@@ -6,3 +6,6 @@ nav:
     - Principal: 'asignaturas/primer_cuatrimestre/modelado_estadistico_de_datos/index.md'
     - Tema 1: 'asignaturas/primer_cuatrimestre/modelado_estadistico_de_datos/tema_1/index.md'
     - Ejercicio 1: 'asignaturas/primer_cuatrimestre/modelado_estadistico_de_datos/tema_1/ejercicios/index.md'
+
+docs_dir: 'src'
+site_dir: 'docs'
