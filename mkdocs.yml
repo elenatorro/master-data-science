@@ -1,0 +1,9 @@
+site_name: Master en Ingeniería y Ciencia de Datos
+
+nav:
+  - Principal: index.md
+  - MODELADO ESTADÍSTICO DE DATOS:
+    - Principal: 'asignaturas/primer_cuatrimestre/modelado_estadistico_de_datos/index.md'
+    - Tema 1: 'asignaturas/primer_cuatrimestre/modelado_estadistico_de_datos/tema_1/index.md'
+  - MINERÍA DE TEXTOS:
+    - Principal: 'asignaturas/primer_cuatrimestre/mineria_de_textos/index.md'
