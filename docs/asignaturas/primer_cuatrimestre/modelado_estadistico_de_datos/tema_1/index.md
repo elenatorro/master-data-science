@@ -1,4 +1,4 @@
-# Principales Técnicas Estadísticas
+# Tema 1 - Principales Técnicas Estadísticas
 
 ## Introducción
 

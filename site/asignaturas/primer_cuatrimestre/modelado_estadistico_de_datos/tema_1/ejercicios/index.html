@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="None">
+        
+        
+        <link rel="shortcut icon" href="../../../../../img/favicon.ico">
+        <title>Master en Ingeniería y Ciencia de Datos</title>
+        <link href="../../../../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body class="homepage">
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../../../..">Master en Ingeniería y Ciencia de Datos</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../../../../..">Principal</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">MODELADO ESTADÍSTICO DE DATOS <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../">Principal</a>
+</li>
+                                    
+<li >
+    <a href="../">Tema 1</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">MINERÍA DE TEXTOS <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../mineria_de_textos/">Principal</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#ejercicios-r">Ejercicios R</a></li>
+            <li><a href="#respuesta-dicotomica">Respuesta Dicotómica</a></li>
+            <li><a href="#respuesta-continua">Respuesta Continua</a></li>
+            <li><a href="#respuesta-nominal">Respuesta Nominal</a></li>
+            <li><a href="#respuesta-ordinal">Respuesta Ordinal</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="ejercicios-r">Ejercicios R</h1>
+<h2 id="respuesta-dicotomica">Respuesta Dicotómica</h2>
+<h3 id="z-diferencia-de-dos-proporciones">z diferencia de dos proporciones</h3>
+<pre><code class="r"># 1. Remove all objects from the current workspace
+rm(list=ls())
+
+# 2. Read the data from the d_d_1.txt file
+data = read.table(&quot;d_d_1.txt&quot;, header=T)
+attach(data)
+
+# Note: exp = x variable, rta = y variable
+
+data_table = table(-rta, exp);
+
+# 3. Assign the indices:
+values_variable_x1 = which(exp==1);
+values_variable_x2 = which(exp==2);
+
+values_variable_y1_x1=which(rta==1 &amp; exp==1);
+values_variable_y1_x2=which(rta==1 &amp; exp==2);
+
+# 4. Assign the samples length
+answer1_num_values = length(rta[values_variable_y1_x1]);
+answer2_num_values = length(rta[values_variable_y1_x2]);
+sample1_num_values = length(rta[values_variable_x1]);
+sample2_num_values = length(rta[values_variable_x2]);
+
+# 5. Assign the alpha value
+alpha=0.05
+
+# 6. Calc proportions
+proportion_1 = answer1_num_values / sample1_num_values;
+proportion_2 = answer2_num_values / sample2_num_values;
+
+proportion_difference = proportion_1 - proportion_2;
+
+# 7. Calc probabilty success
+p = (answer1_num_values + answer2_num_values) / (sample1_num_values + sample2_num_values); # success
+q = 1 - probability_success; # fail
+
+# 8. Calc deviation
+
+variance1 = p * q / sample1_num_values;
+variance2 = p * q / sample2_num_values;
+
+deviation = sqrt(variance1 + variance2)
+
+# 9. Calc z
+
+z0 = pnorm(1 - alpha)
+z = proportion_difference / deviation
+p_value = 2 * (1 - pnorm(abs(z)))
+</code></pre>
+
+<h3 id="exacta-de-fisher">Exacta de Fisher</h3>
+<pre><code class="r"></code></pre>
+
+<h2 id="respuesta-continua">Respuesta Continua</h2>
+<h3 id="t-de-student">t de Student</h3>
+<pre><code class="r"></code></pre>
+
+<h3 id="anova-de-un-factor">ANOVA de un factor</h3>
+<pre><code class="r"></code></pre>
+
+<h2 id="respuesta-nominal">Respuesta Nominal</h2>
+<h3 id="2-de-homogeneidad">χ2 de homogeneidad</h3>
+<pre><code class="r"></code></pre>
+
+<h2 id="respuesta-ordinal">Respuesta Ordinal</h2>
+<h3 id="u-d-emann-whitney">U d eMann-Whitney</h3>
+<h3 id="w-de-wilcoxon">W de Wilcoxon</h3>
+<h3 id="h-de-kruskal-wallis">H de Kruskal-Wallis</h3></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../../../js/base.js" defer></script>
+        <script src="../../../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
+
+<!--
+MkDocs version : 1.0.4
+Build Date UTC : 2019-10-12 13:56:54
+-->
