@@ -1,130 +1,177 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../../../img/favicon.ico">
+  <title>Tema 1 - Master en Ingeniería y Ciencia de Datos</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  <link href="../../../../assets/style.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Tema 1";
+    var mkdocs_page_input_path = "asignaturas/primer_cuatrimestre/modelado_estadistico_de_datos/tema_1/index.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../../../.." class="icon icon-home"> Master en Ingeniería y Ciencia de Datos</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../../..">Índice</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">MODELADO ESTADÍSTICO DE DATOS</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../">Introducción</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">Tema 1</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#tema-1-principales-tecnicas-estadisticas">Tema 1 - Principales Técnicas Estadísticas</a></li>
+    
+        <ul>
         
+            <li><a class="toctree-l4" href="#introduccion">Introducción</a></li>
         
+            <li><a class="toctree-l4" href="#respuesta-dicotomica">Respuesta Dicotómica</a></li>
         
-        <link rel="shortcut icon" href="../../../../img/favicon.ico">
-        <title>Tema 1 - Master en Ingeniería y Ciencia de Datos</title>
-        <link href="../../../../css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="../../../../css/font-awesome.min.css" rel="stylesheet">
-        <link href="../../../../css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
-        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
+            <li><a class="toctree-l4" href="#respuesta-continua">Respuesta Continua</a></li>
+        
+            <li><a class="toctree-l4" href="#respuesta-nominal">Respuesta Nominal</a></li>
+        
+            <li><a class="toctree-l4" href="#respuesta-ordinal">Respuesta Ordinal</a></li>
+        
+            <li><a class="toctree-l4" href="#bibliografia">Bibliografía</a></li>
+        
+        </ul>
+    
 
-        <script src="../../../../js/jquery-1.10.2.min.js" defer></script>
-        <script src="../../../../js/bootstrap-3.0.3.min.js" defer></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script> 
-    </head>
-
-    <body>
-
-        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-            <div class="container">
-
-                <!-- Collapsed navigation -->
-                <div class="navbar-header">
-                    <!-- Expander button -->
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="../../../..">Master en Ingeniería y Ciencia de Datos</a>
-                </div>
-
-                <!-- Expanded navigation -->
-                <div class="navbar-collapse collapse">
-                        <!-- Main navigation -->
-                        <ul class="nav navbar-nav">
-                            <li >
-                                <a href="../../../..">Principal</a>
-                            </li>
-                            <li class="dropdown active">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">MODELADO ESTADÍSTICO DE DATOS <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-<li >
-    <a href="../">Principal</a>
-</li>
-                                    
-<li class="active">
-    <a href="./">Tema 1</a>
-</li>
-                                    
-<li >
-    <a href="ejercicios/">Ejercicio 1</a>
-</li>
-                                </ul>
-                            </li>
-                        </ul>
-
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
-                                <i class="fa fa-search"></i> Search
-                            </a>
-                        </li>
-                            <li >
-                                <a rel="next" href="../">
-                                    <i class="fa fa-arrow-left"></i> Previous
-                                </a>
-                            </li>
-                            <li >
-                                <a rel="prev" href="ejercicios/">
-                                    Next <i class="fa fa-arrow-right"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/elenatorro/master-data-science/edit/master/docs/asignaturas/primer_cuatrimestre/modelado_estadistico_de_datos/tema_1/index.md"><i class="fa fa-github"></i> Edit on GitHub</a>
-                            </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
-    <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#tema-1-principales-tecnicas-estadisticas">Tema 1 - Principales Técnicas Estadísticas</a></li>
-            <li><a href="#introduccion">Introducción</a></li>
-            <li><a href="#respuesta-dicotomica">Respuesta Dicotómica</a></li>
-            <li><a href="#respuesta-continua">Respuesta Continua</a></li>
-            <li><a href="#respuesta-nominal">Respuesta Nominal</a></li>
-            <li><a href="#respuesta-ordinal">Respuesta Ordinal</a></li>
-            <li><a href="#bibliografia">Bibliografía</a></li>
     </ul>
-</div></div>
-                <div class="col-md-9" role="main">
+                </li>
+                <li class="">
+                    
+    <a class="" href="ejercicios/">Ejercicio 1</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">MINERIA DE TEXTO</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../mineria_de_textos/">Introducción</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../mineria_de_textos/1_procesamiento_lenguaje_natural/">1. Procesamiento del Lenguaje Natural</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../mineria_de_textos/1_procesamiento_lenguaje_natural/ejercicios/">Ejercicio 1</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
 
-<h1 id="tema-1-principales-tecnicas-estadisticas">Tema 1 - Principales Técnicas Estadísticas</h1>
-<h2 id="introduccion">Introducción</h2>
-<h3 id="distribuciones-teoricas-de-probabilidad">Distribuciones Teóricas de Probabilidad</h3>
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../..">Master en Ingeniería y Ciencia de Datos</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>MODELADO ESTADÍSTICO DE DATOS &raquo;</li>
+        
+      
+    
+    <li>Tema 1</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/elenatorro/master-data-science/edit/master/docs/asignaturas/primer_cuatrimestre/modelado_estadistico_de_datos/tema_1/index.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="tema-1-principales-tecnicas-estadisticas">Tema 1 - Principales Técnicas Estadísticas<a class="headerlink" href="#tema-1-principales-tecnicas-estadisticas" title="Permanent link">&para;</a></h1>
+<h2 id="introduccion">Introducción<a class="headerlink" href="#introduccion" title="Permanent link">&para;</a></h2>
+<h3 id="distribuciones-teoricas-de-probabilidad">Distribuciones Teóricas de Probabilidad<a class="headerlink" href="#distribuciones-teoricas-de-probabilidad" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Distribución: reparto de elementos / individuos de un grupo / población según una característica</li>
 </ul>
 <blockquote>
 <p>Ejemplo: <strong>Distribución de caramelos con azúcar y sin azúcar en una bolsa de caramelos.</strong> Tenemos una bolsa de caramelos donde hay una mezcla de caramelos con azúcar y caramelos sin azúcar. Si existe el mismo número de caramelos con y sin azúcar, diríamos que es una distribución <strong>uniforme</strong>. La probabilidad de sacar un caramelo sin azúcar de la bolsa es 0,5.</p>
 </blockquote>
-<h4 id="distribucion-de-frecuencias-vs-distribucion-de-probabilidad">Distribución de Frecuencias vs Distribución de Probabilidad</h4>
+<h4 id="distribucion-de-frecuencias-vs-distribucion-de-probabilidad">Distribución de Frecuencias vs Distribución de Probabilidad<a class="headerlink" href="#distribucion-de-frecuencias-vs-distribucion-de-probabilidad" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
-<p>Distribución de Frecuencias: Reparto empírico <em>(empírico = basado en la observación)</em> observado en una <strong>colección de datos.</strong> Agrupación de datos en categorías mutuamente excluyentes <em>(caramelos con o sin azúcar)</em> que indican el número de observaciones en cada categoría.</p>
+<p><strong>Distribución de Frecuencias:</strong> Reparto empírico <em>(empírico = basado en la observación)</em> observado en una <strong>colección de datos.</strong> Agrupación de datos en categorías mutuamente excluyentes <em>(caramelos con o sin azúcar)</em> que indican el número de observaciones en cada categoría.</p>
 </li>
 <li>
-<p>Distribución de Probabilidad: Reparto teórico de la población, una función matemática. La distribución de probabilidad está definida sobre el <strong>conjunto</strong> de todos los sucesos, y cada uno de los sucesos es el <strong>rango de valores</strong> de la <strong>variable aleatoria</strong>. Describe cómo se espera que varíen los resultados.</p>
+<p><strong>Distribución de Probabilidad:</strong> Reparto teórico de la población, una función matemática. La distribución de probabilidad está definida sobre el <strong>conjunto</strong> de todos los sucesos, y cada uno de los sucesos es el <strong>rango de valores</strong> de la <strong>variable aleatoria</strong>. Describe cómo se espera que varíen los resultados.</p>
 </li>
 <li>
-<p>Variable Aleatoria: Función que asigna un valor, usualmente numérico, al resultado de un experimento aleatorio. Por ejemplo, los posibles resultados de sacar tres caramelos de la bolsa de caramelos.</p>
+<p><strong>Variable Aleatoria:</strong> Función que asigna un valor, usualmente numérico, al resultado de un experimento aleatorio, lo que quiere decir que son los resultados que se presentan al azar en cualquier evento o experimento. Por ejemplo, los posibles resultados de sacar tres caramelos de la bolsa de caramelos.</p>
 </li>
 </ul>
 <blockquote>
@@ -133,11 +180,14 @@
   * <strong>Variable Aleatoria:</strong> sacar tres caramelos de la bolsa de caramelos
   * <strong>Posibles resultados:</strong> [con, sin, sin], [sin, con, sin], [sin, sin , sin]...</p>
 </blockquote>
-<h3 id="tipos-de-variables">Tipos de Variables</h3>
+<h3 id="tipos-de-variables-aleatorias">Tipos de Variables Aleatorias<a class="headerlink" href="#tipos-de-variables-aleatorias" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>Variable aleatoria:</strong> Es aquella cuyo valor es el resultado de un evento aleatorio. Lo que quiere decir que son los resultados que se presentan al azar en cualquier evento o experimento.</li>
-<li><strong>Variable aleatoria discreta:</strong> Es aquella que solo toma ciertos valores y que resulta principalmente del conteo realizado. Por ejemplo, que los caramelos sean con o sin azúcar.</li>
-<li><strong>Variable aleatoria continua:</strong> Es aquella que resulta generalmente de la medición y puede tomar cualquier valor dentro de un intervalo dado. Por ejemplo, si nuestra bolsa de caramelos contiene caramelos redondos que pueden tener tamaños distintos, desde ser una bolita "pequeña" hasta una bolita "grande", pasando por todos los tamaños intermedios.</li>
+<li>
+<p><strong>Variable aleatoria discreta:</strong> Es aquella que solo toma ciertos valores y que resulta principalmente del conteo realizado. Por ejemplo, que los caramelos sean con o sin azúcar.</p>
+</li>
+<li>
+<p><strong>Variable aleatoria continua:</strong> Es aquella que resulta generalmente de la medición y puede tomar cualquier valor dentro de un intervalo dado. Por ejemplo, si nuestra bolsa de caramelos contiene caramelos redondos que pueden tener tamaños distintos, desde ser una bolita "pequeña" hasta una bolita "grande", pasando por todos los tamaños intermedios.</p>
+</li>
 </ul>
 <p>Otros datos importantes:</p>
 <ul>
@@ -148,12 +198,13 @@
 </ul>
 </li>
 </ul>
-<h2 id="respuesta-dicotomica">Respuesta Dicotómica</h2>
+<h2 id="respuesta-dicotomica">Respuesta Dicotómica<a class="headerlink" href="#respuesta-dicotomica" title="Permanent link">&para;</a></h2>
 <p>Intenta dar una respuesta a una variable dicotómica a través de otra variable dicotómica.</p>
 <p>En la lógica tradicional, la dicotomía es el desglose o fraccionamiento de un concepto genérico en uno de sus conceptos específicos y su negación. El concepto se refiere asimismo a la ley que establece que ninguna proposición puede ser verdadera y falsa al mismo tiempo.</p>
 <blockquote>
-<p>Ejemplo: un caramelo puede ser con o sin azúcar, pero no puede ser con y sin azúcar al mismo tiempo.</p>
+<p>Por ejemplo: un caramelo puede ser con o sin azúcar, pero no puede ser con y sin azúcar al mismo tiempo.</p>
 </blockquote>
+<h3 id="ejemplo-1-los-peces-mutantes">Ejemplo 1: Los Peces Mutantes<a class="headerlink" href="#ejemplo-1-los-peces-mutantes" title="Permanent link">&para;</a></h3>
 <p>Un grupo de peces tiene una misma enfermedad. Hay dos tratamientos: A y B. A un grupo de peces se les administra el tratamiento A, y al otro grupo el tratamiento B. Se observa qué peces se curan (CURADOS) y qué peces no se curan (NO CURADOS).</p>
 <table>
 <thead>
@@ -208,22 +259,23 @@
 <blockquote>
 <p>La pregunta es, ¿influye el <strong>tratamiento</strong> en la <strong>curación</strong>? Para ello, hay que comparar la proporción de los peces curados con el tratamiento A con la proporción de los peces curados con el tratamiento B.</p>
 </blockquote>
-<p><strong>Nota: El Teorema Central del Límite al Rescate</strong>: Este método se utiliza con tamaños de muestra <strong>grandes</strong>. Es decir, en el ejemplo anterior, tener pocos pececillos enfermos no es suficiente para conocer cuál es el tratamiento adecuado para que se curen los pobrecillos. Si tenemos muchos peces, el resultado será más fiable, y esto lo conocemos gracias al <strong>Teorema Central del Límite</strong>.</p>
+<h4 id="anexo-el-teorema-central-del-limite-al-rescate">Anexo: El Teorema Central del Límite al Rescate<a class="headerlink" href="#anexo-el-teorema-central-del-limite-al-rescate" title="Permanent link">&para;</a></h4>
+<p>Este método se utiliza con tamaños de muestra <strong>grandes</strong>. Es decir, en el ejemplo anterior, tener pocos pececillos enfermos no es suficiente para conocer cuál es el tratamiento adecuado para que se curen los pobrecillos. Si tenemos muchos peces, el resultado será más fiable, y esto lo conocemos gracias al <strong>Teorema Central del Límite</strong>.</p>
 <ul>
 <li>
-<p><strong>Teorema Central del Límite</strong>: Indica que, en condiciones muy generales, si la suma de n variables aleatorias independientes y cuya dispersión se puede cuantificar, entonces la función de distribución de Sn <em>«se aproxima bien»</em> a una <strong>distribución normal</strong> (también llamada distribución gaussiana, curva de Gauss o campana de Gauss).</p>
+<p><strong>Teorema Central del Límite</strong>: Indica que, en condiciones muy generales, dada la suma de n variables aleatorias independientes y cuya dispersión se puede cuantificar, la función de distribución de <code>S(n)</code> <em>«se aproxima bien»</em> a una <strong>distribución normal</strong> (también llamada distribución gaussiana, curva de Gauss o campana de Gauss).</p>
 </li>
 <li>
-<p><strong>Distribución Normal</strong>: Esta distribución es muy utilizada en estadística ya que permite representar numerosos fenómenos, como por ejemplo, el de los pececillos enfermos, pero también muchos otros de caracteres naturales, sociales, psicológicos, etc. La distribución normal se basa en la justificación de que una observación, o resultado final, se puede obtener como la suma de causas pequeñas independientes. La distribución normal es la más extendida en estadística y muchos tests estadísticos están basados en una "normalidad" más o menos justificada de la variable aleatoria bajo estudio.</p>
+<p><strong>Distribución Normal</strong>: Esta distribución es muy utilizada en estadística ya que permite representar numerosos fenómenos, como por ejemplo, el de los pececillos mutates, pero también muchos otros de caracteres naturales, sociales, psicológicos, etc. La distribución normal se basa en la <strong>justificación</strong> de que una observación, o resultado final, se puede obtener como la <strong>suma de causas pequeñas independientes</strong>. La distribución normal es la más extendida en estadística y muchos tests estadísticos están basados en una "normalidad" más o menos justificada de la variable aleatoria bajo estudio.</p>
 </li>
 </ul>
 <p><strong>Explicación</strong></p>
 <blockquote>
-<p>Esta es la comprobación matemática de que nos podemos fiar de un conjunto lo suficientemente grande de datos para dar una respuesta a un problema. Por ejemplo, supongamos que el problema de los peces ocurre en un lago en el que hay millones de peces que han sufrido una enfermedad debido a unos vertidos tóxicos. No necesitamos hacer el estudio con todos los millones de peces del lago para conocer qué tratamiento es necesario aplicar, sino que nos bastaría con una muestra de peces grande (que no te vale con diez pececillos, vaya.)</p>
+<p>Esta es la comprobación matemática de que nos podemos fiar de un conjunto lo suficientemente grande de datos para dar una respuesta a un problema. Por ejemplo, supongamos que el problema de los peces ocurre en un lago en el que hay millones de peces que han sufrido una enfermedad debido a unos vertidos tóxicos. No necesitamos hacer el estudio con todos los millones de peces del lago para conocer qué tratamiento es necesario aplicar, sino que nos bastaría con una muestra de peces grande (que no te vale con diez pececillos para que se fiable, vaya)</p>
 </blockquote>
-<h3 id="metodo-1-z-diferencia-entre-dos-proporciones">Método 1: z diferencia entre dos proporciones</h3>
+<h3 id="metodo-1-z-diferencia-entre-dos-proporciones">Método 1: z diferencia entre dos proporciones<a class="headerlink" href="#metodo-1-z-diferencia-entre-dos-proporciones" title="Permanent link">&para;</a></h3>
 <p>El objetivo de estas pruebas es evaluar las afirmaciones con respecto a una proporción de población. Las pruebas se basan en la premisa de que una proporción muestral será igual a la proporción verdadera de la población si se toman márgenes o tolerancias para la variabilidad muestral (<strong>teorema central del límite</strong>). Las pruebas suelen enfocarse en la diferencia entre un número esperado de ocurrencias, suponiendo que una afirmación es verdadera, y el número observado realmente.</p>
-<p>El <strong>nivel de significancia</strong> es el valor que queremos establecer al formular la pregunta para poder afirmar la hipótesis final. Es decir, un número que al final lo utilizamos para hacer una comparativa. La significancia la obtenemos de la distribución z normal (de ahí que este método se llame "z diferencia"). Dicho valor lo podemos obtener automáticamente si estamos programando, o manualmente en esta tabla, Donde, por ejemplo:</p>
+<p>El <strong>nivel de significancia</strong> es el valor que queremos establecer al formular la pregunta para poder afirmar la hipótesis final. Es decir, un número que al final lo utilizamos para hacer una comparativa con el resultado. La significancia la obtenemos de la <code>distribución normal z</code> (de ahí que este método se llame "z diferencia"). Dicho valor lo podemos obtener automáticamente si estamos programando, o manualmente en esta tabla, dónde, por ejemplo:</p>
 <p>Una significancia de <code>0.025</code> tiene un valor z de <code>-1.96</code> (fila 1.9, columna 0.06 )</p>
 <pre><code>z       .00     .01     .02     .03     .04     .05     .06     .07     .08     .09
 -4.0    0.00003 0.00003 0.00003 0.00003 0.00003 0.00003 0.00002 0.00002 0.00002 0.00002
@@ -269,68 +321,66 @@
 -0.0    0.50000 0.49601 0.49202 0.48803 0.48404 0.48006 0.47607 0.47209 0.46811 0.46414
 </code></pre>
 
-<p>Ejemplo:</p>
+<h3 id="ejemplo-practico">Ejemplo Práctico:<a class="headerlink" href="#ejemplo-practico" title="Permanent link">&para;</a></h3>
 <p>Queremos saber si los caramelos de fresa suelen ser los preferidos, con respecto a los caramelos de limón, entre los <strong>Jugadores de Rugby Americanos</strong> y los <strong>Jugadores de Rugby Australianos</strong>, con un valor de significancia de 0.07. Se han tomado los siguientes datos:</p>
 <ul>
-<li>Dada una muestra de 200 jugadores americanos, se obtuvo que 56 de ellos prefieren los caramelos de fresa.</li>
-<li>
-<p>Dada una muestra de 150 jugadores australianos, se obtuvo que, por el contrario, 29 de ellos prefieren los caramelos de limón.</p>
-</li>
-<li>
-<p>Hipótesis:</p>
-</li>
-<li>
-<p>Hipótesis 0: Ni fu ni fa</p>
-</li>
+<li>Dada una muestra de <code>200</code> jugadores americanos, se obtuvo que <code>56</code> de ellos prefieren los caramelos de fresa.</li>
+<li>Dada una muestra de <code>150</code> jugadores australianos, se obtuvo que, por el contrario, <code>29</code> de ellos prefieren los caramelos de limón.</li>
+</ul>
+<p><strong> 1 - Hipótesis:</strong></p>
+<ul>
+<li>Hipótesis 0: Ni fu ni fa</li>
 <li>Hipótesis 1: Hay una diferencia de proporción</li>
 </ul>
 <p>Es <strong>muy importante</strong> enfatizar en que partimos de la premisa de que la hipótesis 0 es verdadera, y que por esto utilizaremos la <strong>proporción combinada</strong> para descartar dicha hipótesis (si la hipótesis 0 es verdadera, no hay diferencia entre las proporciones)</p>
-<ol>
-<li>Diferencia de proporciones:</li>
-</ol>
-<p>Proporción de caramelos de fresa de la primera muestra: 56 / 200 = 0.28
-Proporción de caramelos de limón de la segunda muestra: 29 / 150 = 0.193</p>
-<p>Como 0.28 es mayor que 0.193, queremos probar hipótesis de que prefieren la fresa.</p>
-<p><code>diferencia_de_proporciones</code> = 0,28 - 0,193 = 0,087</p>
-<ol>
-<li>Proporción combinada: Probabilidad de que la hipótesis 0 sea correcta (o probabilidad de 'éxito' de nuestra hipótesis)</li>
-</ol>
-<p>probabilidad éxito (p) = 56 + 29 / 200 + 150 = 0,2429
-probabilidad de fracaso (q) = 1 - p = 0,7571</p>
-<ol>
-<li>Calcular la varianza de ambas muestras (a partir de las probabilidades de éxito y fracaso)</li>
-</ol>
-<p>p * q = 0,18389959</p>
-<p>varianza muestra 1: p * q / 200 = 0,00091949795
-varianza muestra 2: p * q / 150 = 0,001225997266667</p>
-<ol>
-<li>Calcular la desviación estandar de la distribución muestral de las diferencias de las proporciones muestrales</li>
-</ol>
+<p><strong> 2 - Diferencia de proporciones:</strong></p>
+<p>Proporción de caramelos de fresa de la primera muestra: <code>56 / 200 = 0.28</code>
+Proporción de caramelos de limón de la segunda muestra: <code>29 / 150 = 0.193</code></p>
+<p>Como <code>0.28</code> es mayor que <code>0.193</code>, queremos probar hipótesis de que prefieren la fresa.</p>
+<p><code>diferencia_de_proporciones</code> = <code>0,28 - 0,193 = 0,087</code></p>
+<p><strong> 3 - Proporción combinada:</strong></p>
+<p>Probabilidad de que la hipótesis 0 sea correcta (o probabilidad de 'éxito' de nuestra hipótesis)</p>
+<pre><code>probabilidad éxito (p) = 56 + 29 / 200 + 150 = 0,2429
+probabilidad de fracaso (q) = 1 - p = 0,7571
+</code></pre>
+
+<p>Calcular la varianza de ambas muestras (a partir de las probabilidades de éxito y fracaso)</p>
+<pre><code>p * q = 0,18389959
+</code></pre>
+
+<pre><code>varianza muestra 1: p * q / 200 = 0,00091949795
+varianza muestra 2: p * q / 150 = 0,001225997266667
+</code></pre>
+
+<p><strong> 4 - Calcular la desviación estandar de la distribución muestral de las diferencias de las proporciones muestrales:</strong></p>
 <p>Por definición, la varianza teórica de las dos muestras está dada por: La varianza de la muestra 1 más la varianza de la muestra 2 por la <strong>covariancia</strong> de ambas muestras por dos.</p>
-<p>Por lo tanto, la desviación estandar (la 'z' que queremos comparar con la significancia) será la raíz cuadrada de la suma de la varianza de la muestra 1 con la varianza de la muestra 2:</p>
-<p><code>desviación_estándar</code> = <code>raíz_cuadrada(varianza_muestra_1 + varianza_muestra_2)</code> = 0,046319490677975</p>
-<ol>
-<li>Calcular el valor z:</li>
-</ol>
-<p><code>diferencia_de_proporciones</code> / <code>desviación_estándar</code> = 1,878258994790041</p>
-<ol>
-<li>Comparar la z obtenida a través de la significancia con la z obtenida a través de la diferencia de proporciones</li>
-</ol>
-<p>z0 = 0.07 --&gt; 1,48
-z1 = 1,88</p>
+<p>Por lo tanto, la desviación estandar (la <code>z</code> que queremos comparar con la significancia) será la raíz cuadrada de la suma de la varianza de la muestra 1 con la varianza de la muestra 2:</p>
+<pre><code>desviación_estándar = raíz_cuadrada(varianza_muestra_1 + varianza_muestra_2) = 0,046319490677975
+</code></pre>
+
+<p><strong> 5 - Calcular el valor z:</strong></p>
+<pre><code>diferencia_de_proporciones / desviación_estándar = 1,878258994790041
+</code></pre>
+
+<p>Comparar la z obtenida a través de la significancia con la z obtenida a través de la diferencia de proporciones</p>
+<pre><code>z0 = 0.07 --&gt; 1,48
+z1 = 1,88
+</code></pre>
+
+<p><strong> 6 - Conclusión:</strong></p>
 <blockquote>
-<p>Como 1,88 es mayor de 1,48, rechazamos la primera hipótesis (ni fu ni fa) y podemos concluir que, con un 7% de significancia, hay una diferencia de proporción entre pertenecer al equipo americano y preferir los caramelos de fresa.</p>
+<p>Como <code>1,88</code> es mayor de <code>1,48</code>, rechazamos la primera hipótesis (ni fu ni fa) y podemos concluir que, con un <code>7%</code> de significancia, hay una diferencia de proporción entre pertenecer al equipo americano y preferir los caramelos de fresa.</p>
 </blockquote>
-<h3 id="metodo-2-exacta-de-fisher">Método 2: Exacta de Fisher</h3>
+<h3 id="metodo-2-exacta-de-fisher">Método 2: Exacta de Fisher<a class="headerlink" href="#metodo-2-exacta-de-fisher" title="Permanent link">&para;</a></h3>
 <p>Este método se utiliza para tamaños de muestra <strong>pequeños</strong>. Se utiliza, para ello, una tabla de contingencia que relaciona las variables de las dos muestras.</p>
-<ol>
-<li>Cálculo del p-valor</li>
-</ol>
+<p><strong>1 - Cálculo del p-valor</strong></p>
 <p>El p-valor consiste en calcular la probabilidad exacta de observar un conjunto concreto de cuatro frecuencias: a, b, c y d. Con el ejemplo de los jugadores de rugby, sería:</p>
-<p>Jugador de Rugby Americano
-Jugador de Rugby Australiano
-Prefiere los caramelos de fresa
-Prefiere los caramelos de limón</p>
+<ul>
+<li>Jugador de Rugby Americano</li>
+<li>Jugador de Rugby Australiano</li>
+<li>Prefiere los caramelos de fresa</li>
+<li>Prefiere los caramelos de limón</li>
+</ul>
 <table>
 <thead>
 <tr>
@@ -361,22 +411,18 @@ Prefiere los caramelos de limón</p>
 </tr>
 </tbody>
 </table>
-<p><code>p_valor</code> = (a+b)!(a+c)!(b+d)!(c+d)! / n!a!b!c!d!</p>
-<ol>
-<li>
-<p>Comparar <code>p_valor</code> con el nivel de significancia alfa.</p>
-</li>
-<li>
-<p>p &lt; alfa, se rechaza la hipótesis</p>
-</li>
-<li>p &gt;= alfa, se acepta la hipótesis</li>
-</ol>
-<blockquote>
-<p>Ejemplo</p>
-</blockquote>
+<pre><code>p_valor = (a+b)!(a+c)!(b+d)!(c+d)! / n!a!b!c!d!
+</code></pre>
+
+<p><strong>2 - Comparar <code>p_valor</code> con el nivel de significancia alfa.</strong></p>
+<ul>
+<li><code>p &lt; alfa</code>, se rechaza la hipótesis</li>
+<li><code>p &gt;= alfa</code>, se acepta la hipótesis</li>
+</ul>
+<h3 id="ejemplo-practico_1">Ejemplo Práctico<a class="headerlink" href="#ejemplo-practico_1" title="Permanent link">&para;</a></h3>
 <p>Tenemos una muestra de 35 jugadores: 17 jugadores americanos y 18 australianos. De americanos, 10 de ellos prefieren los caramelos de fresa, y los 7 restantes los de limón. Por otro lado, 5 de los australianos prefieren los caramelos de fresa y 13 los de limón.</p>
 <p>La <strong>variable explicativa</strong> es la nacionalidad del equipo, y la <strong>variable respuesta</strong> la preferencia de sabor (fresa o limón)</p>
-<p>Tabla:</p>
+<p><strong>Tabla:</strong></p>
 <table>
 <thead>
 <tr>
@@ -407,16 +453,21 @@ Prefiere los caramelos de limón</p>
 </tr>
 </tbody>
 </table>
-<p><code>p_valor</code> = 17!18!15!20! / 35!10!7!5!13! = 0,092</p>
-<p>Como 0,092 es menor que el valor de significancia, no se rechaza la hipótesis nula ya que no hay evidencia para concluir que la variable explicativa influya en la variable respuesta de forma significativa. Es decir, no es significante la nacionalidad del equipo para que prefiera los caramelos de fresa sobre los de limón.</p>
-<h2 id="respuesta-continua">Respuesta Continua</h2>
+<pre><code>p_valor = 17!18!15!20! / 35!10!7!5!13! = 0,092
+</code></pre>
+
+<p><strong>Conclusión:</strong></p>
+<blockquote>
+<p>Como <code>0,092</code> es menor que el valor de significancia, no se rechaza la hipótesis nula ya que no hay evidencia para concluir que la variable explicativa influya en la variable respuesta de forma significativa. Es decir, no es significante la nacionalidad del equipo para que prefiera los caramelos de fresa sobre los de limón.</p>
+</blockquote>
+<h2 id="respuesta-continua">Respuesta Continua<a class="headerlink" href="#respuesta-continua" title="Permanent link">&para;</a></h2>
 <p>La variable respuesta es una variable que puede tomar valores continuos.</p>
-<h4 id="t-de-student">t de Student</h4>
-<p>Se está intentando explicar la variable respuesta continua a trav éss de la variable explicativa dicotómica.</p>
+<h4 id="t-de-student">t de Student<a class="headerlink" href="#t-de-student" title="Permanent link">&para;</a></h4>
+<p>Se está intentando explicar la variable respuesta continua a través de la variable explicativa dicotómica.</p>
 <p>Imaginemos a nuestros pobres pececillos del lago. Ahora, en lugar de estar curados o no en base a un tratamiento, digamos que estos peces tienen un gen mutante. Este gen mutante puede adquirir multitud de valores, pero estos valores pueden depender del tratamiento que se le suministre al pez. Como estamos probando dos tratamientos, queremos conocer qué tratamiento produce según qué valores del gen.</p>
-<h2 id="respuesta-nominal">Respuesta Nominal</h2>
-<h2 id="respuesta-ordinal">Respuesta Ordinal</h2>
-<h2 id="bibliografia">Bibliografía</h2>
+<h2 id="respuesta-nominal">Respuesta Nominal<a class="headerlink" href="#respuesta-nominal" title="Permanent link">&para;</a></h2>
+<h2 id="respuesta-ordinal">Respuesta Ordinal<a class="headerlink" href="#respuesta-ordinal" title="Permanent link">&para;</a></h2>
+<h2 id="bibliografia">Bibliografía<a class="headerlink" href="#bibliografia" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://www.youtube.com/watch?v=HMuS0VYMR6Y">El test z para comparar dos proporciones (umh2072 2013-14)</a></li>
 <li><a href="https://es.wikipedia.org/wiki/Distribuci%C3%B3n_normal">Distribución Normal - Wikipedia</a></li>
@@ -424,83 +475,55 @@ Prefiere los caramelos de limón</p>
 <li><a href="https://www.youtube.com/watch?v=vTYYEXG0jWo">Prueba hipótesis z diferencia de dos proporciones</a></li>
 <li><a href="https://revistaseden.org/files/11-CAP%2011.pdf">Apuntes</a></li>
 <li><a href="https://www.youtube.com/watch?v=A6XJjFUNeYM">Prueba exacta de Fisher</a></li>
-</ul></div>
-        </div>
-
-        <footer class="col-md-12">
-            <hr>
-            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
-        </footer>
-        <script>
-            var base_url = "../../../..",
-                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
-        </script>
-        <script src="../../../../js/base.js" defer></script>
-        <script src="../../../../search/main.js" defer></script>
-
-        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+</ul>
+              
             </div>
-            <div class="modal-body">
-                <p>
-                    From here you can search these documents. Enter
-                    your search terms below.
-                </p>
-                <form role="form">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
-                    </div>
-                </form>
-                <div id="mkdocs-search-results"></div>
-            </div>
-            <div class="modal-footer">
-            </div>
-        </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ejercicios/" class="btn btn-neutral float-right" title="Ejercicio 1">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../" class="btn btn-neutral" title="Introducción"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
     </div>
-</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
-            </div>
-            <div class="modal-body">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th style="width: 20%;">Keys</th>
-                    <th>Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="help shortcut"><kbd>?</kbd></td>
-                    <td>Open this help</td>
-                  </tr>
-                  <tr>
-                    <td class="next shortcut"><kbd>n</kbd></td>
-                    <td>Next page</td>
-                  </tr>
-                  <tr>
-                    <td class="prev shortcut"><kbd>p</kbd></td>
-                    <td>Previous page</td>
-                  </tr>
-                  <tr>
-                    <td class="search shortcut"><kbd>s</kbd></td>
-                    <td>Search</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="modal-footer">
-            </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
         </div>
-    </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/elenatorro/master-data-science/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="ejercicios/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
 </div>
+    <script>var base_url = '../../../..';</script>
+    <script src="../../../../js/theme.js" defer></script>
+      <script src="../../../../search/main.js" defer></script>
 
-    </body>
+</body>
 </html>

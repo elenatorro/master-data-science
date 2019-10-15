@@ -1,12 +1,28 @@
 site_name: Master en Ingeniería y Ciencia de Datos
-
-nav:
-  - Principal: index.md
-  - MODELADO ESTADÍSTICO DE DATOS:
-    - Principal: 'asignaturas/primer_cuatrimestre/modelado_estadistico_de_datos/index.md'
-    - Tema 1: 'asignaturas/primer_cuatrimestre/modelado_estadistico_de_datos/tema_1/index.md'
-    - Ejercicio 1: 'asignaturas/primer_cuatrimestre/modelado_estadistico_de_datos/tema_1/ejercicios/index.md'
-
 docs_dir: 'src'
 site_dir: 'docs'
 repo_url: https://github.com/elenatorro/master-data-science/
+
+nav:
+  - Índice: index.md
+  - MODELADO ESTADÍSTICO DE DATOS:
+    - Introducción: 'asignaturas/primer_cuatrimestre/modelado_estadistico_de_datos/index.md'
+    - Tema 1: 'asignaturas/primer_cuatrimestre/modelado_estadistico_de_datos/tema_1/index.md'
+    - Ejercicio 1: 'asignaturas/primer_cuatrimestre/modelado_estadistico_de_datos/tema_1/ejercicios/index.md'
+  - MINERIA DE TEXTO:
+    - Introducción: 'asignaturas/primer_cuatrimestre/mineria_de_textos/index.md'
+    - 1. Procesamiento del Lenguaje Natural: 'asignaturas/primer_cuatrimestre/mineria_de_textos/1_procesamiento_lenguaje_natural/index.md'
+    - Ejercicio 1: 'asignaturas/primer_cuatrimestre/mineria_de_textos/1_procesamiento_lenguaje_natural/ejercicios/index.md'
+
+theme:
+  language: 'es'
+  name: 'readthedocs'
+  feature:
+    tabs: true
+
+markdown_extensions:
+  - toc:
+      permalink: true
+
+extra_css:
+  - assets/style.css

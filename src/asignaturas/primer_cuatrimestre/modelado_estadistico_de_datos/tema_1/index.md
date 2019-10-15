@@ -10,22 +10,22 @@
 
 #### Distribución de Frecuencias vs Distribución de Probabilidad
 
-* Distribución de Frecuencias: Reparto empírico _(empírico = basado en la observación)_ observado en una **colección de datos.** Agrupación de datos en categorías mutuamente excluyentes _(caramelos con o sin azúcar)_ que indican el número de observaciones en cada categoría.
+* **Distribución de Frecuencias:** Reparto empírico _(empírico = basado en la observación)_ observado en una **colección de datos.** Agrupación de datos en categorías mutuamente excluyentes _(caramelos con o sin azúcar)_ que indican el número de observaciones en cada categoría.
 
-* Distribución de Probabilidad: Reparto teórico de la población, una función matemática. La distribución de probabilidad está definida sobre el **conjunto** de todos los sucesos, y cada uno de los sucesos es el **rango de valores** de la **variable aleatoria**. Describe cómo se espera que varíen los resultados.
+* **Distribución de Probabilidad:** Reparto teórico de la población, una función matemática. La distribución de probabilidad está definida sobre el **conjunto** de todos los sucesos, y cada uno de los sucesos es el **rango de valores** de la **variable aleatoria**. Describe cómo se espera que varíen los resultados.
 
-* Variable Aleatoria: Función que asigna un valor, usualmente numérico, al resultado de un experimento aleatorio. Por ejemplo, los posibles resultados de sacar tres caramelos de la bolsa de caramelos.
+* **Variable Aleatoria:** Función que asigna un valor, usualmente numérico, al resultado de un experimento aleatorio, lo que quiere decir que son los resultados que se presentan al azar en cualquier evento o experimento. Por ejemplo, los posibles resultados de sacar tres caramelos de la bolsa de caramelos.
 
 > Ejemplo:
   * **Conjunto de Datos:** Bolsa con N caramelos (donde N puede ser cualquier número de caramelos) donde hay dos tipos de caramelos: con y sin azúcar.
   * **Variable Aleatoria:** sacar tres caramelos de la bolsa de caramelos
   * **Posibles resultados:** [con, sin, sin], [sin, con, sin], [sin, sin , sin]...
 
-### Tipos de Variables
+### Tipos de Variables Aleatorias
 
-* **Variable aleatoria:** Es aquella cuyo valor es el resultado de un evento aleatorio. Lo que quiere decir que son los resultados que se presentan al azar en cualquier evento o experimento.
-  * **Variable aleatoria discreta:** Es aquella que solo toma ciertos valores y que resulta principalmente del conteo realizado. Por ejemplo, que los caramelos sean con o sin azúcar.
-  * **Variable aleatoria continua:** Es aquella que resulta generalmente de la medición y puede tomar cualquier valor dentro de un intervalo dado. Por ejemplo, si nuestra bolsa de caramelos contiene caramelos redondos que pueden tener tamaños distintos, desde ser una bolita "pequeña" hasta una bolita "grande", pasando por todos los tamaños intermedios.
+* **Variable aleatoria discreta:** Es aquella que solo toma ciertos valores y que resulta principalmente del conteo realizado. Por ejemplo, que los caramelos sean con o sin azúcar.
+
+* **Variable aleatoria continua:** Es aquella que resulta generalmente de la medición y puede tomar cualquier valor dentro de un intervalo dado. Por ejemplo, si nuestra bolsa de caramelos contiene caramelos redondos que pueden tener tamaños distintos, desde ser una bolita "pequeña" hasta una bolita "grande", pasando por todos los tamaños intermedios.
 
 Otros datos importantes:
 
@@ -40,7 +40,9 @@ Intenta dar una respuesta a una variable dicotómica a través de otra variable 
 
 En la lógica tradicional, la dicotomía es el desglose o fraccionamiento de un concepto genérico en uno de sus conceptos específicos y su negación. El concepto se refiere asimismo a la ley que establece que ninguna proposición puede ser verdadera y falsa al mismo tiempo.
 
-> Ejemplo: un caramelo puede ser con o sin azúcar, pero no puede ser con y sin azúcar al mismo tiempo.
+> Por ejemplo: un caramelo puede ser con o sin azúcar, pero no puede ser con y sin azúcar al mismo tiempo.
+
+### Ejemplo 1: Los Peces Mutantes
 
 Un grupo de peces tiene una misma enfermedad. Hay dos tratamientos: A y B. A un grupo de peces se les administra el tratamiento A, y al otro grupo el tratamiento B. Se observa qué peces se curan (CURADOS) y qué peces no se curan (NO CURADOS).
 
@@ -59,21 +61,23 @@ Un grupo de peces tiene una misma enfermedad. Hay dos tratamientos: A y B. A un 
 
 > La pregunta es, ¿influye el **tratamiento** en la **curación**? Para ello, hay que comparar la proporción de los peces curados con el tratamiento A con la proporción de los peces curados con el tratamiento B.
 
-**Nota: El Teorema Central del Límite al Rescate**: Este método se utiliza con tamaños de muestra **grandes**. Es decir, en el ejemplo anterior, tener pocos pececillos enfermos no es suficiente para conocer cuál es el tratamiento adecuado para que se curen los pobrecillos. Si tenemos muchos peces, el resultado será más fiable, y esto lo conocemos gracias al **Teorema Central del Límite**.
+#### Anexo: El Teorema Central del Límite al Rescate
 
-- **Teorema Central del Límite**: Indica que, en condiciones muy generales, si la suma de n variables aleatorias independientes y cuya dispersión se puede cuantificar, entonces la función de distribución de Sn _«se aproxima bien»_ a una **distribución normal** (también llamada distribución gaussiana, curva de Gauss o campana de Gauss).
+Este método se utiliza con tamaños de muestra **grandes**. Es decir, en el ejemplo anterior, tener pocos pececillos enfermos no es suficiente para conocer cuál es el tratamiento adecuado para que se curen los pobrecillos. Si tenemos muchos peces, el resultado será más fiable, y esto lo conocemos gracias al **Teorema Central del Límite**.
 
-- **Distribución Normal**: Esta distribución es muy utilizada en estadística ya que permite representar numerosos fenómenos, como por ejemplo, el de los pececillos enfermos, pero también muchos otros de caracteres naturales, sociales, psicológicos, etc. La distribución normal se basa en la justificación de que una observación, o resultado final, se puede obtener como la suma de causas pequeñas independientes. La distribución normal es la más extendida en estadística y muchos tests estadísticos están basados en una "normalidad" más o menos justificada de la variable aleatoria bajo estudio.
+- **Teorema Central del Límite**: Indica que, en condiciones muy generales, dada la suma de n variables aleatorias independientes y cuya dispersión se puede cuantificar, la función de distribución de `S(n)` _«se aproxima bien»_ a una **distribución normal** (también llamada distribución gaussiana, curva de Gauss o campana de Gauss).
+
+- **Distribución Normal**: Esta distribución es muy utilizada en estadística ya que permite representar numerosos fenómenos, como por ejemplo, el de los pececillos mutates, pero también muchos otros de caracteres naturales, sociales, psicológicos, etc. La distribución normal se basa en la **justificación** de que una observación, o resultado final, se puede obtener como la **suma de causas pequeñas independientes**. La distribución normal es la más extendida en estadística y muchos tests estadísticos están basados en una "normalidad" más o menos justificada de la variable aleatoria bajo estudio.
 
 **Explicación**
 
-> Esta es la comprobación matemática de que nos podemos fiar de un conjunto lo suficientemente grande de datos para dar una respuesta a un problema. Por ejemplo, supongamos que el problema de los peces ocurre en un lago en el que hay millones de peces que han sufrido una enfermedad debido a unos vertidos tóxicos. No necesitamos hacer el estudio con todos los millones de peces del lago para conocer qué tratamiento es necesario aplicar, sino que nos bastaría con una muestra de peces grande (que no te vale con diez pececillos, vaya.)
+> Esta es la comprobación matemática de que nos podemos fiar de un conjunto lo suficientemente grande de datos para dar una respuesta a un problema. Por ejemplo, supongamos que el problema de los peces ocurre en un lago en el que hay millones de peces que han sufrido una enfermedad debido a unos vertidos tóxicos. No necesitamos hacer el estudio con todos los millones de peces del lago para conocer qué tratamiento es necesario aplicar, sino que nos bastaría con una muestra de peces grande (que no te vale con diez pececillos para que se fiable, vaya)
 
 ### Método 1: z diferencia entre dos proporciones
 
 El objetivo de estas pruebas es evaluar las afirmaciones con respecto a una proporción de población. Las pruebas se basan en la premisa de que una proporción muestral será igual a la proporción verdadera de la población si se toman márgenes o tolerancias para la variabilidad muestral (**teorema central del límite**). Las pruebas suelen enfocarse en la diferencia entre un número esperado de ocurrencias, suponiendo que una afirmación es verdadera, y el número observado realmente.
 
-El **nivel de significancia** es el valor que queremos establecer al formular la pregunta para poder afirmar la hipótesis final. Es decir, un número que al final lo utilizamos para hacer una comparativa. La significancia la obtenemos de la distribución z normal (de ahí que este método se llame "z diferencia"). Dicho valor lo podemos obtener automáticamente si estamos programando, o manualmente en esta tabla, Donde, por ejemplo:
+El **nivel de significancia** es el valor que queremos establecer al formular la pregunta para poder afirmar la hipótesis final. Es decir, un número que al final lo utilizamos para hacer una comparativa con el resultado. La significancia la obtenemos de la `distribución normal z` (de ahí que este método se llame "z diferencia"). Dicho valor lo podemos obtener automáticamente si estamos programando, o manualmente en esta tabla, dónde, por ejemplo:
 
 Una significancia de `0.025` tiene un valor z de `-1.96` (fila 1.9, columna 0.06 )
 
@@ -122,72 +126,88 @@ z	    .00	    .01	    .02	    .03	    .04	    .05	    .06	    .07	    .08	    .0
 -0.0	0.50000	0.49601	0.49202	0.48803	0.48404	0.48006	0.47607	0.47209	0.46811	0.46414
 ```
 
-Ejemplo:
+### Ejemplo Práctico:
 
 Queremos saber si los caramelos de fresa suelen ser los preferidos, con respecto a los caramelos de limón, entre los **Jugadores de Rugby Americanos** y los **Jugadores de Rugby Australianos**, con un valor de significancia de 0.07. Se han tomado los siguientes datos:
 
-- Dada una muestra de 200 jugadores americanos, se obtuvo que 56 de ellos prefieren los caramelos de fresa.
-- Dada una muestra de 150 jugadores australianos, se obtuvo que, por el contrario, 29 de ellos prefieren los caramelos de limón.
+- Dada una muestra de `200` jugadores americanos, se obtuvo que `56` de ellos prefieren los caramelos de fresa.
+- Dada una muestra de `150` jugadores australianos, se obtuvo que, por el contrario, `29` de ellos prefieren los caramelos de limón.
 
-1. Hipótesis:
+** 1 - Hipótesis:**
 
 - Hipótesis 0: Ni fu ni fa
 - Hipótesis 1: Hay una diferencia de proporción
 
 Es **muy importante** enfatizar en que partimos de la premisa de que la hipótesis 0 es verdadera, y que por esto utilizaremos la **proporción combinada** para descartar dicha hipótesis (si la hipótesis 0 es verdadera, no hay diferencia entre las proporciones)
 
-1. Diferencia de proporciones:
+** 2 - Diferencia de proporciones:**
 
-Proporción de caramelos de fresa de la primera muestra: 56 / 200 = 0.28
-Proporción de caramelos de limón de la segunda muestra: 29 / 150 = 0.193
+Proporción de caramelos de fresa de la primera muestra: `56 / 200 = 0.28`
+Proporción de caramelos de limón de la segunda muestra: `29 / 150 = 0.193`
 
-Como 0.28 es mayor que 0.193, queremos probar hipótesis de que prefieren la fresa.
+Como `0.28` es mayor que `0.193`, queremos probar hipótesis de que prefieren la fresa.
 
-`diferencia_de_proporciones` = 0,28 - 0,193 = 0,087
+`diferencia_de_proporciones` = `0,28 - 0,193 = 0,087`
 
-2. Proporción combinada: Probabilidad de que la hipótesis 0 sea correcta (o probabilidad de 'éxito' de nuestra hipótesis)
+** 3 - Proporción combinada:**
 
+Probabilidad de que la hipótesis 0 sea correcta (o probabilidad de 'éxito' de nuestra hipótesis)
+
+```
 probabilidad éxito (p) = 56 + 29 / 200 + 150 = 0,2429
 probabilidad de fracaso (q) = 1 - p = 0,7571
+```
 
-3. Calcular la varianza de ambas muestras (a partir de las probabilidades de éxito y fracaso)
+Calcular la varianza de ambas muestras (a partir de las probabilidades de éxito y fracaso)
 
+```
 p * q = 0,18389959
+```
 
+```
 varianza muestra 1: p * q / 200 = 0,00091949795
 varianza muestra 2: p * q / 150 = 0,001225997266667
+```
 
-4. Calcular la desviación estandar de la distribución muestral de las diferencias de las proporciones muestrales
+** 4 - Calcular la desviación estandar de la distribución muestral de las diferencias de las proporciones muestrales:**
 
 Por definición, la varianza teórica de las dos muestras está dada por: La varianza de la muestra 1 más la varianza de la muestra 2 por la **covariancia** de ambas muestras por dos.
 
-Por lo tanto, la desviación estandar (la 'z' que queremos comparar con la significancia) será la raíz cuadrada de la suma de la varianza de la muestra 1 con la varianza de la muestra 2:
+Por lo tanto, la desviación estandar (la `z` que queremos comparar con la significancia) será la raíz cuadrada de la suma de la varianza de la muestra 1 con la varianza de la muestra 2:
 
-`desviación_estándar` = `raíz_cuadrada(varianza_muestra_1 + varianza_muestra_2)` = 0,046319490677975
+```
+desviación_estándar = raíz_cuadrada(varianza_muestra_1 + varianza_muestra_2) = 0,046319490677975
+```
 
-5. Calcular el valor z:
+** 5 - Calcular el valor z:**
 
-`diferencia_de_proporciones` / `desviación_estándar` = 1,878258994790041
+```
+diferencia_de_proporciones / desviación_estándar = 1,878258994790041
+```
 
-6. Comparar la z obtenida a través de la significancia con la z obtenida a través de la diferencia de proporciones
+Comparar la z obtenida a través de la significancia con la z obtenida a través de la diferencia de proporciones
 
+```
 z0 = 0.07 --> 1,48
 z1 = 1,88
+```
 
-> Como 1,88 es mayor de 1,48, rechazamos la primera hipótesis (ni fu ni fa) y podemos concluir que, con un 7% de significancia, hay una diferencia de proporción entre pertenecer al equipo americano y preferir los caramelos de fresa.
+** 6 - Conclusión:**
+
+> Como `1,88` es mayor de `1,48`, rechazamos la primera hipótesis (ni fu ni fa) y podemos concluir que, con un `7%` de significancia, hay una diferencia de proporción entre pertenecer al equipo americano y preferir los caramelos de fresa.
 
 ### Método 2: Exacta de Fisher
 
 Este método se utiliza para tamaños de muestra **pequeños**. Se utiliza, para ello, una tabla de contingencia que relaciona las variables de las dos muestras.
 
-1. Cálculo del p-valor
+**1 - Cálculo del p-valor**
 
 El p-valor consiste en calcular la probabilidad exacta de observar un conjunto concreto de cuatro frecuencias: a, b, c y d. Con el ejemplo de los jugadores de rugby, sería:
 
-Jugador de Rugby Americano
-Jugador de Rugby Australiano
-Prefiere los caramelos de fresa
-Prefiere los caramelos de limón
+* Jugador de Rugby Americano
+* Jugador de Rugby Australiano
+* Prefiere los caramelos de fresa
+* Prefiere los caramelos de limón
 
 | Jugador / Caramelo       | Preferencia Fresa        | Preferencia Limón        | Total                    |
 |--------------------------|--------------------------|--------------------------|--------------------------|
@@ -195,20 +215,22 @@ Prefiere los caramelos de limón
 | Australiano              |            c             |            d             |          c + d           |
 | Total                    |          a + c           |          b + d           |            n             |
 
-`p_valor` = (a+b)!(a+c)!(b+d)!(c+d)! / n!a!b!c!d!
+```
+p_valor = (a+b)!(a+c)!(b+d)!(c+d)! / n!a!b!c!d!
+```
 
-2. Comparar `p_valor` con el nivel de significancia alfa.
+**2 - Comparar `p_valor` con el nivel de significancia alfa.**
 
-* p < alfa, se rechaza la hipótesis
-* p >= alfa, se acepta la hipótesis
+* `p < alfa`, se rechaza la hipótesis
+* `p >= alfa`, se acepta la hipótesis
 
-> Ejemplo
+### Ejemplo Práctico
 
-  Tenemos una muestra de 35 jugadores: 17 jugadores americanos y 18 australianos. De americanos, 10 de ellos prefieren los caramelos de fresa, y los 7 restantes los de limón. Por otro lado, 5 de los australianos prefieren los caramelos de fresa y 13 los de limón.
+Tenemos una muestra de 35 jugadores: 17 jugadores americanos y 18 australianos. De americanos, 10 de ellos prefieren los caramelos de fresa, y los 7 restantes los de limón. Por otro lado, 5 de los australianos prefieren los caramelos de fresa y 13 los de limón.
 
 La **variable explicativa** es la nacionalidad del equipo, y la **variable respuesta** la preferencia de sabor (fresa o limón)
 
-Tabla:
+**Tabla:**
 
 | Jugador / Caramelo       | Preferencia Fresa        | Preferencia Limón        | Total                    |
 |--------------------------|--------------------------|--------------------------|--------------------------|
@@ -216,9 +238,13 @@ Tabla:
 | Australiano              |             5            |           13             |           18             |
 | Total                    |            15            |           20             |           35             |
 
-`p_valor` = 17!18!15!20! / 35!10!7!5!13! = 0,092
+```
+p_valor = 17!18!15!20! / 35!10!7!5!13! = 0,092
+```
 
-Como 0,092 es menor que el valor de significancia, no se rechaza la hipótesis nula ya que no hay evidencia para concluir que la variable explicativa influya en la variable respuesta de forma significativa. Es decir, no es significante la nacionalidad del equipo para que prefiera los caramelos de fresa sobre los de limón.
+**Conclusión:**
+
+> Como `0,092` es menor que el valor de significancia, no se rechaza la hipótesis nula ya que no hay evidencia para concluir que la variable explicativa influya en la variable respuesta de forma significativa. Es decir, no es significante la nacionalidad del equipo para que prefiera los caramelos de fresa sobre los de limón.
 
 ## Respuesta Continua
 
@@ -226,7 +252,7 @@ La variable respuesta es una variable que puede tomar valores continuos.
 
 #### t de Student
 
-Se está intentando explicar la variable respuesta continua a trav éss de la variable explicativa dicotómica.
+Se está intentando explicar la variable respuesta continua a través de la variable explicativa dicotómica.
 
 Imaginemos a nuestros pobres pececillos del lago. Ahora, en lugar de estar curados o no en base a un tratamiento, digamos que estos peces tienen un gen mutante. Este gen mutante puede adquirir multitud de valores, pero estos valores pueden depender del tratamiento que se le suministre al pez. Como estamos probando dos tratamientos, queremos conocer qué tratamiento produce según qué valores del gen.
 

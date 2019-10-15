@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../../../img/favicon.ico">
+  <title>1. Procesamiento del Lenguaje Natural - Master en Ingeniería y Ciencia de Datos</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  <link href="../../../../assets/style.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "1. Procesamiento del Lenguaje Natural";
+    var mkdocs_page_input_path = "asignaturas/primer_cuatrimestre/mineria_de_textos/1_procesamiento_lenguaje_natural/index.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../../../.." class="icon icon-home"> Master en Ingeniería y Ciencia de Datos</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../../..">Índice</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">MODELADO ESTADÍSTICO DE DATOS</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../modelado_estadistico_de_datos/">Introducción</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../modelado_estadistico_de_datos/tema_1/">Tema 1</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../modelado_estadistico_de_datos/tema_1/ejercicios/">Ejercicio 1</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">MINERIA DE TEXTO</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../">Introducción</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">1. Procesamiento del Lenguaje Natural</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#introduccion-al-procesamiento-del-lenguaje-natural">Introducción al Procesamiento del Lenguaje Natural</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#mineria-de-textos">Minería de Textos</a></li>
+        
+            <li><a class="toctree-l4" href="#informacion-textual">Información Textual</a></li>
+        
+            <li><a class="toctree-l4" href="#extraccion-de-informacion">Extracción de Información</a></li>
+        
+            <li><a class="toctree-l4" href="#categorizacion-de-documentos">Categorización de Documentos</a></li>
+        
+            <li><a class="toctree-l4" href="#agrupamiento-de-documentos">Agrupamiento de Documentos</a></li>
+        
+            <li><a class="toctree-l4" href="#procesamiento-del-lenguaje-natural">Procesamiento del Lenguaje Natural</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="ejercicios/">Ejercicio 1</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../..">Master en Ingeniería y Ciencia de Datos</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>MINERIA DE TEXTO &raquo;</li>
+        
+      
+    
+    <li>1. Procesamiento del Lenguaje Natural</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/elenatorro/master-data-science/edit/master/docs/asignaturas/primer_cuatrimestre/mineria_de_textos/1_procesamiento_lenguaje_natural/index.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="introduccion-al-procesamiento-del-lenguaje-natural">Introducción al Procesamiento del Lenguaje Natural<a class="headerlink" href="#introduccion-al-procesamiento-del-lenguaje-natural" title="Permanent link">&para;</a></h1>
+<h2 id="mineria-de-textos">Minería de Textos<a class="headerlink" href="#mineria-de-textos" title="Permanent link">&para;</a></h2>
+<p>Proceso de analizar colecciones de textos para descubrir información y patrones que no aparecen de forma explícita en los textos.</p>
+<h3 id="que-hace">Qué hace<a class="headerlink" href="#que-hace" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Extracción y recuperación de información</li>
+<li>Categorización y agrupamiento de documentos</li>
+</ul>
+<h3 id="como-lo-hace">Cómo lo hace<a class="headerlink" href="#como-lo-hace" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Se utilizan técnicas de <strong>procesamiento del lenguaje natural</strong> y de <strong>aprendizaje automático</strong>.</li>
+<li>Se aplica a <strong>colecciones de documentos</strong> con <strong>información textual no estructurada</strong> y escrita en <strong>lenguaje natural</strong></li>
+</ul>
+<h2 id="informacion-textual">Información Textual<a class="headerlink" href="#informacion-textual" title="Permanent link">&para;</a></h2>
+<p>Documentos que pueden agruparse en colecciones o <strong>corpus</strong>. Pueden contener <strong>anotaciones</strong> y <strong>metadatos</strong>.</p>
+<h2 id="extraccion-de-informacion">Extracción de Información<a class="headerlink" href="#extraccion-de-informacion" title="Permanent link">&para;</a></h2>
+<p>Extraer automáticamente información estructurada a partir de textos.</p>
+<p>Abarca procesos como:</p>
+<ul>
+<li>NER: Named Entity Recognition, o <strong>reconocimiento</strong> de nombre de entidades. </li>
+<li><strong>Extracción</strong> de terminología y de relaciones.</li>
+<li>Information Retrieval: <strong>recuperación</strong> de información.</li>
+<li>Buscar documentos</li>
+<li>Buscar información dentro de los documentos</li>
+<li>Buscar información en los metadatos que describan los documentos</li>
+<li>Buscar en distintas fuentes de datos</li>
+</ul>
+<h2 id="categorizacion-de-documentos">Categorización de Documentos<a class="headerlink" href="#categorizacion-de-documentos" title="Permanent link">&para;</a></h2>
+<p><strong>Asignar</strong> a un documento una o más categorías definidas previamente en función de su contenido.</p>
+<h2 id="agrupamiento-de-documentos">Agrupamiento de Documentos<a class="headerlink" href="#agrupamiento-de-documentos" title="Permanent link">&para;</a></h2>
+<p><em>Document Clustering</em></p>
+<p>Forma de organización de documentos en grupos en la que ni la naturaleza de los grupos, ni en ocasiones su número están definidos de antemano.</p>
+<h2 id="procesamiento-del-lenguaje-natural">Procesamiento del Lenguaje Natural<a class="headerlink" href="#procesamiento-del-lenguaje-natural" title="Permanent link">&para;</a></h2>
+<p><em>(PLN ó NLP, Natural Languaje Processing)</em></p>
+<p>Rama de la informática cuyo objetivo es el desarrollo de sistemas que permitan a los ordenadores comunicarse con personas utilizando el lenguaje humano.</p>
+<p>Se utiliza para adquirir conocimientos a partir de cantidades masivas de datos textuales</p>
+<h3 id="retos-nlp">Retos NLP<a class="headerlink" href="#retos-nlp" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Alta ambigüedad a todos los niveles: Léxico, Sintáctico, Semántico, de discursos</li>
+<li>Conocimiento del mundo (contexto, situación, jerga...)</li>
+<li>Interpretar correctamente:<ul>
+<li><strong>Negación:</strong> al extraer la información es importante saber si un dato, concepto, relación etc. está siendo negado.</li>
+<li><strong>Especulación:</strong> Muchas veces se dice que “puede” darse un hecho.</li>
+<li><strong>Correferencia:</strong> es necesario identificar expresiones que hacen referencia a la misma entidad <em>(Aunque todos vieron al <strong>Presidente</strong>, ninguno reconoció al <strong>ganador de las últimas elecciones</strong></em>)</li>
+</ul>
+</li>
+</ul>
+<h3 id="evaluacion-de-tareas">Evaluación de Tareas<a class="headerlink" href="#evaluacion-de-tareas" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Es necesario <strong>obtener</strong> datos de evaluación de los modelos y sistemas para el avance del área.</li>
+<li>Es necesario <strong>comparar</strong> modelos y sistemas de formas justa:<ul>
+<li>Sobre los mismos datos: corpus o colecciones comunes</li>
+<li>Usando las mismas medidas</li>
+</ul>
+</li>
+</ul>
+<h3 id="corpus">Corpus<a class="headerlink" href="#corpus" title="Permanent link">&para;</a></h3>
+<p>Un corpus es una compilación de textos en formato electrónico.</p>
+<p>Son un recurso fundamental en el desarrollo de aplicaciones basadas en PLN:
+* Permiten <strong>evaluar</strong> los sistemas
+* Proporcionan un <strong>marco común</strong> para comparar técnicas alternativas
+* Permiten <strong>entrenar</strong> los sistemas de aprendizaje automático supervisados: ajustan sus parámetros a partir de una parte del corpus usada para entrenamiento.
+* Proporcionan una muestra amplia y natural del lenguaje.
+* Son una fuente de datos estadísticos sobre las palabras, sus relaciones y sus construcciones.</p>
+<h4 id="aplicaciones">Aplicaciones<a class="headerlink" href="#aplicaciones" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Asignación automática de categorías léxicas</li>
+<li>Desambiguación sintáctica</li>
+<li>Extracción de gramáticas</li>
+<li>Traducción automática</li>
+<li>Extracción de entidades (nombres, medicamentos, etc.)</li>
+<li>Extracción de relaciones</li>
+</ul>
+<h4 id="tipos-generales">Tipos generales<a class="headerlink" href="#tipos-generales" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Sin anotar:</strong> Texto puro</li>
+<li><strong>Anotados:</strong> marcados con distintos tipos de información
+lingüística (se les denomina Gold standard y se usan de referencia)</li>
+<li><strong>Monolingüe:</strong> textos pertenecientes a una única lengua</li>
+<li><strong>Multilingüe:</strong> textos en diversas lenguas. Proporcionan anotaciones similares en distintas lenguas</li>
+<li><strong>Paralelo:</strong> contiene los mismos textos en más de una lengua</li>
+<li><strong>Comparable:</strong> Contiene un número equilibrado de textos en distintas lenguas. También están equilibrados respecto al tema y tipo de textos</li>
+</ul>
+<h4 id="ejemplos">Ejemplos<a class="headerlink" href="#ejemplos" title="Permanent link">&para;</a></h4>
+<hr />
+<ul>
+<li>Corpus de Brown<ul>
+<li><a href="http://www.nltk.org/nltk_data">http://www.nltk.org/nltk_data</a></li>
+<li>Palabras anotadas (+1M)</li>
+<li>Categorías léxicas</li>
+<li>87 Etiquetas</li>
+</ul>
+</li>
+</ul>
+<hr />
+<ul>
+<li>Corpus de Susanne<ul>
+<li><a href="http://www.grsampson.net/Resources.html">http://www.nltk.org/nltk_data</a></li>
+<li>Palabras (+130K)</li>
+<li>Subconjunto de 64 archivos del corpus de Brown</li>
+<li>Anotado con categorías léxicas y análisis sintáctico<ul>
+<li>Por cada palabra de texto hay una línea de anotaciones (análisis sintáctico)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr />
+<ul>
+<li>Corpus ADE<ul>
+<li><a href="https://github.com/trunghlt/AdverseDrugReaction">https://github.com/trunghlt/AdverseDrugReaction</a></li>
+<li>Relaciones entre efectos adversos y medicamentos</li>
+</ul>
+</li>
+</ul>
+<hr />
+<ul>
+<li>Corpus Bioscope:<ul>
+<li><a href="http://rgai.inf.u-szeged.hu/index.php?lang=en&amp;page=bioscope">http://rgai.inf.u-szeged.hu/index.php?lang=en&amp;page=bioscope</a></li>
+<li>Textos biomédicos anotados con negación y especulación</li>
+</ul>
+</li>
+</ul>
+<hr />
+<ul>
+<li>Corpus DDI:<ul>
+<li><a href="https://omictools.com/ddi-corpus-tool">https://omictools.com/ddi-corpus-tool</a></li>
+<li>Anotación de medicamentos e interacciones entre ellos: <em>The DDI corpus: an annotated corpus with pharmacological substances and drug-drug interactions.</em></li>
+</ul>
+</li>
+</ul>
+<hr />
+<ul>
+<li>Corpus Europarl:<ul>
+<li><a href="http://www.statmt.org/europarl/">http://www.statmt.org/europarl/</a></li>
+<li>Actas del parlamento europeo en 21 lenguas de Europa: Español, Inglés, Francés, Griego, ..., con alineamiento o correspondencia a nivel de oración)</li>
+</ul>
+</li>
+</ul>
+<hr />
+<ul>
+<li>Corpus DIANN<ul>
+<li><a href="https://github.com/gildofabregat/
+DIANN-IBEREVAL- 2018/tree/master/DIANN_CORPUS">https://github.com/gildofabregat/DIANN-IBEREVAL-2018/tree/master/DIANN_CORPUS</a></li>
+<li>Discapacidades anotadas</li>
+</ul>
+</li>
+</ul>
+<h3 id="evaluacion-de-tareas_1">Evaluación de Tareas<a class="headerlink" href="#evaluacion-de-tareas_1" title="Permanent link">&para;</a></h3>
+<h4 id="campanas-de-evaluacion">Campañas de evaluación<a class="headerlink" href="#campanas-de-evaluacion" title="Permanent link">&para;</a></h4>
+<p>Proponen retos a los participantes, proporcionando datos y un marco de evaluación común y bien definido.
+    * TREC: Text Retrieval conference
+    * CLEF: Conference and Labs of the evaluation Forum
+    * Semeval: Semantic Evaluation Ibereval: Lenguas Ibéricas</p>
+<h4 id="medidas-de-evaluacion">Medidas de Evaluación<a class="headerlink" href="#medidas-de-evaluacion" title="Permanent link">&para;</a></h4>
+<p><strong>Precisión</strong>: fracción de predicciones del modelo propuesto acertadas (coinciden con los datos de referencia)</p>
+<pre><code>precission = true positive / (true positive + false positive)
+</code></pre>
+
+<p><strong>Recall</strong>: Cobertura o exhaustividad. Fracción de los datos de referencia que han sido propuestas por el modelo evaluado:</p>
+<pre><code>recall =
+    true positive /
+    (true positive + false negative)
+</code></pre>
+
+<p><strong>Medida-F:</strong> media armónica de precisión y cobertura:</p>
+<pre><code>meassure_f =
+    2 * precission * recall /
+    (precission + recall)
+</code></pre>
+
+<p><strong>Medida-Fβ:</strong> forma general de la media armónica que permite dar más importancia a la precisión o a la cobertura en función del parámetro β:</p>
+<pre><code>meassure_f_beta =
+    ((1 + β^2) * precission * recall) /
+    (β^2 * (precission + recall))
+</code></pre>
+
+<hr />
+<h5 id="ejemplo">Ejemplo:<a class="headerlink" href="#ejemplo" title="Permanent link">&para;</a></h5>
+<p>Tenemos:</p>
+<ul>
+<li>Número de datos totales: 16</li>
+<li>Número de datos del modelo: 13</li>
+<li>Número de datos que usa el modelo: 8  (true positive)</li>
+<li>Número de datos aportados: 11</li>
+<li>Falsos negativos: 11 - 8 = 3</li>
+<li>Falsos positivos: 13 - 8 = 5 </li>
+</ul>
+<p>Medidas:</p>
+<ul>
+<li>Precisión</li>
+</ul>
+<pre><code> 8 / 8 + 5 = 8 / 13
+</code></pre>
+
+<ul>
+<li>Medida_F</li>
+</ul>
+<pre><code>8 / 8 + 3 = 8 / 11
+</code></pre>
+
+<h3 id="herramientas">Herramientas<a class="headerlink" href="#herramientas" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Nltk: Natural Language Toolkit</p>
+<ul>
+<li>Librería para desarrollar programas en python para procesar datos de lenguaje natural</li>
+<li><a href="https://www.nltk.org/">https://www.nltk.org/</a></li>
+<li>Ejemplos de como iniciarlo, y algunas de las utilidades más básicas: <a href="https://www.nltk.org/book/ch01.html">https://www.nltk.org/book/ch01.html</a></li>
+</ul>
+</li>
+<li>
+<p>Spacy:</p>
+</li>
+<li>Librería para desarrollar programas en python para procesar datos de lenguaje natural</li>
+<li><a href="https://spacy.io/">https://spacy.io/</a></li>
+<li>Tiene modelos preentrenados en Inglés y Español</li>
+</ul>
+<h3 id="procesos">Procesos<a class="headerlink" href="#procesos" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Normalización:<ul>
+<li>Unificar palabras que se refieren de distinta forma a la misma entidad</li>
+</ul>
+</li>
+</ul>
+<hr />
+<ul>
+<li>Expresiones regulares:<ul>
+<li>Especificar patrones de texto</li>
+</ul>
+</li>
+</ul>
+<hr />
+<ul>
+<li>Distancia de edición:<ul>
+<li>Número/coste de las operaciones de edición: Inserción, Borrado,  Sustitución</li>
+<li>Necesarias para transformar una cadena en la otra.</li>
+<li>Explorar todas las combinaciones de operación para seleccionar la de menor coste</li>
+<li>Importante para medir la similitud entre dos cadenas</li>
+<li>Se usan para corrección de errores ortográficos, extracción de información...</li>
+</ul>
+</li>
+</ul>
+<hr />
+<ul>
+<li>Identificar palabras vacías:<ul>
+<li>Palabras sin significado propio: artículos, preposiciones, etc.</li>
+<li>Suelen ser las más frecuentes en un idioma</li>
+<li>En muchos procesos de PLN se eliminan para centrar el análisis en las palabras con contenido semántico</li>
+</ul>
+</li>
+</ul>
+<hr />
+<ul>
+<li>Segmentación de cadenas:<ul>
+<li>Romper una cadena de caracteres (grafemas) en una secuencia de palabras.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<ul>
+<li>POS tagging<ul>
+<li>Part-Of-Speech Tagging: Etiquetar las palabras de una oración con su categoría léxica según su definición y el contexto de la oración</li>
+<li>Cada palabra de una oración se puede clasificar en clases: verbos, adjetivos, nombres, etc</li>
+<li>Útil para: Identificación de entidades, desambiguación del sentido de las palabras, análisis sintáctico...</li>
+<li>Técnicas: Basados en reglas, modelo de probabilidades de las secuencias de palabras y sus etiquetas en función de los datos de un corpus anotado, aprendizaje automático.</li>
+<li>Evaluación: <ul>
+<li>Accuracy: número de etiquetas acertadas sobre el número total de palabras etiquetadas</li>
+<li>Precisión, cobertura y medida-F para cada tipo de etiqueta del conjunto de etiquetas considerado</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr />
+<ul>
+<li>Stemming<ul>
+<li>Análisis morfológico</li>
+<li>El proceso de stemming se refiere al proceso de eliminar la parte final de las palabras, que en muchas ocasiones es una aproximación a la lematización.</li>
+<li>Permite reconocer todas las palabras correspondiente a una misma raíz</li>
+</ul>
+</li>
+</ul>
+<hr />
+<ul>
+<li>Chunking<ul>
+<li>Parte en trozos (chunks) y etiqueta secuencias multipalabra</li>
+<li>NP-chunks suelen ser menores que las frases nominales: NP-chunks no contienen otros NP-chunks</li>
+<li>Los sintagmas preposicionales o las cláusulas subordinadas que modifican un nominal no se suelen incluir.</li>
+<li>Se puede construir una gramatica de detección de chunks usando expresiones regulares sobre las etiquetas POS. (pag. 265 libro nltk)</li>
+<li>También puede construirse con clasificadores entrenados.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<ul>
+<li>Análisis Sintáctico: <ul>
+<li>Identificar la estructura sintáctica de una oración.</li>
+<li>La estructura asignada depende del tipo de gramática considerada.</li>
+<li>Dificultad: ambigüedad estructural → una oración puede tener múltiples árboles de análisis respecto a una misma gramática</li>
+</ul>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p>Desambiguación del sentido de las palabras</p>
+<ul>
+<li>Muchas palabras tiene más de un significado o sentido dependiendo del contexto en que se usan</li>
+<li>
+<p>Muchas aplicaciones requieren seleccionar el sentido correcto: Word Sense Disambiguation (WSD).</p>
+</li>
+<li>
+<p>Relaciones entre sentidos:</p>
+<ul>
+<li>Sinónimos: distintas palabras con el mismo (o muy similar) significado</li>
+<li>Hipónimo: un sentido es hipónimo de otro si el primero es más específico (una subclase).</li>
+<li>Hiperónimo: un sentido es hiperónimo de otro si el primero es más general (superclase)</li>
+</ul>
+</li>
+<li>
+<p>Wordnet: una base de datos de relaciones léxicas</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="analisis-morfolologico">Análisis morfolológico<a class="headerlink" href="#analisis-morfolologico" title="Permanent link">&para;</a></h3>
+<ul>
+<li>La morfología es el campo de la lingüística que estudia la estructura de las palabras</li>
+<li>Un morfema es la unidad lingüística más pequeña que tiene significado semántico</li>
+<li>El análisis morfológico es la tarea de segmentar una palabra en sus morfemas</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ejercicios/" class="btn btn-neutral float-right" title="Ejercicio 1">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../" class="btn btn-neutral" title="Introducción"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/elenatorro/master-data-science/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="ejercicios/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../../../..';</script>
+    <script src="../../../../js/theme.js" defer></script>
+      <script src="../../../../search/main.js" defer></script>
+
+</body>
+</html>
