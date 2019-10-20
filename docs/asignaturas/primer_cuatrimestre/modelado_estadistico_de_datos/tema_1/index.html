@@ -1,168 +1,762 @@
-<!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  
-  <link rel="shortcut icon" href="../../../../img/favicon.ico">
-  <title>Tema 1 - Master en Ingeniería y Ciencia de Datos</title>
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
-  <link rel="stylesheet" href="../../../../css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../../../css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
-  <link href="../../../../assets/style.css" rel="stylesheet">
-  
-  <script>
-    // Current page data
-    var mkdocs_page_name = "Tema 1";
-    var mkdocs_page_input_path = "asignaturas/primer_cuatrimestre/modelado_estadistico_de_datos/tema_1/index.md";
-    var mkdocs_page_url = null;
-  </script>
-  
-  <script src="../../../../js/jquery-2.1.1.min.js" defer></script>
-  <script src="../../../../js/modernizr-2.8.3.min.js" defer></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script> 
-  
-</head>
 
-<body class="wy-body-for-nav" role="document">
 
-  <div class="wy-grid-for-nav">
 
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
     
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
-      <div class="wy-side-nav-search">
-        <a href="../../../.." class="icon icon-home"> Master en Ingeniería y Ciencia de Datos</a>
-        <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
-  </form>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copiar al portapapeles">
+      
+        <meta name="lang:clipboard.copied" content="Copiado al portapapeles">
+      
+        <meta name="lang:search.language" content="es">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No se encontraron documentos">
+      
+        <meta name="lang:search.result.one" content="1 documento encontrado">
+      
+        <meta name="lang:search.result.other" content="# documentos encontrados">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+    
+    
+      
+        <title>Tema 1 - Master en Ingeniería y Ciencia de Datos</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/application.30686662.css">
+      
+        <link rel="stylesheet" href="../../../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../../../../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../../../assets/style.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#tema-1-principales-tecnicas-estadisticas" tabindex="1" class="md-skip">
+        Saltar a contenido
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../../.." title="Master en Ingeniería y Ciencia de Datos" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Master en Ingeniería y Ciencia de Datos
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Tema 1
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Teclee para comenzar búsqueda
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+        
       </div>
-
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-	<ul class="current">
-	  
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../../..">Índice</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">MODELADO ESTADÍSTICO DE DATOS</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../">Introducción</a>
-                </li>
-                <li class=" current">
-                    
-    <a class="current" href="./">Tema 1</a>
-    <ul class="subnav">
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
             
-    <li class="toctree-l3"><a href="#tema-1-principales-tecnicas-estadisticas">Tema 1 - Principales Técnicas Estadísticas</a></li>
-    
-        <ul>
-        
-            <li><a class="toctree-l4" href="#introduccion">Introducción</a></li>
-        
-            <li><a class="toctree-l4" href="#respuesta-dicotomica">Respuesta Dicotómica</a></li>
-        
-            <li><a class="toctree-l4" href="#respuesta-continua">Respuesta Continua</a></li>
-        
-            <li><a class="toctree-l4" href="#respuesta-nominal">Respuesta Nominal</a></li>
-        
-            <li><a class="toctree-l4" href="#respuesta-ordinal">Respuesta Ordinal</a></li>
-        
-            <li><a class="toctree-l4" href="#bibliografia">Bibliografía</a></li>
-        
-        </ul>
-    
 
-    </ul>
-                </li>
-                <li class="">
-                    
-    <a class="" href="ejercicios/">Ejercicio 1</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">MINERIA DE TEXTO</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../mineria_de_textos/">Introducción</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../mineria_de_textos/1_procesamiento_lenguaje_natural/">1. Procesamiento del Lenguaje Natural</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../mineria_de_textos/1_procesamiento_lenguaje_natural/ejercicios/">Ejercicio 1</a>
-                </li>
-    </ul>
-	    </li>
-          
-        </ul>
-      </div>
-      &nbsp;
-    </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+  
+
+<a href="https://github.com/elenatorro/master-data-science/" title="Ir al repositorio" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../../../.." class="md-tabs__link">
+        Principal
+      </a>
+    
+  </li>
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../../../..">Master en Ingeniería y Ciencia de Datos</a>
-      </nav>
-
-      
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="../../../..">Docs</a> &raquo;</li>
-    
-      
         
-          <li>MODELADO ESTADÍSTICO DE DATOS &raquo;</li>
-        
-      
+  
+  
     
-    <li>Tema 1</li>
-    <li class="wy-breadcrumbs-aside">
+    
+  
+  
+    <li class="md-tabs__item">
       
-        <a href="https://github.com/elenatorro/master-data-science/edit/master/docs/asignaturas/primer_cuatrimestre/modelado_estadistico_de_datos/tema_1/index.md"
-          class="icon icon-github"> Edit on GitHub</a>
+        <a href="./" class="md-tabs__link md-tabs__link--active">
+          Asignaturas
+        </a>
       
     </li>
+  
+
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../../../.." title="Master en Ingeniería y Ciencia de Datos" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Master en Ingeniería y Ciencia de Datos
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/elenatorro/master-data-science/" title="Ir al repositorio" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../.." title="Principal" class="md-nav__link">
+      Principal
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Asignaturas
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Asignaturas
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1" checked>
+    
+    <label class="md-nav__link" for="nav-2-1">
+      Modelado Estadístico de Datos
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-1">
+        Modelado Estadístico de Datos
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Tema 1
+      </label>
+    
+    <a href="./" title="Tema 1" class="md-nav__link md-nav__link--active">
+      Tema 1
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tema-1-principales-tecnicas-estadisticas" class="md-nav__link">
+    Tema 1 - Principales Técnicas Estadísticas
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduccion" class="md-nav__link">
+    Introducción
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#distribuciones-teoricas-de-probabilidad" class="md-nav__link">
+    Distribuciones Teóricas de Probabilidad
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#distribucion-de-frecuencias-vs-distribucion-de-probabilidad" class="md-nav__link">
+    Distribución de Frecuencias vs Distribución de Probabilidad
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-variables-aleatorias" class="md-nav__link">
+    Tipos de Variables Aleatorias
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#respuesta-dicotomica" class="md-nav__link">
+    Respuesta Dicotómica
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-1-los-peces-mutantes" class="md-nav__link">
+    Ejemplo 1: Los Peces Mutantes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anexo-el-teorema-central-del-limite-al-rescate" class="md-nav__link">
+    Anexo: El Teorema Central del Límite al Rescate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metodo-1-z-diferencia-entre-dos-proporciones" class="md-nav__link">
+    Método 1: z diferencia entre dos proporciones
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-practico-1" class="md-nav__link">
+    Ejemplo Práctico 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metodo-2-exacta-de-fisher" class="md-nav__link">
+    Método 2: Exacta de Fisher
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-practico-2" class="md-nav__link">
+    Ejemplo Práctico 2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#respuesta-continua" class="md-nav__link">
+    Respuesta Continua
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#t-de-student" class="md-nav__link">
+    t de Student
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#respuesta-nominal" class="md-nav__link">
+    Respuesta Nominal
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#respuesta-ordinal" class="md-nav__link">
+    Respuesta Ordinal
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bibliografia" class="md-nav__link">
+    Bibliografía
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ejercicios/" title="Ejercicio 1" class="md-nav__link">
+      Ejercicio 1
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2">
+    
+    <label class="md-nav__link" for="nav-2-2">
+      Minería de Textos
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-2">
+        Minería de Textos
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mineria_de_textos/1_procesamiento_lenguaje_natural/" title="Tema 1. Procesamiento del Lenguaje Natural" class="md-nav__link">
+      Tema 1. Procesamiento del Lenguaje Natural
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mineria_de_textos/1_procesamiento_lenguaje_natural/ejercicios/" title="Ejercicio 1" class="md-nav__link">
+      Ejercicio 1
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
   </ul>
-  <hr/>
-</div>
-          <div role="main">
-            <div class="section">
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tema-1-principales-tecnicas-estadisticas" class="md-nav__link">
+    Tema 1 - Principales Técnicas Estadísticas
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduccion" class="md-nav__link">
+    Introducción
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#distribuciones-teoricas-de-probabilidad" class="md-nav__link">
+    Distribuciones Teóricas de Probabilidad
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#distribucion-de-frecuencias-vs-distribucion-de-probabilidad" class="md-nav__link">
+    Distribución de Frecuencias vs Distribución de Probabilidad
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-variables-aleatorias" class="md-nav__link">
+    Tipos de Variables Aleatorias
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#respuesta-dicotomica" class="md-nav__link">
+    Respuesta Dicotómica
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-1-los-peces-mutantes" class="md-nav__link">
+    Ejemplo 1: Los Peces Mutantes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anexo-el-teorema-central-del-limite-al-rescate" class="md-nav__link">
+    Anexo: El Teorema Central del Límite al Rescate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metodo-1-z-diferencia-entre-dos-proporciones" class="md-nav__link">
+    Método 1: z diferencia entre dos proporciones
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-practico-1" class="md-nav__link">
+    Ejemplo Práctico 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metodo-2-exacta-de-fisher" class="md-nav__link">
+    Método 2: Exacta de Fisher
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-practico-2" class="md-nav__link">
+    Ejemplo Práctico 2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#respuesta-continua" class="md-nav__link">
+    Respuesta Continua
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#t-de-student" class="md-nav__link">
+    t de Student
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#respuesta-nominal" class="md-nav__link">
+    Respuesta Nominal
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#respuesta-ordinal" class="md-nav__link">
+    Respuesta Ordinal
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bibliografia" class="md-nav__link">
+    Bibliografía
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
               
-                <h1 id="tema-1-principales-tecnicas-estadisticas">Tema 1 - Principales Técnicas Estadísticas<a class="headerlink" href="#tema-1-principales-tecnicas-estadisticas" title="Permanent link">&para;</a></h1>
-<h2 id="introduccion">Introducción<a class="headerlink" href="#introduccion" title="Permanent link">&para;</a></h2>
-<h3 id="distribuciones-teoricas-de-probabilidad">Distribuciones Teóricas de Probabilidad<a class="headerlink" href="#distribuciones-teoricas-de-probabilidad" title="Permanent link">&para;</a></h3>
+                
+                  <a href="https://github.com/elenatorro/master-data-science/edit/master/docs/asignaturas/primer_cuatrimestre/modelado_estadistico_de_datos/tema_1/index.md" title="Editar esta página" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                  <h1>Tema 1</h1>
+                
+                <h4 id="tema-1-principales-tecnicas-estadisticas">Tema 1 - Principales Técnicas Estadísticas<a class="headerlink" href="#tema-1-principales-tecnicas-estadisticas" title="Permanent link">&para;</a></h4>
+<h5 id="introduccion">Introducción<a class="headerlink" href="#introduccion" title="Permanent link">&para;</a></h5>
+<h6 id="distribuciones-teoricas-de-probabilidad">Distribuciones Teóricas de Probabilidad<a class="headerlink" href="#distribuciones-teoricas-de-probabilidad" title="Permanent link">&para;</a></h6>
 <ul>
 <li>Distribución: reparto de elementos / individuos de un grupo / población según una característica</li>
 </ul>
 <blockquote>
 <p>Ejemplo: <strong>Distribución de caramelos con azúcar y sin azúcar en una bolsa de caramelos.</strong> Tenemos una bolsa de caramelos donde hay una mezcla de caramelos con azúcar y caramelos sin azúcar. Si existe el mismo número de caramelos con y sin azúcar, diríamos que es una distribución <strong>uniforme</strong>. La probabilidad de sacar un caramelo sin azúcar de la bolsa es 0,5.</p>
 </blockquote>
-<h4 id="distribucion-de-frecuencias-vs-distribucion-de-probabilidad">Distribución de Frecuencias vs Distribución de Probabilidad<a class="headerlink" href="#distribucion-de-frecuencias-vs-distribucion-de-probabilidad" title="Permanent link">&para;</a></h4>
+<h6 id="distribucion-de-frecuencias-vs-distribucion-de-probabilidad">Distribución de Frecuencias vs Distribución de Probabilidad<a class="headerlink" href="#distribucion-de-frecuencias-vs-distribucion-de-probabilidad" title="Permanent link">&para;</a></h6>
 <ul>
 <li>
 <p><strong>Distribución de Frecuencias:</strong> Reparto empírico <em>(empírico = basado en la observación)</em> observado en una <strong>colección de datos.</strong> Agrupación de datos en categorías mutuamente excluyentes <em>(caramelos con o sin azúcar)</em> que indican el número de observaciones en cada categoría.</p>
@@ -180,7 +774,7 @@
   * <strong>Variable Aleatoria:</strong> sacar tres caramelos de la bolsa de caramelos
   * <strong>Posibles resultados:</strong> [con, sin, sin], [sin, con, sin], [sin, sin , sin]...</p>
 </blockquote>
-<h3 id="tipos-de-variables-aleatorias">Tipos de Variables Aleatorias<a class="headerlink" href="#tipos-de-variables-aleatorias" title="Permanent link">&para;</a></h3>
+<h6 id="tipos-de-variables-aleatorias">Tipos de Variables Aleatorias<a class="headerlink" href="#tipos-de-variables-aleatorias" title="Permanent link">&para;</a></h6>
 <ul>
 <li>
 <p><strong>Variable aleatoria discreta:</strong> Es aquella que solo toma ciertos valores y que resulta principalmente del conteo realizado. Por ejemplo, que los caramelos sean con o sin azúcar.</p>
@@ -198,13 +792,13 @@
 </ul>
 </li>
 </ul>
-<h2 id="respuesta-dicotomica">Respuesta Dicotómica<a class="headerlink" href="#respuesta-dicotomica" title="Permanent link">&para;</a></h2>
+<h5 id="respuesta-dicotomica">Respuesta Dicotómica<a class="headerlink" href="#respuesta-dicotomica" title="Permanent link">&para;</a></h5>
 <p>Intenta dar una respuesta a una variable dicotómica a través de otra variable dicotómica.</p>
 <p>En la lógica tradicional, la dicotomía es el desglose o fraccionamiento de un concepto genérico en uno de sus conceptos específicos y su negación. El concepto se refiere asimismo a la ley que establece que ninguna proposición puede ser verdadera y falsa al mismo tiempo.</p>
 <blockquote>
 <p>Por ejemplo: un caramelo puede ser con o sin azúcar, pero no puede ser con y sin azúcar al mismo tiempo.</p>
 </blockquote>
-<h3 id="ejemplo-1-los-peces-mutantes">Ejemplo 1: Los Peces Mutantes<a class="headerlink" href="#ejemplo-1-los-peces-mutantes" title="Permanent link">&para;</a></h3>
+<h6 id="ejemplo-1-los-peces-mutantes">Ejemplo 1: Los Peces Mutantes<a class="headerlink" href="#ejemplo-1-los-peces-mutantes" title="Permanent link">&para;</a></h6>
 <p>Un grupo de peces tiene una misma enfermedad. Hay dos tratamientos: A y B. A un grupo de peces se les administra el tratamiento A, y al otro grupo el tratamiento B. Se observa qué peces se curan (CURADOS) y qué peces no se curan (NO CURADOS).</p>
 <table>
 <thead>
@@ -259,7 +853,7 @@
 <blockquote>
 <p>La pregunta es, ¿influye el <strong>tratamiento</strong> en la <strong>curación</strong>? Para ello, hay que comparar la proporción de los peces curados con el tratamiento A con la proporción de los peces curados con el tratamiento B.</p>
 </blockquote>
-<h4 id="anexo-el-teorema-central-del-limite-al-rescate">Anexo: El Teorema Central del Límite al Rescate<a class="headerlink" href="#anexo-el-teorema-central-del-limite-al-rescate" title="Permanent link">&para;</a></h4>
+<h6 id="anexo-el-teorema-central-del-limite-al-rescate">Anexo: El Teorema Central del Límite al Rescate<a class="headerlink" href="#anexo-el-teorema-central-del-limite-al-rescate" title="Permanent link">&para;</a></h6>
 <p>Este método se utiliza con tamaños de muestra <strong>grandes</strong>. Es decir, en el ejemplo anterior, tener pocos pececillos enfermos no es suficiente para conocer cuál es el tratamiento adecuado para que se curen los pobrecillos. Si tenemos muchos peces, el resultado será más fiable, y esto lo conocemos gracias al <strong>Teorema Central del Límite</strong>.</p>
 <ul>
 <li>
@@ -273,7 +867,7 @@
 <blockquote>
 <p>Esta es la comprobación matemática de que nos podemos fiar de un conjunto lo suficientemente grande de datos para dar una respuesta a un problema. Por ejemplo, supongamos que el problema de los peces ocurre en un lago en el que hay millones de peces que han sufrido una enfermedad debido a unos vertidos tóxicos. No necesitamos hacer el estudio con todos los millones de peces del lago para conocer qué tratamiento es necesario aplicar, sino que nos bastaría con una muestra de peces grande (que no te vale con diez pececillos para que se fiable, vaya)</p>
 </blockquote>
-<h3 id="metodo-1-z-diferencia-entre-dos-proporciones">Método 1: z diferencia entre dos proporciones<a class="headerlink" href="#metodo-1-z-diferencia-entre-dos-proporciones" title="Permanent link">&para;</a></h3>
+<h6 id="metodo-1-z-diferencia-entre-dos-proporciones">Método 1: z diferencia entre dos proporciones<a class="headerlink" href="#metodo-1-z-diferencia-entre-dos-proporciones" title="Permanent link">&para;</a></h6>
 <p>El objetivo de estas pruebas es evaluar las afirmaciones con respecto a una proporción de población. Las pruebas se basan en la premisa de que una proporción muestral será igual a la proporción verdadera de la población si se toman márgenes o tolerancias para la variabilidad muestral (<strong>teorema central del límite</strong>). Las pruebas suelen enfocarse en la diferencia entre un número esperado de ocurrencias, suponiendo que una afirmación es verdadera, y el número observado realmente.</p>
 <p>El <strong>nivel de significancia</strong> es el valor que queremos establecer al formular la pregunta para poder afirmar la hipótesis final. Es decir, un número que al final lo utilizamos para hacer una comparativa con el resultado. La significancia la obtenemos de la <code>distribución normal z</code> (de ahí que este método se llame "z diferencia"). Dicho valor lo podemos obtener automáticamente si estamos programando, o manualmente en esta tabla, dónde, por ejemplo:</p>
 <p>Una significancia de <code>0.025</code> tiene un valor z de <code>-1.96</code> (fila 1.9, columna 0.06 )</p>
@@ -321,7 +915,7 @@
 -0.0    0.50000 0.49601 0.49202 0.48803 0.48404 0.48006 0.47607 0.47209 0.46811 0.46414
 </code></pre>
 
-<h3 id="ejemplo-practico">Ejemplo Práctico:<a class="headerlink" href="#ejemplo-practico" title="Permanent link">&para;</a></h3>
+<h6 id="ejemplo-practico-1">Ejemplo Práctico 1<a class="headerlink" href="#ejemplo-practico-1" title="Permanent link">&para;</a></h6>
 <p>Queremos saber si los caramelos de fresa suelen ser los preferidos, con respecto a los caramelos de limón, entre los <strong>Jugadores de Rugby Americanos</strong> y los <strong>Jugadores de Rugby Australianos</strong>, con un valor de significancia de 0.07. Se han tomado los siguientes datos:</p>
 <ul>
 <li>Dada una muestra de <code>200</code> jugadores americanos, se obtuvo que <code>56</code> de ellos prefieren los caramelos de fresa.</li>
@@ -371,7 +965,7 @@ z1 = 1,88
 <blockquote>
 <p>Como <code>1,88</code> es mayor de <code>1,48</code>, rechazamos la primera hipótesis (ni fu ni fa) y podemos concluir que, con un <code>7%</code> de significancia, hay una diferencia de proporción entre pertenecer al equipo americano y preferir los caramelos de fresa.</p>
 </blockquote>
-<h3 id="metodo-2-exacta-de-fisher">Método 2: Exacta de Fisher<a class="headerlink" href="#metodo-2-exacta-de-fisher" title="Permanent link">&para;</a></h3>
+<h6 id="metodo-2-exacta-de-fisher">Método 2: Exacta de Fisher<a class="headerlink" href="#metodo-2-exacta-de-fisher" title="Permanent link">&para;</a></h6>
 <p>Este método se utiliza para tamaños de muestra <strong>pequeños</strong>. Se utiliza, para ello, una tabla de contingencia que relaciona las variables de las dos muestras.</p>
 <p><strong>1 - Cálculo del p-valor</strong></p>
 <p>El p-valor consiste en calcular la probabilidad exacta de observar un conjunto concreto de cuatro frecuencias: a, b, c y d. Con el ejemplo de los jugadores de rugby, sería:</p>
@@ -419,7 +1013,7 @@ z1 = 1,88
 <li><code>p &lt; alfa</code>, se rechaza la hipótesis</li>
 <li><code>p &gt;= alfa</code>, se acepta la hipótesis</li>
 </ul>
-<h3 id="ejemplo-practico_1">Ejemplo Práctico<a class="headerlink" href="#ejemplo-practico_1" title="Permanent link">&para;</a></h3>
+<h6 id="ejemplo-practico-2">Ejemplo Práctico 2<a class="headerlink" href="#ejemplo-practico-2" title="Permanent link">&para;</a></h6>
 <p>Tenemos una muestra de 35 jugadores: 17 jugadores americanos y 18 australianos. De americanos, 10 de ellos prefieren los caramelos de fresa, y los 7 restantes los de limón. Por otro lado, 5 de los australianos prefieren los caramelos de fresa y 13 los de limón.</p>
 <p>La <strong>variable explicativa</strong> es la nacionalidad del equipo, y la <strong>variable respuesta</strong> la preferencia de sabor (fresa o limón)</p>
 <p><strong>Tabla:</strong></p>
@@ -460,14 +1054,14 @@ z1 = 1,88
 <blockquote>
 <p>Como <code>0,092</code> es menor que el valor de significancia, no se rechaza la hipótesis nula ya que no hay evidencia para concluir que la variable explicativa influya en la variable respuesta de forma significativa. Es decir, no es significante la nacionalidad del equipo para que prefiera los caramelos de fresa sobre los de limón.</p>
 </blockquote>
-<h2 id="respuesta-continua">Respuesta Continua<a class="headerlink" href="#respuesta-continua" title="Permanent link">&para;</a></h2>
+<h5 id="respuesta-continua">Respuesta Continua<a class="headerlink" href="#respuesta-continua" title="Permanent link">&para;</a></h5>
 <p>La variable respuesta es una variable que puede tomar valores continuos.</p>
-<h4 id="t-de-student">t de Student<a class="headerlink" href="#t-de-student" title="Permanent link">&para;</a></h4>
+<h6 id="t-de-student">t de Student<a class="headerlink" href="#t-de-student" title="Permanent link">&para;</a></h6>
 <p>Se está intentando explicar la variable respuesta continua a través de la variable explicativa dicotómica.</p>
 <p>Imaginemos a nuestros pobres pececillos del lago. Ahora, en lugar de estar curados o no en base a un tratamiento, digamos que estos peces tienen un gen mutante. Este gen mutante puede adquirir multitud de valores, pero estos valores pueden depender del tratamiento que se le suministre al pez. Como estamos probando dos tratamientos, queremos conocer qué tratamiento produce según qué valores del gen.</p>
-<h2 id="respuesta-nominal">Respuesta Nominal<a class="headerlink" href="#respuesta-nominal" title="Permanent link">&para;</a></h2>
-<h2 id="respuesta-ordinal">Respuesta Ordinal<a class="headerlink" href="#respuesta-ordinal" title="Permanent link">&para;</a></h2>
-<h2 id="bibliografia">Bibliografía<a class="headerlink" href="#bibliografia" title="Permanent link">&para;</a></h2>
+<h5 id="respuesta-nominal">Respuesta Nominal<a class="headerlink" href="#respuesta-nominal" title="Permanent link">&para;</a></h5>
+<h5 id="respuesta-ordinal">Respuesta Ordinal<a class="headerlink" href="#respuesta-ordinal" title="Permanent link">&para;</a></h5>
+<h5 id="bibliografia">Bibliografía<a class="headerlink" href="#bibliografia" title="Permanent link">&para;</a></h5>
 <ul>
 <li><a href="https://www.youtube.com/watch?v=HMuS0VYMR6Y">El test z para comparar dos proporciones (umh2072 2013-14)</a></li>
 <li><a href="https://es.wikipedia.org/wiki/Distribuci%C3%B3n_normal">Distribución Normal - Wikipedia</a></li>
@@ -476,54 +1070,94 @@ z1 = 1,88
 <li><a href="https://revistaseden.org/files/11-CAP%2011.pdf">Apuntes</a></li>
 <li><a href="https://www.youtube.com/watch?v=A6XJjFUNeYM">Prueba exacta de Fisher</a></li>
 </ul>
+                
+                  
+                
               
-            </div>
+              
+                
+
+
+              
+            </article>
           </div>
-          <footer>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
   
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="ejercicios/" class="btn btn-neutral float-right" title="Ejercicio 1">Next <span class="icon icon-circle-arrow-right"></span></a>
-      
-      
-        <a href="../" class="btn btn-neutral" title="Introducción"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-      
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../../.." title="Principal" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Anterior
+                </span>
+                Principal
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="ejercicios/" title="Ejercicio 1" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Siguiente
+                </span>
+                Ejercicio 1
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
     </div>
   
-
-  <hr/>
-
-  <div role="contentinfo">
-    <!-- Copyright etc -->
-    
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
   </div>
-
-  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
       
-        </div>
-      </div>
-
-    </section>
-
-  </div>
-
-  <div class="rst-versions" role="note" style="cursor: pointer">
-    <span class="rst-current-version" data-toggle="rst-current-version">
+    </div>
+    
+      <script src="../../../../assets/javascripts/application.ac79c3b0.js"></script>
       
-          <a href="https://github.com/elenatorro/master-data-science/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+        
+        
+          
+          <script src="../../../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+              
+                <script src="../../../../assets/javascripts/lunr/lunr.es.js"></script>
+              
+            
+          
+          
+        
       
+      <script>app.initialize({version:"1.0.4",url:{base:"../../../.."}})</script>
       
-        <span><a href="../" style="color: #fcfcfc;">&laquo; Previous</a></span>
-      
-      
-        <span style="margin-left: 15px"><a href="ejercicios/" style="color: #fcfcfc">Next &raquo;</a></span>
-      
-    </span>
-</div>
-    <script>var base_url = '../../../..';</script>
-    <script src="../../../../js/theme.js" defer></script>
-      <script src="../../../../search/main.js" defer></script>
-
-</body>
+    
+  </body>
 </html>

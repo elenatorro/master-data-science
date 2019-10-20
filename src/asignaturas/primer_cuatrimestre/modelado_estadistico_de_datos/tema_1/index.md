@@ -126,7 +126,7 @@ z	    .00	    .01	    .02	    .03	    .04	    .05	    .06	    .07	    .08	    .0
 -0.0	0.50000	0.49601	0.49202	0.48803	0.48404	0.48006	0.47607	0.47209	0.46811	0.46414
 ```
 
-### Ejemplo Práctico:
+### Ejemplo Práctico 1
 
 Queremos saber si los caramelos de fresa suelen ser los preferidos, con respecto a los caramelos de limón, entre los **Jugadores de Rugby Americanos** y los **Jugadores de Rugby Australianos**, con un valor de significancia de 0.07. Se han tomado los siguientes datos:
 
@@ -224,7 +224,7 @@ p_valor = (a+b)!(a+c)!(b+d)!(c+d)! / n!a!b!c!d!
 * `p < alfa`, se rechaza la hipótesis
 * `p >= alfa`, se acepta la hipótesis
 
-### Ejemplo Práctico
+### Ejemplo Práctico 2
 
 Tenemos una muestra de 35 jugadores: 17 jugadores americanos y 18 australianos. De americanos, 10 de ellos prefieren los caramelos de fresa, y los 7 restantes los de limón. Por otro lado, 5 de los australianos prefieren los caramelos de fresa y 13 los de limón.
 

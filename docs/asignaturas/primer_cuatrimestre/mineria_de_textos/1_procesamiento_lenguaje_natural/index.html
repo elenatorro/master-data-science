@@ -1,174 +1,826 @@
-<!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  
-  <link rel="shortcut icon" href="../../../../img/favicon.ico">
-  <title>1. Procesamiento del Lenguaje Natural - Master en Ingeniería y Ciencia de Datos</title>
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
-  <link rel="stylesheet" href="../../../../css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../../../css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
-  <link href="../../../../assets/style.css" rel="stylesheet">
-  
-  <script>
-    // Current page data
-    var mkdocs_page_name = "1. Procesamiento del Lenguaje Natural";
-    var mkdocs_page_input_path = "asignaturas/primer_cuatrimestre/mineria_de_textos/1_procesamiento_lenguaje_natural/index.md";
-    var mkdocs_page_url = null;
-  </script>
-  
-  <script src="../../../../js/jquery-2.1.1.min.js" defer></script>
-  <script src="../../../../js/modernizr-2.8.3.min.js" defer></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script> 
-  
-</head>
 
-<body class="wy-body-for-nav" role="document">
 
-  <div class="wy-grid-for-nav">
 
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
     
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
-      <div class="wy-side-nav-search">
-        <a href="../../../.." class="icon icon-home"> Master en Ingeniería y Ciencia de Datos</a>
-        <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
-  </form>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copiar al portapapeles">
+      
+        <meta name="lang:clipboard.copied" content="Copiado al portapapeles">
+      
+        <meta name="lang:search.language" content="es">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No se encontraron documentos">
+      
+        <meta name="lang:search.result.one" content="1 documento encontrado">
+      
+        <meta name="lang:search.result.other" content="# documentos encontrados">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+    
+    
+      
+        <title>Tema 1. Procesamiento del Lenguaje Natural - Master en Ingeniería y Ciencia de Datos</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/application.30686662.css">
+      
+        <link rel="stylesheet" href="../../../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../../../../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../../../assets/style.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#introduccion-al-procesamiento-del-lenguaje-natural" tabindex="1" class="md-skip">
+        Saltar a contenido
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../../.." title="Master en Ingeniería y Ciencia de Datos" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Master en Ingeniería y Ciencia de Datos
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Tema 1. Procesamiento del Lenguaje Natural
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Teclee para comenzar búsqueda
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+        
       </div>
-
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-	<ul class="current">
-	  
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../../..">Índice</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">MODELADO ESTADÍSTICO DE DATOS</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../modelado_estadistico_de_datos/">Introducción</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../modelado_estadistico_de_datos/tema_1/">Tema 1</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../modelado_estadistico_de_datos/tema_1/ejercicios/">Ejercicio 1</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">MINERIA DE TEXTO</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../">Introducción</a>
-                </li>
-                <li class=" current">
-                    
-    <a class="current" href="./">1. Procesamiento del Lenguaje Natural</a>
-    <ul class="subnav">
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
             
-    <li class="toctree-l3"><a href="#introduccion-al-procesamiento-del-lenguaje-natural">Introducción al Procesamiento del Lenguaje Natural</a></li>
-    
-        <ul>
-        
-            <li><a class="toctree-l4" href="#mineria-de-textos">Minería de Textos</a></li>
-        
-            <li><a class="toctree-l4" href="#informacion-textual">Información Textual</a></li>
-        
-            <li><a class="toctree-l4" href="#extraccion-de-informacion">Extracción de Información</a></li>
-        
-            <li><a class="toctree-l4" href="#categorizacion-de-documentos">Categorización de Documentos</a></li>
-        
-            <li><a class="toctree-l4" href="#agrupamiento-de-documentos">Agrupamiento de Documentos</a></li>
-        
-            <li><a class="toctree-l4" href="#procesamiento-del-lenguaje-natural">Procesamiento del Lenguaje Natural</a></li>
-        
-        </ul>
-    
 
-    </ul>
-                </li>
-                <li class="">
-                    
-    <a class="" href="ejercicios/">Ejercicio 1</a>
-                </li>
-    </ul>
-	    </li>
-          
-        </ul>
-      </div>
-      &nbsp;
-    </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+  
 
+<a href="https://github.com/elenatorro/master-data-science/" title="Ir al repositorio" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+          </div>
+        </div>
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../../../..">Master en Ingeniería y Ciencia de Datos</a>
-      </nav>
-
-      
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="../../../..">Docs</a> &raquo;</li>
+    </div>
+  </nav>
+</header>
     
+    <div class="md-container">
       
         
-          <li>MINERIA DE TEXTO &raquo;</li>
+      
+      
         
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
       
+        
+  <li class="md-tabs__item">
     
-    <li>1. Procesamiento del Lenguaje Natural</li>
-    <li class="wy-breadcrumbs-aside">
+      <a href="../../../.." class="md-tabs__link">
+        Principal
+      </a>
+    
+  </li>
+
       
-        <a href="https://github.com/elenatorro/master-data-science/edit/master/docs/asignaturas/primer_cuatrimestre/mineria_de_textos/1_procesamiento_lenguaje_natural/index.md"
-          class="icon icon-github"> Edit on GitHub</a>
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../modelado_estadistico_de_datos/tema_1/" class="md-tabs__link">
+          Asignaturas
+        </a>
       
     </li>
+  
+
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../../../.." title="Master en Ingeniería y Ciencia de Datos" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Master en Ingeniería y Ciencia de Datos
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/elenatorro/master-data-science/" title="Ir al repositorio" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../.." title="Principal" class="md-nav__link">
+      Principal
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Asignaturas
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Asignaturas
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1">
+    
+    <label class="md-nav__link" for="nav-2-1">
+      Modelado Estadístico de Datos
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-1">
+        Modelado Estadístico de Datos
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../modelado_estadistico_de_datos/tema_1/" title="Tema 1" class="md-nav__link">
+      Tema 1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../modelado_estadistico_de_datos/tema_1/ejercicios/" title="Ejercicio 1" class="md-nav__link">
+      Ejercicio 1
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2" checked>
+    
+    <label class="md-nav__link" for="nav-2-2">
+      Minería de Textos
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-2">
+        Minería de Textos
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Tema 1. Procesamiento del Lenguaje Natural
+      </label>
+    
+    <a href="./" title="Tema 1. Procesamiento del Lenguaje Natural" class="md-nav__link md-nav__link--active">
+      Tema 1. Procesamiento del Lenguaje Natural
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion-al-procesamiento-del-lenguaje-natural" class="md-nav__link">
+    Introducción al Procesamiento del Lenguaje Natural
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mineria-de-textos" class="md-nav__link">
+    Minería de Textos
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-hace" class="md-nav__link">
+    Qué hace
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-lo-hace" class="md-nav__link">
+    Cómo lo hace
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#informacion-textual" class="md-nav__link">
+    Información Textual
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extraccion-de-informacion" class="md-nav__link">
+    Extracción de Información
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#categorizacion-de-documentos" class="md-nav__link">
+    Categorización de Documentos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agrupamiento-de-documentos" class="md-nav__link">
+    Agrupamiento de Documentos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#procesamiento-del-lenguaje-natural" class="md-nav__link">
+    Procesamiento del Lenguaje Natural
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#retos-nlp" class="md-nav__link">
+    Retos NLP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evaluacion-de-tareas" class="md-nav__link">
+    Evaluación de Tareas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#corpus" class="md-nav__link">
+    Corpus
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aplicaciones" class="md-nav__link">
+    Aplicaciones
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipos-generales" class="md-nav__link">
+    Tipos generales
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos" class="md-nav__link">
+    Ejemplos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evaluacion-de-tareas_1" class="md-nav__link">
+    Evaluación de Tareas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#campanas-de-evaluacion" class="md-nav__link">
+    Campañas de evaluación
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#medidas-de-evaluacion" class="md-nav__link">
+    Medidas de Evaluación
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo" class="md-nav__link">
+    Ejemplo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#herramientas" class="md-nav__link">
+    Herramientas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#procesos" class="md-nav__link">
+    Procesos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analisis-morfolologico" class="md-nav__link">
+    Análisis morfolológico
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ejercicios/" title="Ejercicio 1" class="md-nav__link">
+      Ejercicio 1
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
   </ul>
-  <hr/>
-</div>
-          <div role="main">
-            <div class="section">
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion-al-procesamiento-del-lenguaje-natural" class="md-nav__link">
+    Introducción al Procesamiento del Lenguaje Natural
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mineria-de-textos" class="md-nav__link">
+    Minería de Textos
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-hace" class="md-nav__link">
+    Qué hace
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-lo-hace" class="md-nav__link">
+    Cómo lo hace
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#informacion-textual" class="md-nav__link">
+    Información Textual
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extraccion-de-informacion" class="md-nav__link">
+    Extracción de Información
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#categorizacion-de-documentos" class="md-nav__link">
+    Categorización de Documentos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agrupamiento-de-documentos" class="md-nav__link">
+    Agrupamiento de Documentos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#procesamiento-del-lenguaje-natural" class="md-nav__link">
+    Procesamiento del Lenguaje Natural
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#retos-nlp" class="md-nav__link">
+    Retos NLP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evaluacion-de-tareas" class="md-nav__link">
+    Evaluación de Tareas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#corpus" class="md-nav__link">
+    Corpus
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aplicaciones" class="md-nav__link">
+    Aplicaciones
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipos-generales" class="md-nav__link">
+    Tipos generales
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos" class="md-nav__link">
+    Ejemplos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evaluacion-de-tareas_1" class="md-nav__link">
+    Evaluación de Tareas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#campanas-de-evaluacion" class="md-nav__link">
+    Campañas de evaluación
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#medidas-de-evaluacion" class="md-nav__link">
+    Medidas de Evaluación
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo" class="md-nav__link">
+    Ejemplo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#herramientas" class="md-nav__link">
+    Herramientas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#procesos" class="md-nav__link">
+    Procesos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analisis-morfolologico" class="md-nav__link">
+    Análisis morfolológico
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
               
-                <h1 id="introduccion-al-procesamiento-del-lenguaje-natural">Introducción al Procesamiento del Lenguaje Natural<a class="headerlink" href="#introduccion-al-procesamiento-del-lenguaje-natural" title="Permanent link">&para;</a></h1>
-<h2 id="mineria-de-textos">Minería de Textos<a class="headerlink" href="#mineria-de-textos" title="Permanent link">&para;</a></h2>
+                
+                  <a href="https://github.com/elenatorro/master-data-science/edit/master/docs/asignaturas/primer_cuatrimestre/mineria_de_textos/1_procesamiento_lenguaje_natural/index.md" title="Editar esta página" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                  <h1>Tema 1. Procesamiento del Lenguaje Natural</h1>
+                
+                <h4 id="introduccion-al-procesamiento-del-lenguaje-natural">Introducción al Procesamiento del Lenguaje Natural<a class="headerlink" href="#introduccion-al-procesamiento-del-lenguaje-natural" title="Permanent link">&para;</a></h4>
+<h5 id="mineria-de-textos">Minería de Textos<a class="headerlink" href="#mineria-de-textos" title="Permanent link">&para;</a></h5>
 <p>Proceso de analizar colecciones de textos para descubrir información y patrones que no aparecen de forma explícita en los textos.</p>
-<h3 id="que-hace">Qué hace<a class="headerlink" href="#que-hace" title="Permanent link">&para;</a></h3>
+<h6 id="que-hace">Qué hace<a class="headerlink" href="#que-hace" title="Permanent link">&para;</a></h6>
 <ul>
 <li>Extracción y recuperación de información</li>
 <li>Categorización y agrupamiento de documentos</li>
 </ul>
-<h3 id="como-lo-hace">Cómo lo hace<a class="headerlink" href="#como-lo-hace" title="Permanent link">&para;</a></h3>
+<h6 id="como-lo-hace">Cómo lo hace<a class="headerlink" href="#como-lo-hace" title="Permanent link">&para;</a></h6>
 <ul>
 <li>Se utilizan técnicas de <strong>procesamiento del lenguaje natural</strong> y de <strong>aprendizaje automático</strong>.</li>
 <li>Se aplica a <strong>colecciones de documentos</strong> con <strong>información textual no estructurada</strong> y escrita en <strong>lenguaje natural</strong></li>
 </ul>
-<h2 id="informacion-textual">Información Textual<a class="headerlink" href="#informacion-textual" title="Permanent link">&para;</a></h2>
+<h5 id="informacion-textual">Información Textual<a class="headerlink" href="#informacion-textual" title="Permanent link">&para;</a></h5>
 <p>Documentos que pueden agruparse en colecciones o <strong>corpus</strong>. Pueden contener <strong>anotaciones</strong> y <strong>metadatos</strong>.</p>
-<h2 id="extraccion-de-informacion">Extracción de Información<a class="headerlink" href="#extraccion-de-informacion" title="Permanent link">&para;</a></h2>
+<h5 id="extraccion-de-informacion">Extracción de Información<a class="headerlink" href="#extraccion-de-informacion" title="Permanent link">&para;</a></h5>
 <p>Extraer automáticamente información estructurada a partir de textos.</p>
 <p>Abarca procesos como:</p>
 <ul>
@@ -180,16 +832,16 @@
 <li>Buscar información en los metadatos que describan los documentos</li>
 <li>Buscar en distintas fuentes de datos</li>
 </ul>
-<h2 id="categorizacion-de-documentos">Categorización de Documentos<a class="headerlink" href="#categorizacion-de-documentos" title="Permanent link">&para;</a></h2>
+<h5 id="categorizacion-de-documentos">Categorización de Documentos<a class="headerlink" href="#categorizacion-de-documentos" title="Permanent link">&para;</a></h5>
 <p><strong>Asignar</strong> a un documento una o más categorías definidas previamente en función de su contenido.</p>
-<h2 id="agrupamiento-de-documentos">Agrupamiento de Documentos<a class="headerlink" href="#agrupamiento-de-documentos" title="Permanent link">&para;</a></h2>
+<h5 id="agrupamiento-de-documentos">Agrupamiento de Documentos<a class="headerlink" href="#agrupamiento-de-documentos" title="Permanent link">&para;</a></h5>
 <p><em>Document Clustering</em></p>
 <p>Forma de organización de documentos en grupos en la que ni la naturaleza de los grupos, ni en ocasiones su número están definidos de antemano.</p>
-<h2 id="procesamiento-del-lenguaje-natural">Procesamiento del Lenguaje Natural<a class="headerlink" href="#procesamiento-del-lenguaje-natural" title="Permanent link">&para;</a></h2>
+<h5 id="procesamiento-del-lenguaje-natural">Procesamiento del Lenguaje Natural<a class="headerlink" href="#procesamiento-del-lenguaje-natural" title="Permanent link">&para;</a></h5>
 <p><em>(PLN ó NLP, Natural Languaje Processing)</em></p>
 <p>Rama de la informática cuyo objetivo es el desarrollo de sistemas que permitan a los ordenadores comunicarse con personas utilizando el lenguaje humano.</p>
 <p>Se utiliza para adquirir conocimientos a partir de cantidades masivas de datos textuales</p>
-<h3 id="retos-nlp">Retos NLP<a class="headerlink" href="#retos-nlp" title="Permanent link">&para;</a></h3>
+<h6 id="retos-nlp">Retos NLP<a class="headerlink" href="#retos-nlp" title="Permanent link">&para;</a></h6>
 <ul>
 <li>Alta ambigüedad a todos los niveles: Léxico, Sintáctico, Semántico, de discursos</li>
 <li>Conocimiento del mundo (contexto, situación, jerga...)</li>
@@ -200,7 +852,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="evaluacion-de-tareas">Evaluación de Tareas<a class="headerlink" href="#evaluacion-de-tareas" title="Permanent link">&para;</a></h3>
+<h6 id="evaluacion-de-tareas">Evaluación de Tareas<a class="headerlink" href="#evaluacion-de-tareas" title="Permanent link">&para;</a></h6>
 <ul>
 <li>Es necesario <strong>obtener</strong> datos de evaluación de los modelos y sistemas para el avance del área.</li>
 <li>Es necesario <strong>comparar</strong> modelos y sistemas de formas justa:<ul>
@@ -209,7 +861,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="corpus">Corpus<a class="headerlink" href="#corpus" title="Permanent link">&para;</a></h3>
+<h6 id="corpus">Corpus<a class="headerlink" href="#corpus" title="Permanent link">&para;</a></h6>
 <p>Un corpus es una compilación de textos en formato electrónico.</p>
 <p>Son un recurso fundamental en el desarrollo de aplicaciones basadas en PLN:
 * Permiten <strong>evaluar</strong> los sistemas
@@ -217,7 +869,7 @@
 * Permiten <strong>entrenar</strong> los sistemas de aprendizaje automático supervisados: ajustan sus parámetros a partir de una parte del corpus usada para entrenamiento.
 * Proporcionan una muestra amplia y natural del lenguaje.
 * Son una fuente de datos estadísticos sobre las palabras, sus relaciones y sus construcciones.</p>
-<h4 id="aplicaciones">Aplicaciones<a class="headerlink" href="#aplicaciones" title="Permanent link">&para;</a></h4>
+<h6 id="aplicaciones">Aplicaciones<a class="headerlink" href="#aplicaciones" title="Permanent link">&para;</a></h6>
 <ul>
 <li>Asignación automática de categorías léxicas</li>
 <li>Desambiguación sintáctica</li>
@@ -226,7 +878,7 @@
 <li>Extracción de entidades (nombres, medicamentos, etc.)</li>
 <li>Extracción de relaciones</li>
 </ul>
-<h4 id="tipos-generales">Tipos generales<a class="headerlink" href="#tipos-generales" title="Permanent link">&para;</a></h4>
+<h6 id="tipos-generales">Tipos generales<a class="headerlink" href="#tipos-generales" title="Permanent link">&para;</a></h6>
 <ul>
 <li><strong>Sin anotar:</strong> Texto puro</li>
 <li><strong>Anotados:</strong> marcados con distintos tipos de información
@@ -236,7 +888,7 @@ lingüística (se les denomina Gold standard y se usan de referencia)</li>
 <li><strong>Paralelo:</strong> contiene los mismos textos en más de una lengua</li>
 <li><strong>Comparable:</strong> Contiene un número equilibrado de textos en distintas lenguas. También están equilibrados respecto al tema y tipo de textos</li>
 </ul>
-<h4 id="ejemplos">Ejemplos<a class="headerlink" href="#ejemplos" title="Permanent link">&para;</a></h4>
+<h6 id="ejemplos">Ejemplos<a class="headerlink" href="#ejemplos" title="Permanent link">&para;</a></h6>
 <hr />
 <ul>
 <li>Corpus de Brown<ul>
@@ -301,13 +953,13 @@ DIANN-IBEREVAL- 2018/tree/master/DIANN_CORPUS">https://github.com/gildofabregat/
 </ul>
 </li>
 </ul>
-<h3 id="evaluacion-de-tareas_1">Evaluación de Tareas<a class="headerlink" href="#evaluacion-de-tareas_1" title="Permanent link">&para;</a></h3>
-<h4 id="campanas-de-evaluacion">Campañas de evaluación<a class="headerlink" href="#campanas-de-evaluacion" title="Permanent link">&para;</a></h4>
+<h6 id="evaluacion-de-tareas_1">Evaluación de Tareas<a class="headerlink" href="#evaluacion-de-tareas_1" title="Permanent link">&para;</a></h6>
+<h6 id="campanas-de-evaluacion">Campañas de evaluación<a class="headerlink" href="#campanas-de-evaluacion" title="Permanent link">&para;</a></h6>
 <p>Proponen retos a los participantes, proporcionando datos y un marco de evaluación común y bien definido.
     * TREC: Text Retrieval conference
     * CLEF: Conference and Labs of the evaluation Forum
     * Semeval: Semantic Evaluation Ibereval: Lenguas Ibéricas</p>
-<h4 id="medidas-de-evaluacion">Medidas de Evaluación<a class="headerlink" href="#medidas-de-evaluacion" title="Permanent link">&para;</a></h4>
+<h6 id="medidas-de-evaluacion">Medidas de Evaluación<a class="headerlink" href="#medidas-de-evaluacion" title="Permanent link">&para;</a></h6>
 <p><strong>Precisión</strong>: fracción de predicciones del modelo propuesto acertadas (coinciden con los datos de referencia)</p>
 <pre><code>precission = true positive / (true positive + false positive)
 </code></pre>
@@ -331,7 +983,7 @@ DIANN-IBEREVAL- 2018/tree/master/DIANN_CORPUS">https://github.com/gildofabregat/
 </code></pre>
 
 <hr />
-<h5 id="ejemplo">Ejemplo:<a class="headerlink" href="#ejemplo" title="Permanent link">&para;</a></h5>
+<h6 id="ejemplo">Ejemplo<a class="headerlink" href="#ejemplo" title="Permanent link">&para;</a></h6>
 <p>Tenemos:</p>
 <ul>
 <li>Número de datos totales: 16</li>
@@ -339,7 +991,7 @@ DIANN-IBEREVAL- 2018/tree/master/DIANN_CORPUS">https://github.com/gildofabregat/
 <li>Número de datos que usa el modelo: 8  (true positive)</li>
 <li>Número de datos aportados: 11</li>
 <li>Falsos negativos: 11 - 8 = 3</li>
-<li>Falsos positivos: 13 - 8 = 5 </li>
+<li>Falsos positivos: 13 - 8 = 5</li>
 </ul>
 <p>Medidas:</p>
 <ul>
@@ -354,7 +1006,7 @@ DIANN-IBEREVAL- 2018/tree/master/DIANN_CORPUS">https://github.com/gildofabregat/
 <pre><code>8 / 8 + 3 = 8 / 11
 </code></pre>
 
-<h3 id="herramientas">Herramientas<a class="headerlink" href="#herramientas" title="Permanent link">&para;</a></h3>
+<h6 id="herramientas">Herramientas<a class="headerlink" href="#herramientas" title="Permanent link">&para;</a></h6>
 <ul>
 <li>
 <p>Nltk: Natural Language Toolkit</p>
@@ -371,7 +1023,7 @@ DIANN-IBEREVAL- 2018/tree/master/DIANN_CORPUS">https://github.com/gildofabregat/
 <li><a href="https://spacy.io/">https://spacy.io/</a></li>
 <li>Tiene modelos preentrenados en Inglés y Español</li>
 </ul>
-<h3 id="procesos">Procesos<a class="headerlink" href="#procesos" title="Permanent link">&para;</a></h3>
+<h6 id="procesos">Procesos<a class="headerlink" href="#procesos" title="Permanent link">&para;</a></h6>
 <ul>
 <li>Normalización:<ul>
 <li>Unificar palabras que se refieren de distinta forma a la misma entidad</li>
@@ -479,60 +1131,100 @@ DIANN-IBEREVAL- 2018/tree/master/DIANN_CORPUS">https://github.com/gildofabregat/
 </ul>
 </li>
 </ul>
-<h3 id="analisis-morfolologico">Análisis morfolológico<a class="headerlink" href="#analisis-morfolologico" title="Permanent link">&para;</a></h3>
+<h6 id="analisis-morfolologico">Análisis morfolológico<a class="headerlink" href="#analisis-morfolologico" title="Permanent link">&para;</a></h6>
 <ul>
 <li>La morfología es el campo de la lingüística que estudia la estructura de las palabras</li>
 <li>Un morfema es la unidad lingüística más pequeña que tiene significado semántico</li>
 <li>El análisis morfológico es la tarea de segmentar una palabra en sus morfemas</li>
 </ul>
+                
+                  
+                
               
-            </div>
+              
+                
+
+
+              
+            </article>
           </div>
-          <footer>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
   
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="ejercicios/" class="btn btn-neutral float-right" title="Ejercicio 1">Next <span class="icon icon-circle-arrow-right"></span></a>
-      
-      
-        <a href="../" class="btn btn-neutral" title="Introducción"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-      
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../modelado_estadistico_de_datos/tema_1/ejercicios/" title="Ejercicio 1" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Anterior
+                </span>
+                Ejercicio 1
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="ejercicios/" title="Ejercicio 1" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Siguiente
+                </span>
+                Ejercicio 1
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
     </div>
   
-
-  <hr/>
-
-  <div role="contentinfo">
-    <!-- Copyright etc -->
-    
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
   </div>
-
-  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
       
-        </div>
-      </div>
-
-    </section>
-
-  </div>
-
-  <div class="rst-versions" role="note" style="cursor: pointer">
-    <span class="rst-current-version" data-toggle="rst-current-version">
+    </div>
+    
+      <script src="../../../../assets/javascripts/application.ac79c3b0.js"></script>
       
-          <a href="https://github.com/elenatorro/master-data-science/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+        
+        
+          
+          <script src="../../../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+              
+                <script src="../../../../assets/javascripts/lunr/lunr.es.js"></script>
+              
+            
+          
+          
+        
       
+      <script>app.initialize({version:"1.0.4",url:{base:"../../../.."}})</script>
       
-        <span><a href="../" style="color: #fcfcfc;">&laquo; Previous</a></span>
-      
-      
-        <span style="margin-left: 15px"><a href="ejercicios/" style="color: #fcfcfc">Next &raquo;</a></span>
-      
-    </span>
-</div>
-    <script>var base_url = '../../../..';</script>
-    <script src="../../../../js/theme.js" defer></script>
-      <script src="../../../../search/main.js" defer></script>
-
-</body>
+    
+  </body>
 </html>

@@ -187,7 +187,7 @@ meassure_f_beta =
 
 ---
 
-##### Ejemplo:
+### Ejemplo
 
 Tenemos:
 
@@ -196,7 +196,7 @@ Tenemos:
 * Número de datos que usa el modelo: 8  (true positive)
 * Número de datos aportados: 11
 * Falsos negativos: 11 - 8 = 3
-* Falsos positivos: 13 - 8 = 5 
+* Falsos positivos: 13 - 8 = 5
 
 Medidas:
 
