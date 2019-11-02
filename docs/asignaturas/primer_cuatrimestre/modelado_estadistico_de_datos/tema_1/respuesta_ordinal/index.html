@@ -87,6 +87,10 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
+      <a href="#respuesta-ordinal" tabindex="1" class="md-skip">
+        Saltar a contenido
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -396,9 +400,63 @@
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Respuesta Ordinal
+      </label>
+    
     <a href="./" title="Respuesta Ordinal" class="md-nav__link md-nav__link--active">
       Respuesta Ordinal
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#respuesta-ordinal" class="md-nav__link">
+    Respuesta Ordinal
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#u-de-mann-whitney" class="md-nav__link">
+    U de Mann-Whitney
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#w-de-wilcoxon" class="md-nav__link">
+    W de Wilcoxon
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#h-de-kruskal-wallis" class="md-nav__link">
+    H de Kruskal-Wallis
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -593,6 +651,62 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#respuesta-ordinal" class="md-nav__link">
+    Respuesta Ordinal
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#u-de-mann-whitney" class="md-nav__link">
+    U de Mann-Whitney
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#w-de-wilcoxon" class="md-nav__link">
+    W de Wilcoxon
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#h-de-kruskal-wallis" class="md-nav__link">
+    H de Kruskal-Wallis
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -603,7 +717,59 @@
                 
                   <h1>Respuesta Ordinal</h1>
                 
-                
+                <h4 id="respuesta-ordinal">Respuesta Ordinal<a class="headerlink" href="#respuesta-ordinal" title="Permanent link">&para;</a></h4>
+<p>Una respuesta ordinal es aquella que puede obtener valores dentro de un rango numérico ordenado. En esta sección se ven tres métodos:</p>
+<blockquote>
+<p><strong>Nota:</strong> En los siguientes tests, también vale para una variable respuesta Y <strong>nominal</strong> si dicha variable respuesta Y <strong>no es normal</strong> en cada categoría.</p>
+</blockquote>
+<ul>
+<li>
+<p>A través de una variable X explicativa dicotómica:</p>
+</li>
+<li>
+<p>U de Mann-Whitney</p>
+</li>
+<li>W de Wilcoxon</li>
+</ul>
+<p><em>Nota: ambos tests son <strong>equivalentes</strong></em></p>
+<ul>
+<li>
+<p>A través de una variable X explicativa nominal:</p>
+</li>
+<li>
+<p>H de Kruskal-Wallis</p>
+</li>
+</ul>
+<p><strong>Metáfora de los peces mutantes</strong></p>
+<p>Supongamos que clasificamos a los peces según un grado de mutación que puede variar del 1 al 5, siendo 1 poco mutante y 5 muy mutante.</p>
+<h5 id="u-de-mann-whitney">U de Mann-Whitney<a class="headerlink" href="#u-de-mann-whitney" title="Permanent link">&para;</a></h5>
+<p>En este caso, tendremos 2 tratamientos y analizaremos 2 muestras de peces.</p>
+<p><strong>Formulación de la hipótesis:</strong></p>
+<ul>
+<li><code>H0 : F1 = F2</code></li>
+<li><code>H1 : F1 != F2</code></li>
+</ul>
+<p><strong>Valores:</strong></p>
+<ul>
+<li>Número de valores por muestra: n1 y n2</li>
+<li>Número total de valores: n</li>
+<li>Mediana de cada muestra: m1 y m2</li>
+<li>Rango intercuartílico de cada muestra: r1 y r2</li>
+<li>Número de valores <strong>distintos</strong> que se produce para cada valor de la variable respuesta sin distinguir grupos: <code>k</code></li>
+<li>Número de empates desde j = 1 hasta j = k: <code>d_1 ... d_k</code></li>
+</ul>
+<pre><code>sumatorio j=1, k ==&gt; d^3 - d
+U = sqrt((1 / 12) * ((n1 * n2)/n(n - 1)) * (n^3 - n - sumatorio))
+</code></pre>
+
+<h5 id="w-de-wilcoxon">W de Wilcoxon<a class="headerlink" href="#w-de-wilcoxon" title="Permanent link">&para;</a></h5>
+<h5 id="h-de-kruskal-wallis">H de Kruskal-Wallis<a class="headerlink" href="#h-de-kruskal-wallis" title="Permanent link">&para;</a></h5>
+<p><strong>Formulación de la hipótesis:</strong></p>
+<pre><code>H0 : F1 = F2 = F3 = ... = Fn
+H1 : Alguna Fi distinta
+</code></pre>
+
+<p><img alt="Kruskal-Wallis formula" src="/assets/img/kruskal-wallis.svg" /></p>
                 
                   
                 

@@ -1,11 +1,13 @@
 # Respuesta Nominal
 
-Se está intentando explicar la variable respuesta Y nominal a través de la variable explicativa X nominal.
+Se está intentando explicar la variable respuesta `Y` nominal a través de la variable explicativa `X` nominal.
 Se da, por ejemplo, cuando se quiere estudiar si distintos tipos de efectos adversos están influidos por distintos tipos de dieta.
 
 Para ello se realiza un estudio en n individuos a los que se les asigna, por ejemplo, la dieta 1 (codificada
 con 1 en la variable dieta) a n1 individuos, la dieta 2 (codificada con 2), la dieta 3 (codificada con 3) a n3
 individuos, con n = n1 + n2 + n3 y se observa qué tipo de efecto adverso presenta (por ejemplo, 1, 2, 3  o 4).
+
+> Nota: Una respuesta dicotómica es una respuesta nominal de dos valores
 
 **Contraste de Hipótesis**
 
