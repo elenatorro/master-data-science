@@ -7,11 +7,23 @@ nav:
   - Principal: index.md
   - Asignaturas:
     - Modelado Estadístico de Datos:
-      - Tema 1: 'asignaturas/primer_cuatrimestre/modelado_estadistico_de_datos/tema_1/index.md'
+      - Tema 1:
+        - Introducción: 'asignaturas/primer_cuatrimestre/modelado_estadistico_de_datos/tema_1/index.md'
+        - Respuesta Dicotómica: 'asignaturas/primer_cuatrimestre/modelado_estadistico_de_datos/tema_1/respuesta_dicotomica/index.md'
+        - Respuesta Continua: 'asignaturas/primer_cuatrimestre/modelado_estadistico_de_datos/tema_1/respuesta_continua/index.md'
+        - Respuesta Nominal: 'asignaturas/primer_cuatrimestre/modelado_estadistico_de_datos/tema_1/respuesta_nominal/index.md'
+        - Respuesta Ordinal: 'asignaturas/primer_cuatrimestre/modelado_estadistico_de_datos/tema_1/respuesta_ordinal/index.md'
+      - Tema 2:
+        - Introducción: 'asignaturas/primer_cuatrimestre/modelado_estadistico_de_datos/tema_2/index.md'
+        - Índices Absolutos: 'asignaturas/primer_cuatrimestre/modelado_estadistico_de_datos/tema_2/indices_absolutos/index.md'
+        - Índices Relativos: 'asignaturas/primer_cuatrimestre/modelado_estadistico_de_datos/tema_2/indices_relativos/index.md'
       - Ejercicio 1: 'asignaturas/primer_cuatrimestre/modelado_estadistico_de_datos/tema_1/ejercicios/index.md'
     - Minería de Textos:
       - Tema 1. Procesamiento del Lenguaje Natural: 'asignaturas/primer_cuatrimestre/mineria_de_textos/1_procesamiento_lenguaje_natural/index.md'
       - Ejercicio 1: 'asignaturas/primer_cuatrimestre/mineria_de_textos/1_procesamiento_lenguaje_natural/ejercicios/index.md'
+    - Programación en Entorno de Datos:
+      - Tema 1: 'asignaturas/primer_cuatrimestre/programacion_en_entornos_de_datos/tema_1/index.md'
+      - Ejercicios: 'asignaturas/primer_cuatrimestre/programacion_en_entornos_de_datos/ejercicios/index.md'
 
 theme:
   language: 'es'
