@@ -53,4 +53,4 @@ H0 : F1 = F2 = F3 = ... = Fn
 H1 : Alguna Fi distinta
 ```
 
-![Kruskal-Wallis formula](/assets/img/kruskal-wallis.svg)
+![Kruskal-Wallis formula](../../../../../assets/img/kruskal-wallis.svg)
