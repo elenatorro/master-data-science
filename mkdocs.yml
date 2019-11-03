@@ -13,11 +13,20 @@ nav:
         - Respuesta Continua: 'asignaturas/primer_cuatrimestre/modelado_estadistico_de_datos/tema_1/respuesta_continua/index.md'
         - Respuesta Nominal: 'asignaturas/primer_cuatrimestre/modelado_estadistico_de_datos/tema_1/respuesta_nominal/index.md'
         - Respuesta Ordinal: 'asignaturas/primer_cuatrimestre/modelado_estadistico_de_datos/tema_1/respuesta_ordinal/index.md'
+      - Ejercicios 1: 'asignaturas/primer_cuatrimestre/modelado_estadistico_de_datos/ejercicios_tema_1/index.md'
       - Tema 2:
         - Introducción: 'asignaturas/primer_cuatrimestre/modelado_estadistico_de_datos/tema_2/index.md'
         - Índices Absolutos: 'asignaturas/primer_cuatrimestre/modelado_estadistico_de_datos/tema_2/indices_absolutos/index.md'
         - Índices Relativos: 'asignaturas/primer_cuatrimestre/modelado_estadistico_de_datos/tema_2/indices_relativos/index.md'
-      - Ejercicio 1: 'asignaturas/primer_cuatrimestre/modelado_estadistico_de_datos/tema_1/ejercicios/index.md'
+      - Ejercicios 2: 'asignaturas/primer_cuatrimestre/modelado_estadistico_de_datos/ejercicios_tema_2/index.md'
+      - Tema 3:
+        - Diagnóstico Dicotómico: 'asignaturas/primer_cuatrimestre/modelado_estadistico_de_datos/tema_3/diagnostico_dicotomico/index.md'
+        - Diagnóstico Continuo: 'asignaturas/primer_cuatrimestre/modelado_estadistico_de_datos/tema_3/diagnostico_continuo/index.md'
+      - Ejercicios 3: 'asignaturas/primer_cuatrimestre/modelado_estadistico_de_datos/ejercicios_tema_3/index.md'
+      - Tema 4:
+          - Introducción al Aprendizaje Supervisado: 'asignaturas/primer_cuatrimestre/modelado_estadistico_de_datos/tema_4/index.md'
+      - Ejercicios 4: 'asignaturas/primer_cuatrimestre/modelado_estadistico_de_datos/ejercicios_tema_4/index.md'
+
     - Minería de Textos:
       - Tema 1. Procesamiento del Lenguaje Natural: 'asignaturas/primer_cuatrimestre/mineria_de_textos/1_procesamiento_lenguaje_natural/index.md'
       - Ejercicio 1: 'asignaturas/primer_cuatrimestre/mineria_de_textos/1_procesamiento_lenguaje_natural/ejercicios/index.md'
