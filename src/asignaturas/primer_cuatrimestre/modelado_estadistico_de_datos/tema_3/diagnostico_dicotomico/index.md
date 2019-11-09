@@ -7,8 +7,8 @@
 
 |             | X = 1                  | X = 0                  |  Total  |
 |-------------|------------------------|------------------------|---------|
-| Y = 1       | a = Verdadero Positivo | b = Falso Positivo     |  a + b  |
-| Y = 0       | c = Falso Positivo     | d = Verdadero Positivo |  c + d  |
+| Y = 1       | a = Verdadero Positivo | b = Falso Negativo     |  a + b  |
+| Y = 0       | c = Falso Positivo     | d = Verdadero Negativo |  c + d  |
 | Total       | a + c                  | b + d                  |  N      |
 
 En el caso de índices de riesgo, se indicaría si el individuo está expuesto o no a un índice de riesgo.
