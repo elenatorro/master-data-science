@@ -1,8 +1,8 @@
 > [An Introduction to Statistical Learning](http://faculty.marshall.usc.edu/gareth-james/ISL/), _Gareth James • Daniela Witten • Trevor Hastie Robert Tibshirani_
 
-El aprendizaje estadístico supervisado consiste, en general, en construir un modelo estadístico para predecir o estimar unos **datos de salida** (output) basados en uno o más **datos de entrada** (input).
+El **aprendizaje estadístico supervisado** consiste, en general, en construir un modelo estadístico para predecir o estimar unos **datos de salida** (output) basados en uno o más **datos de entrada** (input).
 
-Por ejemplo, en campos como los negocios, la medicina o la astrofísica. El aprendizaje estadístico no supervisado, sí que existen datos de entrada pero no se tienen en cuenta los datos de salida. Sin embargo, se pueden establecer relaciones de esos datos.
+Por otro lado, el **aprendizaje estadístico no supervisado**, tiene el mismo objetivo pero , aunque sí que se tienen en cuenta unos datos de entrada, no se tienen en cuenta los datos de salida. A pesar de esto, se pueden **establecer relaciones** de esos datos.
 
 Imaginemos que trabajamos en un departamento de ventas y queremos conocer la relación entre publicidad y ventas, para saber ajustar presupuestos publicitarios (el dinero destinado a publicidad) e incrementar las ventas. Nuestro objetivo sería desarrollar un modelo preciso que pueda precedir las ventas dados tres tipos de medios: televisión, radio y periódico.
 
