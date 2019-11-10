@@ -28,12 +28,26 @@
 
 * **Variable aleatoria continua:** Es aquella que resulta generalmente de la medición y puede tomar cualquier valor dentro de un intervalo dado. Por ejemplo, si nuestra bolsa de caramelos contiene caramelos redondos que pueden tener tamaños distintos, desde ser una bolita "pequeña" hasta una bolita "grande", pasando por todos los tamaños intermedios.
 
-Otros datos importantes:
+Conceptos básicos:
+
+* **Varianza**:
+
+![Fórmula Varianza](../../../../assets/img/formula-varianza.jpg)
+
+* **Desviación Típica**: La desviación típica o estándar es una medida que ofrece información sobre la dispersión media de una variable. La desviación típica es siempre mayor o igual que cero.
+    * Esperanza matemática, valor esperado o media: Es la media de nuestra serie de datos.
+    * Desviación: La desviación es la separación que existe entre un valor cualquiera de la serie y la media.
+
+![Fórmula Desviación Típica](../../../../assets/img/formula-desviacion-tipica.jpg)
 
 * **Covarianza**: valor que indica el grado de variación conjunta de dos variables aleatorias respecto a sus medias.
-    * Cuando los valores altos de una de las variables suelen mayoritariamente corresponderse con los valores altos de la otra, y lo mismo se verifica para los pequeños valores de una con los de la otra, se corrobora que tienden a mostrar comportamiento similar lo que se refleja en un valor positivo de la covarianza1​
+    * Cuando los valores altos de una de las variables suelen mayoritariamente corresponderse con los valores altos de la otra, y lo mismo se verifica para los pequeños valores de una con los de la otra, se corrobora que tienden a mostrar comportamiento similar lo que se refleja en un valor positivo de la covarianza
     * Por el contrario, cuando a los mayores valores de una variable suelen corresponder en general los menores de la otra, expresando un comportamiento opuesto, la covarianza es negativa.
     * El signo de la covarianza, por lo tanto, expresa la tendencia en la relación lineal entre las variables.
+    * `cov(X, Y) = E[(X - E[X])(Y - E[Y])]` _(Nota: `E[X]` = Valor esperado de X, o la media de X.)_
+
+![Fórmula Covarianza 1](../../../../assets/img/formula-covarianza-1.svg)
+![Fórmula Covarianza 2](../../../../assets/img/formula-covarianza-2.svg)
 
 ### El Teorema Central del Límite
 

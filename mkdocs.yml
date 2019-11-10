@@ -24,7 +24,15 @@ nav:
         - Diagnóstico Continuo: 'asignaturas/primer_cuatrimestre/modelado_estadistico_de_datos/tema_3/diagnostico_continuo/index.md'
       - Ejercicios 3: 'asignaturas/primer_cuatrimestre/modelado_estadistico_de_datos/ejercicios_tema_3/index.md'
       - Tema 4:
-          - Introducción al Aprendizaje Supervisado: 'asignaturas/primer_cuatrimestre/modelado_estadistico_de_datos/tema_4/index.md'
+          - Introducción al Aprendizaje Supervisado: 'asignaturas/primer_cuatrimestre/modelado_estadistico_de_datos/tema_4/introduccion/index.md'
+          - ¿Por qué estimar f?: 'asignaturas/primer_cuatrimestre/modelado_estadistico_de_datos/tema_4/por_que_estimar/index.md'
+          - ¿Cómo estimar f?: 'asignaturas/primer_cuatrimestre/modelado_estadistico_de_datos/tema_4/como_estimar/index.md'
+          - Aprendizaje Supervisado vs Aprendizaje No Supervisado: 'asignaturas/primer_cuatrimestre/modelado_estadistico_de_datos/tema_4/supervisado_vs_no_supervisado/index.md'
+          - Problemas de Regresión vs Problemas de Clasificación: 'asignaturas/primer_cuatrimestre/modelado_estadistico_de_datos/tema_4/regresion_y_clasificacion/index.md'
+          - Evaluación de la precisión de modelos: 'asignaturas/primer_cuatrimestre/modelado_estadistico_de_datos/tema_4/evaluacion_de_precision/index.md'
+          - Medir la calidad de ajuste: 'asignaturas/primer_cuatrimestre/modelado_estadistico_de_datos/tema_4/quality_of_fit/index.md'
+          - Equilibrio entre sesgo (bias) y varianza: 'asignaturas/primer_cuatrimestre/modelado_estadistico_de_datos/tema_4/sesgo_y_varianza/index.md'
+          - Ajuste de la Clasificación: 'asignaturas/primer_cuatrimestre/modelado_estadistico_de_datos/tema_4/ajuste_de_clasificacion/index.md'
       - Ejercicios 4: 'asignaturas/primer_cuatrimestre/modelado_estadistico_de_datos/ejercicios_tema_4/index.md'
 
     - Minería de Textos:

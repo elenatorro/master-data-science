@@ -676,8 +676,104 @@
 
 
   <li class="md-nav__item">
-    <a href="../tema_4/" title="Introducción al Aprendizaje Supervisado" class="md-nav__link">
+    <a href="../tema_4/introduccion/" title="Introducción al Aprendizaje Supervisado" class="md-nav__link">
       Introducción al Aprendizaje Supervisado
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tema_4/por_que_estimar/" title="¿Por qué estimar f?" class="md-nav__link">
+      ¿Por qué estimar f?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tema_4/como_estimar/" title="¿Cómo estimar f?" class="md-nav__link">
+      ¿Cómo estimar f?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tema_4/supervisado_vs_no_supervisado/" title="Aprendizaje Supervisado vs Aprendizaje No Supervisado" class="md-nav__link">
+      Aprendizaje Supervisado vs Aprendizaje No Supervisado
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tema_4/regresion_y_clasificacion/" title="Problemas de Regresión vs Problemas de Clasificación" class="md-nav__link">
+      Problemas de Regresión vs Problemas de Clasificación
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tema_4/evaluacion_de_precision/" title="Evaluación de la precisión de modelos" class="md-nav__link">
+      Evaluación de la precisión de modelos
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tema_4/quality_of_fit/" title="Medir la calidad de ajuste" class="md-nav__link">
+      Medir la calidad de ajuste
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tema_4/sesgo_y_varianza/" title="Equilibrio entre sesgo (bias) y varianza" class="md-nav__link">
+      Equilibrio entre sesgo (bias) y varianza
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tema_4/ajuste_de_clasificacion/" title="Ajuste de la Clasificación" class="md-nav__link">
+      Ajuste de la Clasificación
     </a>
   </li>
 
@@ -955,15 +1051,30 @@
 <p><strong>Variable aleatoria continua:</strong> Es aquella que resulta generalmente de la medición y puede tomar cualquier valor dentro de un intervalo dado. Por ejemplo, si nuestra bolsa de caramelos contiene caramelos redondos que pueden tener tamaños distintos, desde ser una bolita "pequeña" hasta una bolita "grande", pasando por todos los tamaños intermedios.</p>
 </li>
 </ul>
-<p>Otros datos importantes:</p>
+<p>Conceptos básicos:</p>
 <ul>
-<li><strong>Covarianza</strong>: valor que indica el grado de variación conjunta de dos variables aleatorias respecto a sus medias.<ul>
-<li>Cuando los valores altos de una de las variables suelen mayoritariamente corresponderse con los valores altos de la otra, y lo mismo se verifica para los pequeños valores de una con los de la otra, se corrobora que tienden a mostrar comportamiento similar lo que se refleja en un valor positivo de la covarianza1​</li>
-<li>Por el contrario, cuando a los mayores valores de una variable suelen corresponder en general los menores de la otra, expresando un comportamiento opuesto, la covarianza es negativa.</li>
-<li>El signo de la covarianza, por lo tanto, expresa la tendencia en la relación lineal entre las variables.</li>
+<li><strong>Varianza</strong>:</li>
+</ul>
+<p><img alt="Fórmula Varianza" src="../../../../assets/img/formula-varianza.jpg" /></p>
+<ul>
+<li><strong>Desviación Típica</strong>: La desviación típica o estándar es una medida que ofrece información sobre la dispersión media de una variable. La desviación típica es siempre mayor o igual que cero.<ul>
+<li>Esperanza matemática, valor esperado o media: Es la media de nuestra serie de datos.</li>
+<li>Desviación: La desviación es la separación que existe entre un valor cualquiera de la serie y la media.</li>
 </ul>
 </li>
 </ul>
+<p><img alt="Fórmula Desviación Típica" src="../../../../assets/img/formula-desviacion-tipica.jpg" /></p>
+<ul>
+<li><strong>Covarianza</strong>: valor que indica el grado de variación conjunta de dos variables aleatorias respecto a sus medias.<ul>
+<li>Cuando los valores altos de una de las variables suelen mayoritariamente corresponderse con los valores altos de la otra, y lo mismo se verifica para los pequeños valores de una con los de la otra, se corrobora que tienden a mostrar comportamiento similar lo que se refleja en un valor positivo de la covarianza</li>
+<li>Por el contrario, cuando a los mayores valores de una variable suelen corresponder en general los menores de la otra, expresando un comportamiento opuesto, la covarianza es negativa.</li>
+<li>El signo de la covarianza, por lo tanto, expresa la tendencia en la relación lineal entre las variables.</li>
+<li><code>cov(X, Y) = E[(X - E[X])(Y - E[Y])]</code> <em>(Nota: <code>E[X]</code> = Valor esperado de X, o la media de X.)</em></li>
+</ul>
+</li>
+</ul>
+<p><img alt="Fórmula Covarianza 1" src="../../../../assets/img/formula-covarianza-1.svg" />
+<img alt="Fórmula Covarianza 2" src="../../../../assets/img/formula-covarianza-2.svg" /></p>
 <h6 id="el-teorema-central-del-limite">El Teorema Central del Límite<a class="headerlink" href="#el-teorema-central-del-limite" title="Permanent link">&para;</a></h6>
 <p>Este método se utiliza con tamaños de muestra <strong>grandes</strong>. Es decir, en el ejemplo anterior, tener pocos pececillos enfermos no es suficiente para conocer cuál es el tratamiento adecuado para que se curen los pobrecillos. Si tenemos muchos peces, el resultado será más fiable, y esto lo conocemos gracias al <strong>Teorema Central del Límite</strong>.</p>
 <ul>
