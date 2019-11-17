@@ -911,7 +911,7 @@
 <p><strong>Estimaciones de <code>f</code> con diferentes métodos:</strong> </p>
 <ul>
 <li>Línea negra: datos simulados de <code>f</code></li>
-<li>Línea naranja: regresión linear</li>
+<li>Línea naranja: regresión lineal</li>
 <li>Líneas azul y verde: smoothing spline fit</li>
 </ul>
 </li>
@@ -927,11 +927,11 @@
 </li>
 </ul>
 <p><img alt="Flexibilidad vs MSE" src="../../../../../assets/img/modelado_estadistico_datos/tema_4/mse_2.png" /></p>
-<p>Aquí, como <code>f</code> no es linear, la línea naranja de la primera gráfica no es lo suficientemente flexible para estimar bien <code>f</code>. La línea verde tiene el menor <strong>training MSE</strong> de los tres métodos, como vemos que corresponde a la curva más flexible de la primera gráfica.</p>
-<p>Otro ejemplo con unos datos que se aproximan más a una función linear:</p>
-<p><img alt="Comparación de MSE para datos lineares" src="../../../../../assets/img/modelado_estadistico_datos/tema_4/mse_3.png" /></p>
-<p>Que podemos ver cómo de diferente es para datos que no encajan con una función linear:</p>
-<p><img alt="Comparación de MSE para datos no lineares" src="../../../../../assets/img/modelado_estadistico_datos/tema_4/mse_4.png" /></p>
+<p>Aquí, como <code>f</code> no es lineal, la línea naranja de la primera gráfica no es lo suficientemente flexible para estimar bien <code>f</code>. La línea verde tiene el menor <strong>training MSE</strong> de los tres métodos, como vemos que corresponde a la curva más flexible de la primera gráfica.</p>
+<p>Otro ejemplo con unos datos que se aproximan más a una función lineal:</p>
+<p><img alt="Comparación de MSE para datos lineales" src="../../../../../assets/img/modelado_estadistico_datos/tema_4/mse_3.png" /></p>
+<p>Que podemos ver cómo de diferente es para datos que no encajan con una función lineal:</p>
+<p><img alt="Comparación de MSE para datos no lineales" src="../../../../../assets/img/modelado_estadistico_datos/tema_4/mse_4.png" /></p>
 <h4 id="overfitting"><strong>Overfitting</strong><a class="headerlink" href="#overfitting" title="Permanent link">&para;</a></h4>
 <p>En la segunda gráfica podemos ver cómo, de manera que la flexibilidad del método estatístico aumenta, hay un decrecimiento monótono del <strong>training MSE</strong> y una la <strong>test MSE</strong> tiene forma de U. Esta es una <strong>propiedad fundamental</strong> del aprendizaje estadísitco: independientemente de un conjunto de datos praticulares e independientemente del método estadístico utilizado, de manera que la flexibilidad aumenta, el <strong>training MSE</strong> disminuye, pero puede que el <strong>test MSE</strong> no. Cuando Un método produce un pequeño <strong>training MSE</strong> pero un gran <strong>test MSE</strong>, estaremos hablando de <strong>overfitting</strong>.</p>
 <p>Esto sucede porque el procedimiento utilizado está trabajando demasiado duro en encontrar un patrón en los datos de entrenamiento, y puede estar usando algunos patrones que pasan <strong>por casualidad</strong> o <strong>azar</strong>, en lugar de ser verdaderas propiedades de <code>f</code>. Cuando hay <strong>overfit</strong>, el <strong>test MSE</strong> suele ser muy grande porque los supuestos patrones que suceden por casualidad no van a estar en los datos de prueba. Independientemente de que ocurra o no overfitting, casi siempre hemos de esperar que el <strong>training MSE</strong> sea menor que el <strong>test MSE</strong> porque la mayoría de los métodos estadísticos, de manera directa o indirecta, buscan minimizar el <strong>training MSE</strong>.</p>

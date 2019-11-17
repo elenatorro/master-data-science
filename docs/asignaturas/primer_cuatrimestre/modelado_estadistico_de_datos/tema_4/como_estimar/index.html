@@ -895,20 +895,20 @@
                 
                   <h1>¿Cómo estimar f?</h1>
                 
-                <p>El objetivo es explorar métodos lineares y no lineares para estimar <code>f</code>. Estos métodos generalmente comparten varias características, por lo que es interesante conocer cuáles son esas características en común.</p>
+                <p>El objetivo es explorar métodos lineales y no lineales para estimar <code>f</code>. Estos métodos generalmente comparten varias características, por lo que es interesante conocer cuáles son esas características en común.</p>
 <p>Se va a asumir que hemos observado un conjunto de <code>n</code> datos diferentes. Estas observaciones se llaman <strong>datos de entrenamiento</strong> porque se usan para entrenar o enseñar un método para estimar <code>f</code>.</p>
 <p>Es decir, queremos encontrar una <code>f'</code> de manera que <code>Y ≈ f'(X)</code> para cualquier observación <code>(X, Y)</code>.</p>
 <p>De manera genérica, podemos decir que la mayoría de los métodos de aprendizaje estadístico pueden clasificarse como paramétricos y no paramétricos.</p>
 <h4 id="metodos-parametricos">Métodos paramétricos<a class="headerlink" href="#metodos-parametricos" title="Permanent link">&para;</a></h4>
 <p>Los métodos paramétricos consisten en una enfoque de <strong>dos pasos</strong> basado en modelos.</p>
 <p><strong>Paso 1: Suposición</strong></p>
-<p>Primero, haremos una supusición sobre la forma de <code>f</code>. Por ejemplo, una simple suposición es que <code>f</code> es linear en <code>X</code>:</p>
+<p>Primero, haremos una supusición sobre la forma de <code>f</code>. Por ejemplo, una simple suposición es que <code>f</code> es lineal en <code>X</code>:</p>
 <pre><code>f(X) = β0 + β1X1 + β2X2 + ... + βpXp.
 </code></pre>
 
-<p>Esto es un <strong>modelo linear</strong> (se verá más adelante).</p>
+<p>Esto es un <strong>modelo lineal</strong> (se verá más adelante).</p>
 <p><strong>Paso 2: Entrenamiento</strong></p>
-<p>Después de seleccionar un modelo, necesitamos un procedimiento que use datos entrenados o que entrene el modelo. En el caso del modelo linear, necesitamos estimar los parámetros <code>β0, β1,...,βp.</code>. Es decir, necesitamos encontrar valores para dichos parámetros tal que:</p>
+<p>Después de seleccionar un modelo, necesitamos un procedimiento que use datos entrenados o que entrene el modelo. En el caso del modelo lineal, necesitamos estimar los parámetros <code>β0, β1,...,βp.</code>. Es decir, necesitamos encontrar valores para dichos parámetros tal que:</p>
 <pre><code>Y ≈ β0 + β1X1 + β2X2 + ... + βpXp.
 </code></pre>
 
@@ -916,11 +916,11 @@
 <p>La desventaja potencial del enfoque paramétrico es que el model que escogemos se ajustará con la verdadera (y desconocida) forma de <code>f</code>. Si el modelo escogido está muy lejos de lo que es <code>f</code> en realidad, entonces nuestra estimación será <strong>pobre</strong>. Se puede intentar resolver este problema escogiendo <strong>modelos flexibles</strong> que puedan encajar muchas posibles formas de <code>f</code>. Pero en general, conseguir ajustar un modelo más flexible requiere estimar un mayor número de parámetros. Esos modelos son más complejos y pueden llevar a un fenómeno conocido como <strong>overfitting</strong> (<em>sobreajuste</em>) de los datos.</p>
 <p><strong>Ejemplo:</strong></p>
 <p>Queremos calcular los <strong>ingresos</strong> (<em>income</em>) de una persona en base a una función que utiliza como variables de entrada los <strong>años de educación</strong> (<em>education</em>) y el nivel de <strong>experienca</strong> (<em>seniority</em>). Tenemos datos de 30 personas.</p>
-<p>Aplicando un <strong>modelo linear</strong>, podríamos considerar esto:</p>
+<p>Aplicando un <strong>modelo lineal</strong>, podríamos considerar esto:</p>
 <pre><code>income ≈ β0 + β1 × education + β2 × seniority.
 </code></pre>
 
-<p>De manera que nos tendríamos que limitar a conocer los valores de <code>β0, β1 y β2</code>, para lo que se podría utilizar, por ejemplo, <strong>regresión linear cuadrática</strong> (<em>squares linear regression</em>)</p>
+<p>De manera que nos tendríamos que limitar a conocer los valores de <code>β0, β1 y β2</code>, para lo que se podría utilizar, por ejemplo, <strong>regresión lineal cuadrática</strong> (<em>squares lineal regression</em>)</p>
 <h4 id="metodos-no-parametricos">Métodos no-paramétricos<a class="headerlink" href="#metodos-no-parametricos" title="Permanent link">&para;</a></h4>
 <p>Los métodos no-paramétricos no hacen suposiciones explícitas sobre la forma funcional de <code>f</code>. En lugar de eso, buscan una estimación de <code>f</code> que se aproxime a los puntos de datos tanto como sea posible sin que el resultado sea demasiado <em>ondulado</em> o <em>rugoso</em>. </p>
 <p>Estas estimaciones pueden tener una mayor ventaja sobre aproximaciones paramétricas: evitando la suposición de una forma funcional particular de <code>f</code>, consiguen el potencial de, de manera precisa, ajustarse a un rango más grande de posibles formas de <code>f</code>. Cualquier aproximación paramétrica trae con eso la posibilidad de que la forma funcional utilizada para estimar <code>f</code> sea <strong>muy diferente</strong> de la verdadera <code>f</code>, en cuyo caso, el modelo resultado no encajará con los datos tan bien.</p>
@@ -928,9 +928,9 @@
 <p><strong>Ejemplo: Comparativa</strong></p>
 <p>Estos gráficos representan los ingresos de una persona como una función de los años de educación y la experiencia dado un conjunto de datos de 30 personas. La superficie, en cada uno de ellos, representa la relación entre estas variables. En estos gráficos podemos ver las diferentes formas que toma la superficie, dependiendo del método que se utilice para calcular <code>f</code>.</p>
 <ul>
-<li>Gráfica de Ingresos - Linear</li>
+<li>Gráfica de Ingresos - Lineal</li>
 </ul>
-<p><img alt="Gráfica de Ingresos - Linear" src="../../../../../assets/img/modelado_estadistico_datos/tema_4/figure_2.png" /></p>
+<p><img alt="Gráfica de Ingresos - Lineal" src="../../../../../assets/img/modelado_estadistico_datos/tema_4/figure_2.png" /></p>
 <ul>
 <li>Gráfica de Ingresos - Método Paramétrico - Smooth Spline</li>
 </ul>
@@ -940,9 +940,9 @@
 </ul>
 <p><img alt="Gráfica de Ingresos - Método No-Paramétrico - Rought Spline" src="../../../../../assets/img/modelado_estadistico_datos/tema_4/figure_4.png" /></p>
 <h4 id="el-equilibro-entre-precision-de-la-prediccion-e-interpretacion-del-modelo">El equilibro entre "precisión de la predicción" e "interpretación del modelo"<a class="headerlink" href="#el-equilibro-entre-precision-de-la-prediccion-e-interpretacion-del-modelo" title="Permanent link">&para;</a></h4>
-<p>Algunos modelos son menos flexibles, o más restrictivos, en el sentido de que pueden producir un rango relativamente pequeño de formas para estimar <code>f</code>. Por ejemplo, la regresión linear es una estimación relativamente flexible, pero sólo puede generar funciones lineales.</p>
+<p>Algunos modelos son menos flexibles, o más restrictivos, en el sentido de que pueden producir un rango relativamente pequeño de formas para estimar <code>f</code>. Por ejemplo, la regresión lineal es una estimación relativamente flexible, pero sólo puede generar funciones lineales.</p>
 <p>Entonces, <strong>¿por qué querríamos escoger una aproximación más restrictiva en lugar de una más flexible?</strong>. Hay varias razones por las cuáles podríamos preferir un modelo más restrictivo.</p>
-<p>Por ejemplo, si estamos interesados en cómo <strong>infieren</strong> los datos, el modelo linear puede ser una buena elección ya que es fácil entender la relación entre <code>Y</code> y <code>X1, X2, ... XP</code>. Por el contrario, esa flexibilidad puede conllevar a estimaciones complicadas difíciles de <code>f</code> que hace complicado entender la asociación de cualquier indicador con la respuesta.</p>
+<p>Por ejemplo, si estamos interesados en cómo <strong>infieren</strong> los datos, el modelo  puede ser una buena elección ya que es fácil entender la relación entre <code>Y</code> y <code>X1, X2, ... XP</code>. Por el contrario, esa flexibilidad puede conllevar a estimaciones complicadas difíciles de <code>f</code> que hace complicado entender la asociación de cualquier indicador con la respuesta.</p>
 <p>En otros casos, sin embargo, sólo estaremos interesados en hacer una <strong>predicción</strong>. Si queremos por ejemplo desarrollar un algorithmo que sea capaz de predecir el precio de una acción, querremos un modelo flexible.</p>
 <p>¡Pero cuidado! Se puede dar el caso de obtner predicciones más precisas usando el método menos flexible. Este fenómeno, que a priori puede parecer contraintuitivo, tiene mucho que ver con el <strong>overfitting</strong> de los métodos muy flexibles.</p>
                 
