@@ -36,7 +36,8 @@ nav:
 
     - Minería de Textos:
       - Tema 1. Procesamiento del Lenguaje Natural: 'asignaturas/primer_cuatrimestre/mineria_de_textos/1_procesamiento_lenguaje_natural/index.md'
-      - Ejercicio 1: 'asignaturas/primer_cuatrimestre/mineria_de_textos/1_procesamiento_lenguaje_natural/ejercicios/index.md'
+      - Tarea 1: 'asignaturas/primer_cuatrimestre/mineria_de_textos/tareas/tarea_1.md'
+
     - Programación en Entorno de Datos:
       - Tema 1: 'asignaturas/primer_cuatrimestre/programacion_en_entornos_de_datos/tema_1/index.md'
       - Ejercicios: 'asignaturas/primer_cuatrimestre/programacion_en_entornos_de_datos/ejercicios/index.md'
