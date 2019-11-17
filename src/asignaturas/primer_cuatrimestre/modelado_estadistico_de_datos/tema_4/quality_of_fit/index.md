@@ -2,14 +2,15 @@
 
 No existe un método perfecto, sino que el reto consiste en encontrar la mejor aproximación para encontrar una solución al problema que nos planteamos.
 
-Para evaluar la eficiencia de un método de aprendizaje estadistico dado un conjunto de datos, necesitamos alguna manera de medir cómo de bien las predicciones de dicho modelo encajan con los datos observados. Es decir, necesitamos **quantificar** cómo de cerca está cada respuesta de una observación con el verdadero valor de esa observación.
+Para evaluar la eficiencia de un método de aprendizaje estadistico dado un conjunto de datos, necesitamos alguna manera de medir cómo de bien las predicciones de dicho modelo encajan con los datos observados. Es decir, necesitamos **cuantificar** cómo de cerca está cada respuesta de una observación con el verdadero valor de esa observación.
 
 Lo más utilizado es el **mean squared error** (MSE):
 
 ```
 MSE = 1 / n * [(yi − f'(xi))^2, ..., (yn − f'(xn))^2]
 ```
-Donde:
+
+Dónde:
 
 * `f'` es la **predicción**
 * `n` es el **número de observaciones**
