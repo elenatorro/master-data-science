@@ -58,9 +58,9 @@ Otros indicadores pueden tener una relación contraria.
 
 Dependiendo de la complejidad de `f`, la relación entre la respuesta y un indicador puede también depender de los valores de otros indicadores.
 
-* **¿Puede la relación entre `Y` y cada indicador abreviarse correctamente utilizando una ecuación linear, o es más complicado?**
+* **¿Puede la relación entre `Y` y cada indicador abreviarse correctamente utilizando una ecuación lineal, o es más complicado?**
 
-La mayoría de métodos para estimar `f` toman una forma lineal. En algunas situaciones, este supuesto o hipótesis es razonable o incluso deseable, pero es muy posible que la relación sea mas complicada, en cuyo caso, el modelo linear puede no darnos una representación precisa de esta relación entre input y output.
+La mayoría de métodos para estimar `f` toman una forma lineal. En algunas situaciones, este supuesto o hipótesis es razonable o incluso deseable, pero es muy posible que la relación sea mas complicada, en cuyo caso, el modelo lineal puede no darnos una representación precisa de esta relación entre input y output.
 
 **Ejemplo:**
 

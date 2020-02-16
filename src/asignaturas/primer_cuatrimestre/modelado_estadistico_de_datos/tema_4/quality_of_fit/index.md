@@ -34,7 +34,7 @@ Pero, ¿Cómo podemos seleccionar el método que minimize el **test MSE**? Depen
 
 * **Estimaciones de `f` con diferentes métodos:** 
     * Línea negra: datos simulados de `f`
-    * Línea naranja: regresión linear
+    * Línea naranja: regresión lineal
     * Líneas azul y verde: smoothing spline fit
 
 ![Estimaciones de f con diferentes métodos](../../../../../assets/img/modelado_estadistico_datos/tema_4/mse_1.png)
@@ -47,15 +47,15 @@ Pero, ¿Cómo podemos seleccionar el método que minimize el **test MSE**? Depen
 
 ![Flexibilidad vs MSE](../../../../../assets/img/modelado_estadistico_datos/tema_4/mse_2.png)
 
-Aquí, como `f` no es linear, la línea naranja de la primera gráfica no es lo suficientemente flexible para estimar bien `f`. La línea verde tiene el menor **training MSE** de los tres métodos, como vemos que corresponde a la curva más flexible de la primera gráfica.
+Aquí, como `f` no es lineal, la línea naranja de la primera gráfica no es lo suficientemente flexible para estimar bien `f`. La línea verde tiene el menor **training MSE** de los tres métodos, como vemos que corresponde a la curva más flexible de la primera gráfica.
 
-Otro ejemplo con unos datos que se aproximan más a una función linear:
+Otro ejemplo con unos datos que se aproximan más a una función lineal:
 
-![Comparación de MSE para datos lineares](../../../../../assets/img/modelado_estadistico_datos/tema_4/mse_3.png)
+![Comparación de MSE para datos lineales](../../../../../assets/img/modelado_estadistico_datos/tema_4/mse_3.png)
 
-Que podemos ver cómo de diferente es para datos que no encajan con una función linear:
+Que podemos ver cómo de diferente es para datos que no encajan con una función lineal:
 
-![Comparación de MSE para datos no lineares](../../../../../assets/img/modelado_estadistico_datos/tema_4/mse_4.png)
+![Comparación de MSE para datos no lineales](../../../../../assets/img/modelado_estadistico_datos/tema_4/mse_4.png)
 
 # **Overfitting**
 

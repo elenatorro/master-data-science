@@ -1,4 +1,4 @@
-El objetivo es explorar métodos lineares y no lineares para estimar `f`. Estos métodos generalmente comparten varias características, por lo que es interesante conocer cuáles son esas características en común.
+El objetivo es explorar métodos lineales y no lineales para estimar `f`. Estos métodos generalmente comparten varias características, por lo que es interesante conocer cuáles son esas características en común.
 
 Se va a asumir que hemos observado un conjunto de `n` datos diferentes. Estas observaciones se llaman **datos de entrenamiento** porque se usan para entrenar o enseñar un método para estimar `f`.
 
@@ -12,17 +12,17 @@ Los métodos paramétricos consisten en una enfoque de **dos pasos** basado en m
 
 **Paso 1: Suposición**
 
-Primero, haremos una supusición sobre la forma de `f`. Por ejemplo, una simple suposición es que `f` es linear en `X`:
+Primero, haremos una supusición sobre la forma de `f`. Por ejemplo, una simple suposición es que `f` es lineal en `X`:
 
 ```
 f(X) = β0 + β1X1 + β2X2 + ... + βpXp.
 ```
 
-Esto es un **modelo linear** (se verá más adelante).
+Esto es un **modelo lineal** (se verá más adelante).
 
 **Paso 2: Entrenamiento**
 
-Después de seleccionar un modelo, necesitamos un procedimiento que use datos entrenados o que entrene el modelo. En el caso del modelo linear, necesitamos estimar los parámetros `β0, β1,...,βp.`. Es decir, necesitamos encontrar valores para dichos parámetros tal que:
+Después de seleccionar un modelo, necesitamos un procedimiento que use datos entrenados o que entrene el modelo. En el caso del modelo lineal, necesitamos estimar los parámetros `β0, β1,...,βp.`. Es decir, necesitamos encontrar valores para dichos parámetros tal que:
 
 ```
 Y ≈ β0 + β1X1 + β2X2 + ... + βpXp.
@@ -36,13 +36,13 @@ La desventaja potencial del enfoque paramétrico es que el model que escogemos s
 
 Queremos calcular los **ingresos** (_income_) de una persona en base a una función que utiliza como variables de entrada los **años de educación** (_education_) y el nivel de **experienca** (_seniority_). Tenemos datos de 30 personas.
 
-Aplicando un **modelo linear**, podríamos considerar esto:
+Aplicando un **modelo lineal**, podríamos considerar esto:
 
 ```
 income ≈ β0 + β1 × education + β2 × seniority.
 ```
 
-De manera que nos tendríamos que limitar a conocer los valores de `β0, β1 y β2`, para lo que se podría utilizar, por ejemplo, **regresión linear cuadrática** (_squares linear regression_)
+De manera que nos tendríamos que limitar a conocer los valores de `β0, β1 y β2`, para lo que se podría utilizar, por ejemplo, **regresión lineal cuadrática** (_squares linear regression_)
 
 # Métodos no-paramétricos
 
@@ -56,9 +56,9 @@ Por el contrario, las aproximaciones no paramétricas evitan por completo este r
 
 Estos gráficos representan los ingresos de una persona como una función de los años de educación y la experiencia dado un conjunto de datos de 30 personas. La superficie, en cada uno de ellos, representa la relación entre estas variables. En estos gráficos podemos ver las diferentes formas que toma la superficie, dependiendo del método que se utilice para calcular `f`.
 
-* Gráfica de Ingresos - Linear
+* Gráfica de Ingresos - Lineal
 
-![Gráfica de Ingresos - Linear](../../../../../assets/img/modelado_estadistico_datos/tema_4/figure_2.png)
+![Gráfica de Ingresos - Lineal](../../../../../assets/img/modelado_estadistico_datos/tema_4/figure_2.png)
 
 * Gráfica de Ingresos - Método Paramétrico - Smooth Spline
 
@@ -70,11 +70,11 @@ Estos gráficos representan los ingresos de una persona como una función de los
 
 # El equilibro entre "precisión de la predicción" e "interpretación del modelo"
 
-Algunos modelos son menos flexibles, o más restrictivos, en el sentido de que pueden producir un rango relativamente pequeño de formas para estimar `f`. Por ejemplo, la regresión linear es una estimación relativamente flexible, pero sólo puede generar funciones lineales.
+Algunos modelos son menos flexibles, o más restrictivos, en el sentido de que pueden producir un rango relativamente pequeño de formas para estimar `f`. Por ejemplo, la regresión lineal es una estimación relativamente flexible, pero sólo puede generar funciones lineales.
 
 Entonces, **¿por qué querríamos escoger una aproximación más restrictiva en lugar de una más flexible?**. Hay varias razones por las cuáles podríamos preferir un modelo más restrictivo.
 
-Por ejemplo, si estamos interesados en cómo **infieren** los datos, el modelo linear puede ser una buena elección ya que es fácil entender la relación entre `Y` y `X1, X2, ... XP`. Por el contrario, esa flexibilidad puede conllevar a estimaciones complicadas difíciles de `f` que hace complicado entender la asociación de cualquier indicador con la respuesta.
+Por ejemplo, si estamos interesados en cómo **infieren** los datos, el modelo lineal puede ser una buena elección ya que es fácil entender la relación entre `Y` y `X1, X2, ... XP`. Por el contrario, esa flexibilidad puede conllevar a estimaciones complicadas difíciles de `f` que hace complicado entender la asociación de cualquier indicador con la respuesta.
 
 En otros casos, sin embargo, sólo estaremos interesados en hacer una **predicción**. Si queremos por ejemplo desarrollar un algorithmo que sea capaz de predecir el precio de una acción, querremos un modelo flexible.
 
