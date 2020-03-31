@@ -35,12 +35,23 @@ nav:
         - Ejercicios: 'asignaturas/primer_cuatrimestre/modelado_estadistico_de_datos/ejercicios_tema_4/index.md'
 
     - Minería de Textos:
-      - Tema 1. Procesamiento del Lenguaje Natural: 'asignaturas/primer_cuatrimestre/mineria_de_textos/1_procesamiento_lenguaje_natural/index.md'
+      - Tema 1. Procesamiento del Lenguaje Natural: 'asignaturas/primer_cuatrimestre/mineria_de_textos/tema_1/index.md'
+      - Tema 2: 'asignaturas/primer_cuatrimestre/mineria_de_textos/tema_2/index.md'
+      - Tema 3: 'asignaturas/primer_cuatrimestre/mineria_de_textos/tema_3/index.md'
+      - Tema 4: 'asignaturas/primer_cuatrimestre/mineria_de_textos/tema_4/index.md'
+      - Tema 5: 'asignaturas/primer_cuatrimestre/mineria_de_textos/tema_5/index.md'
       - Tarea 1: 'asignaturas/primer_cuatrimestre/mineria_de_textos/tareas/tarea_1.md'
 
     - Programación en Entorno de Datos:
       - Tema 1: 'asignaturas/primer_cuatrimestre/programacion_en_entornos_de_datos/tema_1/index.md'
+      - Tema 2: 'asignaturas/primer_cuatrimestre/programacion_en_entornos_de_datos/tema_2/index.md'
+      - Tema 3: 'asignaturas/primer_cuatrimestre/programacion_en_entornos_de_datos/tema_3/index.md'
+      - Tema 4: 'asignaturas/primer_cuatrimestre/programacion_en_entornos_de_datos/tema_4/index.md'
       - Ejercicios: 'asignaturas/primer_cuatrimestre/programacion_en_entornos_de_datos/ejercicios/index.md'
+    
+    - Gestión y Almacenamiento de Datos:
+      - Tema 1. Fundamentos de Bases de Datos NoSQL: 'asignaturas/segundo_cuatrimestre/gestion_y_almacenamiento_de_datos/tema_1/index.md'
+      - Tema 2. Redis - Base de datos clave-valor: 'asignaturas/segundo_cuatrimestre/gestion_y_almacenamiento_de_datos/tema_2/index.md'
 
 theme:
   language: 'es'
