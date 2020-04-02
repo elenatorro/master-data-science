@@ -1,0 +1,227 @@
+docker run --name ejercicio-1-mongo -it -p 27017:27017 -d mongo:4.0
+docker exec -it ejercicio-1-mongo mongo --port 27017
+
+db.createCollection('users', {
+    'validator': {
+        '$jsonSchema': {
+            'bsonType': 'object',
+            'required': ['name', 'username', 'twitter'],
+            'properties': {
+                'name': {
+                    'bsonType': 'string'
+                },
+                'username': {
+                    'bsonType': 'string'
+                },
+                'twitter': {
+                    'bsonType': 'string',
+                    'pattern': '^@'
+                },
+                'address': {
+                    'bsonType': 'object',
+                    'required': ['cp'],
+                    'properties': {
+                        'street': {
+                            'bsonType': 'string'
+                        },
+                        'number': {
+                            'bsonType': 'number'
+                        },
+                        'house_number': {
+                            'bsonType': 'number'
+                        },
+                        'city': {
+                            'bsonType': 'string'
+                        },
+                        'cp': {
+                            'bsonType': 'number'
+                        }
+                    }
+                }
+            }
+        }
+    }
+})
+
+db.createCollection('posts', {
+    'validator': {
+        '$jsonSchema': {
+            'bsonType': 'object',
+            'required': ['title', 'body', 'author'],
+            'properties': {
+                'title': {
+                    'bsonType': 'string'
+                },
+                'body': {
+                    'bsonType': 'string'
+                },
+                'author': {
+                    'bsonType': 'string'
+                },
+                'date': {
+                    'bsonType': 'date'
+                },
+                'comments': {
+                    'bsonType': 'array',
+                    'items': {
+                        'bsonType': 'object',
+                        'required': ['user_id',  'content', 'date'],
+                        'properties': {
+                            'user_id': {
+                                'bsonType': 'objectId'
+                            },
+                            'content': {
+                                'bsonType': 'string'
+                            },
+                            'date': {
+                                'bsonType': 'date'
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+})
+
+db.users.createIndex({ 'username': 1 }, { 'unique': true })
+
+db.users.createIndex({ 'twitter': 1 }, { 'unique': true })
+
+db.users.createIndex({ 'address.cp': 1 })
+
+db.posts.createIndex({ 'date': 1 })
+
+db.posts.createIndex({
+    'comments.user_id': 1,
+    'comments.twitter': 1,
+    'comments.username': 1,
+    'comments.date': 1
+})
+
+db.users.insert({
+    'name': 'elena torro',
+    'username': 'elenatorro',
+    'twitter': '@elenatorro'    
+})
+
+db.users.insert({
+    'name': 'kiko beats',
+    'username': 'kikobeats',
+    'twitter': '@kikobeats',
+    'address': {
+        'street': 'Calle Inventada',
+        'house_number': 89,
+        'city': 'Madrid',
+        'number': 3,
+        'cp': 28014
+    }
+})
+
+db.users.insert({
+    'name': 'len belinchon',
+    'username': 'lenbelinchon',
+    'twitter': '@lenbelinchon',
+    'address': {
+        'street': 'Calle Inexistente',
+        'house_number': 8,
+        'city': 'Murcia',
+        'number': 2,
+        'cp': 30002
+    }
+})
+
+db.users.insert({
+    'name': 'alvaro torro',
+    'username': 'alvarotorro',
+    'twitter': '@alvarotorro',
+    'address': {
+        'street': 'Calle Imaginaria',
+        'house_number': 23,
+        'city': 'Murcia',
+        'number': 5,
+        'cp': 30002
+    }
+})
+
+db.posts.insert({
+    'title': 'Post 1',
+    'body': 'This is a post example',
+    'author': 'elenatorro',
+    'date': new Date()
+})
+
+db.posts.insert({
+    'title': 'Post 2',
+    'body': 'This is another post example',
+    'author': 'elenatorro',
+    'date': new Date(),
+    'comments': [{
+            'user_id': ObjectId('5e84a07a8613f62d0f2bc9fb'),
+            'content': 'This is the comment content',
+            'date': new Date()
+    }]
+})
+
+db.users.aggregate([
+    { 
+        '$match': {
+            'address.cp': { 
+                '$exists': true, 
+                '$ne': null
+            }
+        }    
+    },
+    {
+       '$group': {
+           '_id': '$address.cp',
+           'total': { '$sum': 1 },
+           'users': { '$push': '$username' },
+          }
+    }
+])
+
+db.posts.aggregate([
+    {
+        '$match': {
+            'comments': { 
+                '$exists': true, 
+                '$ne': null
+            }
+        }    
+    },
+    {
+        '$group': {
+            '_id': '$comments.user_id',
+            'count': { '$sum': 1 }
+        }
+    }
+])
+
+db.posts.aggregate([
+    {
+        '$match': {
+            'comments': { 
+                '$exists': true, 
+                '$ne': null
+            }
+        }    
+    },
+    {
+        '$group': {
+            '_id': '$comments.date',
+            'count': { '$sum': 1 }
+        }
+    }
+])
+
+db.posts.aggregate([
+    {
+      $project: {
+         'count': { $cond: { if: { $isArray: "$comments" }, then: { $size: "$comments" }, else: "NA"} }
+      }
+   }
+])
+
+
+docker stop ejercicio-1-mongo

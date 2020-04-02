@@ -1,0 +1,476 @@
+{
+    nombre: "Bertoldo",
+    navegador:"firefox",
+    fecha: ISODate("2016-02-21T06:01:17.171Z"),
+    pags: [{url:"http://www.ucm.es",segs:200 },
+	   {url:"https://www.todomesobra.com",segs:5 },
+	   {url:"https://www.mikokoloko.com",segs:120 },
+	   {url:"http://www.mundoroedor.es",segs:85 },
+	   {url:"https://www.mikokoloko.com",segs:600 }
+	  ] }
+{
+    nombre: "Herminia",
+    navegador:"Explorer",
+    fecha: ISODate("2016-02-04T13:01:17.171Z"),
+    pags: [{url:"http://www.nomiresatras.es",segs:1200 },
+	   {url:"http://www.bancoimpopular.com",segs:500 },
+	   {url:"http://www.cocinacochina.com",segs:300 },
+	   {url:"http://www.mikokoloko.com",segs:60 }
+	  ]
+}
+{
+    nombre: "Bertoldo",
+    navegador:"firefox",
+    fecha: ISODate("2016-01-21T06:01:17.171Z"),
+    pags: [
+	   {url:"http://www.vuelosparaAbuelos.es",segs:500 },
+	   {url:"https://www.mikokoloko.com",segs:120 },
+	   {url:"http://www.comomemongo.com",segs:185 },
+	   {url:"https://www.ucm.com",segs:68 }
+	  ] }
+{
+    nombre: "Herminia",
+    navegador:"Explorer",
+    fecha: ISODate("2015-11-30T13:01:17.171Z"),
+    pags: [{url:"http://www.nocheviejuna.es",segs:1200 },
+	   {url:"http://www.uvasexpress.es",segs:50 }
+	  ]
+}
+{
+    nombre: "Aniceto",
+    navegador:"Chrome",
+    fecha: ISODate("2016-01-21T08:01:17.171Z"),
+    pags: [
+	   {url:"http://www.kalvossinreparos.es",segs:300 },
+	   {url:"https://www.secretosindiscretos.com",segs:120 },
+	   {url:"http://www.comomemongo.com",segs:185 },
+	   {url:"https://www.ucm.com",segs:968 }
+	  ] }
+{
+    nombre: "Aniceto",
+    navegador:"Chrome",
+    fecha: ISODate("2015-09-21T14:01:17.171Z"),
+    pags: [{url:"http://www.quizaseahoy.es",segs:1200 },
+	   {url:"https://www.lanochemashermosa.es",segs:50 }
+	  ]
+}
+{
+    nombre: "Bertoldo",
+    navegador:"firefox",
+    fecha: ISODate("2016-02-21T06:01:17.171Z"),
+    pags: [{url:"http://www.ucm.es",segs:200 },
+	   {url:"https://www.todomesobra.com",segs:5 },
+	   {url:"https://www.mikokoloko.com",segs:120 },
+	   {url:"http://www.mundoroedor.es",segs:85 },
+	   {url:"https://www.mikokoloko.com",segs:600 }
+	  ] }
+{
+    nombre: "Herminia",
+    navegador:"Explorer",
+    fecha: ISODate("2016-02-04T13:01:17.171Z"),
+    pags: [{url:"http://www.nomiresatras.es",segs:1200 },
+	   {url:"http://www.bancoimpopular.com",segs:500 },
+	   {url:"http://www.cocinacochina.com",segs:300 },
+	   {url:"http://www.mikokoloko.com",segs:60 }
+	  ]
+}
+{
+    nombre: "Bertoldo",
+    navegador:"firefox",
+    fecha: ISODate("2016-01-21T06:01:17.171Z"),
+    pags: [
+	   {url:"http://www.vuelosparaAbuelos.es",segs:500 },
+	   {url:"https://www.mikokoloko.com",segs:120 },
+	   {url:"http://www.comomemongo.com",segs:185 },
+	   {url:"https://www.ucm.com",segs:68 }
+	  ] }
+{
+    nombre: "Herminia",
+    navegador:"Explorer",
+    fecha: ISODate("2015-11-30T13:01:17.171Z"),
+    pags: [{url:"http://www.nocheviejuna.es",segs:1200 },
+	   {url:"http://www.uvasexpress.es",segs:50 }
+	  ]
+}
+{
+    nombre: "Aniceto",
+    navegador:"Chrome",
+    fecha: ISODate("2016-01-21T08:01:17.171Z"),
+    pags: [
+	   {url:"http://www.kalvossinreparos.es",segs:300 },
+	   {url:"https://www.secretosindiscretos.com",segs:120 },
+	   {url:"http://www.comomemongo.com",segs:185 },
+	   {url:"https://www.ucm.com",segs:968 }
+	  ] }
+{
+    nombre: "Aniceto",
+    navegador:"Chrome",
+    fecha: ISODate("2015-09-21T14:01:17.171Z"),
+    pags: [{url:"http://www.quizaseahoy.es",segs:1200 },
+	   {url:"https://www.lanochemashermosa.es",segs:50 }
+	  ]
+}
+{
+    nombre: "Bertoldo",
+    navegador:"firefox",
+    fecha: ISODate("2016-02-21T06:01:17.171Z"),
+    pags: [{url:"http://www.ucm.es",segs:200 },
+	   {url:"https://www.todomesobra.com",segs:5 },
+	   {url:"https://www.mikokoloko.com",segs:120 },
+	   {url:"http://www.mundoroedor.es",segs:85 },
+	   {url:"https://www.mikokoloko.com",segs:600 }
+	  ] }
+{
+    nombre: "Herminia",
+    navegador:"Explorer",
+    fecha: ISODate("2016-02-04T13:01:17.171Z"),
+    pags: [{url:"http://www.nomiresatras.es",segs:1200 },
+	   {url:"http://www.bancoimpopular.com",segs:500 },
+	   {url:"http://www.cocinacochina.com",segs:300 },
+	   {url:"http://www.mikokoloko.com",segs:60 }
+	  ]
+}
+{
+    nombre: "Bertoldo",
+    navegador:"firefox",
+    fecha: ISODate("2016-01-21T06:01:17.171Z"),
+    pags: [
+	   {url:"http://www.vuelosparaAbuelos.es",segs:500 },
+	   {url:"https://www.mikokoloko.com",segs:120 },
+	   {url:"http://www.comomemongo.com",segs:185 },
+	   {url:"https://www.ucm.com",segs:68 }
+	  ] }
+{
+    nombre: "Herminia",
+    navegador:"Explorer",
+    fecha: ISODate("2015-11-30T13:01:17.171Z"),
+    pags: [{url:"http://www.nocheviejuna.es",segs:1200 },
+	   {url:"http://www.uvasexpress.es",segs:50 }
+	  ]
+}
+{
+    nombre: "Aniceto",
+    navegador:"Chrome",
+    fecha: ISODate("2016-01-21T08:01:17.171Z"),
+    pags: [
+	   {url:"http://www.kalvossinreparos.es",segs:300 },
+	   {url:"https://www.secretosindiscretos.com",segs:120 },
+	   {url:"http://www.comomemongo.com",segs:185 },
+	   {url:"https://www.ucm.com",segs:968 }
+	  ] }
+{
+    nombre: "Aniceto",
+    navegador:"Chrome",
+    fecha: ISODate("2015-09-21T14:01:17.171Z"),
+    pags: [{url:"http://www.quizaseahoy.es",segs:1200 },
+	   {url:"https://www.lanochemashermosa.es",segs:50 }
+	  ]
+}
+{
+    nombre: "Bertoldo",
+    navegador:"firefox",
+    fecha: ISODate("2016-02-21T06:01:17.171Z"),
+    pags: [{url:"http://www.ucm.es",segs:200 },
+	   {url:"https://www.todomesobra.com",segs:5 },
+	   {url:"https://www.mikokoloko.com",segs:120 },
+	   {url:"http://www.mundoroedor.es",segs:85 },
+	   {url:"https://www.mikokoloko.com",segs:600 }
+	  ] }
+{
+    nombre: "Herminia",
+    navegador:"Explorer",
+    fecha: ISODate("2016-02-04T13:01:17.171Z"),
+    pags: [{url:"http://www.nomiresatras.es",segs:1200 },
+	   {url:"http://www.bancoimpopular.com",segs:500 },
+	   {url:"http://www.cocinacochina.com",segs:300 },
+	   {url:"http://www.mikokoloko.com",segs:60 }
+	  ]
+}
+{
+    nombre: "Bertoldo",
+    navegador:"firefox",
+    fecha: ISODate("2016-01-21T06:01:17.171Z"),
+    pags: [
+	   {url:"http://www.vuelosparaAbuelos.es",segs:500 },
+	   {url:"https://www.mikokoloko.com",segs:120 },
+	   {url:"http://www.comomemongo.com",segs:185 },
+	   {url:"https://www.ucm.com",segs:68 }
+	  ] }
+{
+    nombre: "Herminia",
+    navegador:"Explorer",
+    fecha: ISODate("2015-11-30T13:01:17.171Z"),
+    pags: [{url:"http://www.nocheviejuna.es",segs:1200 },
+	   {url:"http://www.uvasexpress.es",segs:50 }
+	  ]
+}
+{
+    nombre: "Aniceto",
+    navegador:"Chrome",
+    fecha: ISODate("2016-01-21T08:01:17.171Z"),
+    pags: [
+	   {url:"http://www.kalvossinreparos.es",segs:300 },
+	   {url:"https://www.secretosindiscretos.com",segs:120 },
+	   {url:"http://www.comomemongo.com",segs:185 },
+	   {url:"https://www.ucm.com",segs:968 }
+	  ] }
+{
+    nombre: "Aniceto",
+    navegador:"Chrome",
+    fecha: ISODate("2015-09-21T14:01:17.171Z"),
+    pags: [{url:"http://www.quizaseahoy.es",segs:1200 },
+	   {url:"https://www.lanochemashermosa.es",segs:50 }
+	  ]
+}
+{
+    nombre: "Bertoldo",
+    navegador:"firefox",
+    fecha: ISODate("2016-02-21T06:01:17.171Z"),
+    pags: [{url:"http://www.ucm.es",segs:200 },
+	   {url:"https://www.todomesobra.com",segs:5 },
+	   {url:"https://www.mikokoloko.com",segs:120 },
+	   {url:"http://www.mundoroedor.es",segs:85 },
+	   {url:"https://www.mikokoloko.com",segs:600 }
+	  ] }
+{
+    nombre: "Herminia",
+    navegador:"Explorer",
+    fecha: ISODate("2016-02-04T13:01:17.171Z"),
+    pags: [{url:"http://www.nomiresatras.es",segs:1200 },
+	   {url:"http://www.bancoimpopular.com",segs:500 },
+	   {url:"http://www.cocinacochina.com",segs:300 },
+	   {url:"http://www.mikokoloko.com",segs:60 }
+	  ]
+}
+{
+    nombre: "Bertoldo",
+    navegador:"firefox",
+    fecha: ISODate("2016-01-21T06:01:17.171Z"),
+    pags: [
+	   {url:"http://www.vuelosparaAbuelos.es",segs:500 },
+	   {url:"https://www.mikokoloko.com",segs:120 },
+	   {url:"http://www.comomemongo.com",segs:185 },
+	   {url:"https://www.ucm.com",segs:68 }
+	  ] }
+{
+    nombre: "Herminia",
+    navegador:"Explorer",
+    fecha: ISODate("2015-11-30T13:01:17.171Z"),
+    pags: [{url:"http://www.nocheviejuna.es",segs:1200 },
+	   {url:"http://www.uvasexpress.es",segs:50 }
+	  ]
+}
+{
+    nombre: "Aniceto",
+    navegador:"Chrome",
+    fecha: ISODate("2016-01-21T08:01:17.171Z"),
+    pags: [
+	   {url:"http://www.kalvossinreparos.es",segs:300 },
+	   {url:"https://www.secretosindiscretos.com",segs:120 },
+	   {url:"http://www.comomemongo.com",segs:185 },
+	   {url:"https://www.ucm.com",segs:968 }
+	  ] }
+{
+    nombre: "Aniceto",
+    navegador:"Chrome",
+    fecha: ISODate("2015-09-21T14:01:17.171Z"),
+    pags: [{url:"http://www.quizaseahoy.es",segs:1200 },
+	   {url:"https://www.lanochemashermosa.es",segs:50 }
+	  ]
+}
+{
+    nombre: "Bertoldo",
+    navegador:"firefox",
+    fecha: ISODate("2016-02-21T06:01:17.171Z"),
+    pags: [{url:"http://www.ucm.es",segs:200 },
+	   {url:"https://www.todomesobra.com",segs:5 },
+	   {url:"https://www.mikokoloko.com",segs:120 },
+	   {url:"http://www.mundoroedor.es",segs:85 },
+	   {url:"https://www.mikokoloko.com",segs:600 }
+	  ] }
+{
+    nombre: "Herminia",
+    navegador:"Explorer",
+    fecha: ISODate("2016-02-04T13:01:17.171Z"),
+    pags: [{url:"http://www.nomiresatras.es",segs:1200 },
+	   {url:"http://www.bancoimpopular.com",segs:500 },
+	   {url:"http://www.cocinacochina.com",segs:300 },
+	   {url:"http://www.mikokoloko.com",segs:60 }
+	  ]
+}
+{
+    nombre: "Bertoldo",
+    navegador:"firefox",
+    fecha: ISODate("2016-01-21T06:01:17.171Z"),
+    pags: [
+	   {url:"http://www.vuelosparaAbuelos.es",segs:500 },
+	   {url:"https://www.mikokoloko.com",segs:120 },
+	   {url:"http://www.comomemongo.com",segs:185 },
+	   {url:"https://www.ucm.com",segs:68 }
+	  ] }
+{
+    nombre: "Herminia",
+    navegador:"Explorer",
+    fecha: ISODate("2015-11-30T13:01:17.171Z"),
+    pags: [{url:"http://www.nocheviejuna.es",segs:1200 },
+	   {url:"http://www.uvasexpress.es",segs:50 }
+	  ]
+}
+{
+    nombre: "Aniceto",
+    navegador:"Chrome",
+    fecha: ISODate("2016-01-21T08:01:17.171Z"),
+    pags: [
+	   {url:"http://www.kalvossinreparos.es",segs:300 },
+	   {url:"https://www.secretosindiscretos.com",segs:120 },
+	   {url:"http://www.comomemongo.com",segs:185 },
+	   {url:"https://www.ucm.com",segs:968 }
+	  ] }
+{
+    nombre: "Aniceto",
+    navegador:"Chrome",
+    fecha: ISODate("2015-09-21T14:01:17.171Z"),
+    pags: [{url:"http://www.quizaseahoy.es",segs:1200 },
+	   {url:"https://www.lanochemashermosa.es",segs:50 }
+	  ]
+}
+{
+    nombre: "Bertoldo",
+    navegador:"firefox",
+    fecha: ISODate("2016-02-21T06:01:17.171Z"),
+    pags: [{url:"http://www.ucm.es",segs:200 },
+	   {url:"https://www.todomesobra.com",segs:5 },
+	   {url:"https://www.mikokoloko.com",segs:120 },
+	   {url:"http://www.mundoroedor.es",segs:85 },
+	   {url:"https://www.mikokoloko.com",segs:600 }
+	  ] }
+{
+    nombre: "Herminia",
+    navegador:"Explorer",
+    fecha: ISODate("2016-02-04T13:01:17.171Z"),
+    pags: [{url:"http://www.nomiresatras.es",segs:1200 },
+	   {url:"http://www.bancoimpopular.com",segs:500 },
+	   {url:"http://www.cocinacochina.com",segs:300 },
+	   {url:"http://www.mikokoloko.com",segs:60 }
+	  ]
+}
+{
+    nombre: "Bertoldo",
+    navegador:"firefox",
+    fecha: ISODate("2016-01-21T06:01:17.171Z"),
+    pags: [
+	   {url:"http://www.vuelosparaAbuelos.es",segs:500 },
+	   {url:"https://www.mikokoloko.com",segs:120 },
+	   {url:"http://www.comomemongo.com",segs:185 },
+	   {url:"https://www.ucm.com",segs:68 }
+	  ] }
+{
+    nombre: "Herminia",
+    navegador:"Explorer",
+    fecha: ISODate("2015-11-30T13:01:17.171Z"),
+    pags: [{url:"http://www.nocheviejuna.es",segs:1200 },
+	   {url:"http://www.uvasexpress.es",segs:50 }
+	  ]
+}
+{
+    nombre: "Aniceto",
+    navegador:"Chrome",
+    fecha: ISODate("2016-01-21T08:01:17.171Z"),
+    pags: [
+	   {url:"http://www.kalvossinreparos.es",segs:300 },
+	   {url:"https://www.secretosindiscretos.com",segs:120 },
+	   {url:"http://www.comomemongo.com",segs:185 },
+	   {url:"https://www.ucm.com",segs:968 }
+	  ] }
+{
+    nombre: "Aniceto",
+    navegador:"Chrome",
+    fecha: ISODate("2015-09-21T14:01:17.171Z"),
+    pags: [{url:"http://www.quizaseahoy.es",segs:1200 },
+	   {url:"https://www.lanochemashermosa.es",segs:50 }
+	  ]
+}
+{
+    nombre: "Herminia",
+    navegador:"Explorer",
+    fecha: ISODate("2016-02-04T13:01:17.171Z"),
+    pags: [{url:"http://www.nomiresatras.es",segs:1200 },
+	   {url:"http://www.bancoimpopular.com",segs:500 },
+	   {url:"http://www.cocinacochina.com",segs:300 },
+	   {url:"http://www.mikokoloko.com",segs:60 }
+	  ]
+}
+{
+    nombre: "Bertoldo",
+    navegador:"firefox",
+    fecha: ISODate("2016-01-21T06:01:17.171Z"),
+    pags: [
+	   {url:"http://www.vuelosparaAbuelos.es",segs:500 },
+	   {url:"https://www.mikokoloko.com",segs:120 },
+	   {url:"http://www.comomemongo.com",segs:185 },
+	   {url:"https://www.ucm.com",segs:68 }
+	  ] }
+{
+    nombre: "Herminia",
+    navegador:"Explorer",
+    fecha: ISODate("2015-11-30T13:01:17.171Z"),
+    pags: [{url:"http://www.nocheviejuna.es",segs:1200 },
+	   {url:"http://www.uvasexpress.es",segs:50 }
+	  ]
+}
+{
+    nombre: "Herminia",
+    navegador:"Explorer",
+    fecha: ISODate("2016-02-04T13:01:17.171Z"),
+    pags: [{url:"http://www.nomiresatras.es",segs:1200 },
+	   {url:"http://www.bancoimpopular.com",segs:500 },
+	   {url:"http://www.cocinacochina.com",segs:300 },
+	   {url:"http://www.mikokoloko.com",segs:60 }
+	  ]
+}
+{
+    nombre: "Bertoldo",
+    navegador:"firefox",
+    fecha: ISODate("2016-01-21T06:01:17.171Z"),
+    pags: [
+	   {url:"http://www.vuelosparaAbuelos.es",segs:500 },
+	   {url:"https://www.mikokoloko.com",segs:120 },
+	   {url:"http://www.comomemongo.com",segs:185 },
+	   {url:"https://www.ucm.com",segs:68 }
+	  ] }
+{
+    nombre: "Herminia",
+    navegador:"Explorer",
+    fecha: ISODate("2015-11-30T13:01:17.171Z"),
+    pags: [{url:"http://www.nocheviejuna.es",segs:1200 },
+	   {url:"http://www.uvasexpress.es",segs:50 }
+	  ]
+}
+{
+    nombre: "Herminia",
+    navegador:"Explorer",
+    fecha: ISODate("2016-02-04T13:01:17.171Z"),
+    pags: [{url:"http://www.nomiresatras.es",segs:1200 },
+	   {url:"http://www.bancoimpopular.com",segs:500 },
+	   {url:"http://www.cocinacochina.com",segs:300 },
+	   {url:"http://www.mikokoloko.com",segs:60 }
+	  ]
+}
+{
+    nombre: "Bertoldo",
+    navegador:"firefox",
+    fecha: ISODate("2016-01-21T06:01:17.171Z"),
+    pags: [
+	   {url:"http://www.vuelosparaAbuelos.es",segs:500 },
+	   {url:"https://www.mikokoloko.com",segs:120 },
+	   {url:"http://www.comomemongo.com",segs:185 },
+	   {url:"https://www.ucm.com",segs:68 }
+	  ] }
+{
+    nombre: "Herminia",
+    navegador:"Explorer",
+    fecha: ISODate("2015-11-30T13:01:17.171Z"),
+    pags: [{url:"http://www.nocheviejuna.es",segs:1200 },
+	   {url:"http://www.uvasexpress.es",segs:50 }
+	  ]
+}

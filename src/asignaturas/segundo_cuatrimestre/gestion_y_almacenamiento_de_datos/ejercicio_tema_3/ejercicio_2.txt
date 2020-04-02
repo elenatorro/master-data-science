@@ -1,0 +1,241 @@
+docker run --name ejercicio-2-mongo -it -p 27017:27017 -d mongo:4.0
+
+docker cp webs.json ejercicio-2-mongo:/tmp/webs.json
+
+docker exec -it ejercicio-2-mongo mongoimport --db ejercicio2 --collection webs --file /tmp/webs.json
+
+docker exec -it ejercicio-2-mongo mongo --port 27017
+
+use ejercicio2
+
+# Consulta 1: Número de sesiones (documentos) en los que se ha visitado la web “https://www.mikokoloko.com”.
+# > Nota: si una sesión incluye dos visitas solo se contará una vez
+
+db.webs.find(
+   { "pags.url": "https://www.mikokoloko.com" }
+).count()
+
+# Consulta 2: Mostrar los distintos navegadores que se han utilizado en toda la colección
+
+db.webs.distinct('navegador')
+
+# Consulta 3: Mostrar únicamente el campo “navegador” de las sesiones realizadas por el usuario “Bertoldo”
+# entre las fechas “20/02/2016” y “25/02/2016” (a las 00:00:00.000 horas en ambos casos).
+
+db.webs.find(
+    {
+        fecha: {
+            $gte: ISODate("2016-02-20T00:00:00.000Z"),
+            $lt: ISODate("2016-02-25T00:00:00.000Z")
+        }
+    }, {
+        _id: 0, navegador: 1
+    })
+
+
+# Agregacion 1: Obtener el número de sesiones por cada navegador, ordenadas en orden ascendente.
+# La salida mostrará, para cada navegador, un “_id” que contiene el nombre del navegador,
+# y un campo "total" con el número de sesiones de dicho navegador.
+
+
+db.webs.aggregate([
+    {
+        $group: {
+            _id: '$navegador',
+            total: { $sum: 1 }
+        }
+    },{
+        $sort: { "total": 1 }
+    }
+])
+
+# Agregacion 2: Obtener la persona con mayor número de sesiones totales en la colección.
+# La salida mostrará para cada persona (sólo 1) un “_id” conteniendo el nombre de la persona
+# y un campo “total” con el número de sesiones totales.
+
+db.webs.aggregate([
+    {
+        $group: {
+            _id: '$nombre',
+            total: { $sum: 1 }
+        }
+    }, {
+        $sort: { "total": -1 }
+    },
+    { $limit : 1 }
+])
+
+
+# Agregacion 3: Para cada persona indicar el número de URLs visitadas durante más de 100 segundos
+# > (se cuentan las repeticiones).
+# La salida mostrará para cada persona un “_id” conteniendo el nombre de la persona y un campo “num”
+# con el número de URLs.
+
+db.webs.aggregate([{
+        $unwind: {
+            path: "$pags"
+        }
+    },
+    {
+        $project: {
+            _id: 1,
+            nombre: 1,
+            num: {
+                $gt: ["$pags.segs", 100]
+            },
+        }
+    },
+    {
+        $group: {
+            _id: '$nombre',
+            num: {
+                $sum: 1
+            }
+        }
+    }
+])
+
+
+# Agregacion 4: Nombre de la persona que visita más páginas de media por sesión.
+# La salida mostrará un “_id” conteniendo el nombre de la persona
+# y un campo “media” con el valor de la media de páginas visitadas.
+# > Pistas: calcular el número de URLs para cada sesión y luego
+# calcular la media de ese dato para cada persona
+# > No hace falta utilizar $unwind.
+
+db.webs.aggregate([{
+        $project: {
+            _id: 1,
+            nombre: 1,
+            numPags: {
+                $size: '$pags'
+            }
+        }
+    },
+    {
+        $group: {
+            _id: '$nombre',
+            numPags: {
+                $sum: '$numPags'
+            },
+            numSessions: {
+                $sum: 1
+            }
+        }
+    }, {
+        $project: {
+            _id: 1,
+            media: {
+                $divide: ['$numPags', '$numSessions']
+            }
+        }
+    }, {
+        $sort: {
+            "media": -1
+        }
+    },
+    {
+        $limit: 1
+    }
+])
+
+db.webs.aggregate([{
+    $project: {
+            _id: 1,
+            nombre: 1,
+            numPags: {
+                $size: '$pags'
+            }
+        }
+    }
+])
+
+# Agregación 5: Calcular el total de sesiones con el navegador “Explorer” en 2016.
+# La salida mostrará el “_id” conteniendo el año (2016) y un campo “total” con el número total
+# de sesiones.
+# > Pista: para obtener el año de una fecha se puede utilizar {$year:”$fecha”}.
+
+db.webs.aggregate([{
+        $project: {
+            _id: 1,
+            navegador: 1,
+            year: {
+                $year: '$fecha'
+            }
+        }
+    },
+    {
+        $match: {
+            navegador: "Explorer",
+            year: 2016
+        }
+    },
+    {
+        $group: {
+            _id: '$year',
+            total: { $sum: 1 }
+        }
+    }
+])
+
+# Agregación 6: Agregación 6: Para cada persona calcular el tiempo acumulado de todas
+# las URLs visitadas, en minutos. La salida mostrará un campo “nombre” con el
+# nombre de la persona, y un campo “tiempomin” con el tiempo acumulado.
+# La salida estará ordenada alfabéticamente por los nombres de los usuarios.
+# > Pista: utilizar la opción $unwind de aggregate.
+
+db.webs.aggregate([{
+        $unwind: "$pags"
+    },
+    {
+        $project: {
+            _id: 0,
+            nombre: 1,
+            segs: '$pags.segs'
+        }
+    },{
+        $group: {
+            _id: '$nombre',
+            tiempomin: { $sum: '$segs' }
+        }
+    }, {
+        $sort: {
+            _id: 1
+        }
+    }
+])
+
+# Agregación 7: Obtener el nombre de las personas que han visitado alguna página que
+# comience por “https”. La salida mostrará para cada persona únicamente el campo “nombre”
+# que contendrá su nombre. Pista: utilizar el operador de proyección $substr.
+
+db.webs.aggregate([{
+        $unwind: "$pags"
+    },
+    {
+        $project: {
+            _id: 1,
+            nombre: 1,
+            protocol: {
+                $substr: ["$pags.url", 0, 5]
+            }
+        }
+    },
+    {
+        $match: {
+            protocol: 'https'
+        }
+    },
+    {
+        $group: {
+            _id: '$nombre'
+        }
+    }, {
+        $project: {
+            _id: 0,
+            nombre: '$_id'
+        }
+    }
+])
+
+docker stop ejercicio-2-mongo
